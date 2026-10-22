@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PitchPrep (beta): DECA-style practice
 
-## Getting Started
+Cluster exam practice weighted to the official 2026–27 blueprint, spaced-repetition vocab, and an AI role-play judge you present to out loud. See [PLAN.md](PLAN.md) for the roadmap.
 
-First, run the development server:
-
+## Run it
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.example .env.local   # add your ANTHROPIC_API_KEY
+npm run dev                  # http://localhost:3000
 ```
+Exams and vocab work without a key. The role-play judge needs one.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## What's in the beta
+| Area | Where |
+|---|---|
+| Event / level picker, weak-area dashboard | `app/page.tsx` |
+| Blueprint mock exams, topic drills, missed-question review | `app/exam/page.tsx`, `lib/deca.ts` |
+| Flashcards (Leitner boxes) and 60s Blitz | `app/vocab/page.tsx` |
+| AI judge: scenario → prep timer → voice presentation → live follow-ups → scored evaluation form | `app/roleplay/page.tsx`, `app/api/ai/route.ts`, `lib/speech.ts` |
+| Question bank / vocab / blueprint | `data/` |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Progress is saved in each student's browser (localStorage). Accounts come later.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Growing the question bank
+```bash
+node scripts/generate-items.mjs 20                       # 20 new questions for every instructional area
+node scripts/generate-items.mjs 30 "Pricing,Promotion"   # specific areas
+```
+New items land in `data/items.generated.json` and show up in the app right away. Have a strong competitor review them, then move the good ones into `data/items.json`.
 
-## Learn More
+**Content rule:** everything must be original. Never paste in DECA+ exams/scenarios or questions from other prep sites.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy for your chapter (Vercel)
+1. Push to GitHub and import the repo at vercel.com.
+2. Add `ANTHROPIC_API_KEY` and `BETA_ACCESS_CODE` in Project → Settings → Environment Variables.
+3. Share the URL and access code with members. Voice input works in Chrome and Edge. Other browsers can type.

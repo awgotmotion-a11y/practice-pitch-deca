@@ -1,0 +1,64 @@
+{
+  "source": "https://www.deca.org/advisor-resources/competitive-events-exam-blueprints",
+  "year": "2026-2027",
+  "itemsPerExam": 100,
+  "levels": ["district", "association", "icdc"],
+  "clusters": {
+    "Business Administration Core": {
+      "Business Law": [1, 1, 4], "Communications": [15, 15, 11], "Customer Relations": [5, 5, 4],
+      "Economics": [7, 7, 12], "Emotional Intelligence": [22, 22, 19], "Entrepreneurship": [0, 0, 1],
+      "Financial Analysis": [16, 16, 13], "Human Resources Management": [1, 1, 1],
+      "Information Management": [10, 10, 11], "Marketing": [1, 1, 1], "Operations": [11, 11, 13],
+      "Professional Development": [11, 11, 9], "Strategic Management": [0, 0, 1]
+    },
+    "Business Management + Administration": {
+      "Business Law": [5, 5, 5], "Communications": [7, 6, 6], "Customer Relations": [2, 2, 1],
+      "Economics": [6, 5, 4], "Emotional Intelligence": [9, 8, 6], "Entrepreneurship": [1, 0, 0],
+      "Financial Analysis": [7, 6, 5], "Human Resources Management": [1, 0, 0],
+      "Information Management": [7, 6, 6], "Knowledge Management": [6, 7, 8], "Marketing": [1, 1, 1],
+      "Operations": [21, 24, 26], "Professional Development": [6, 5, 4], "Project Management": [6, 7, 8],
+      "Quality Management": [3, 4, 5], "Risk Management": [4, 5, 5], "Strategic Management": [8, 9, 10]
+    },
+    "Entrepreneurship": {
+      "Business Law": [4, 4, 3], "Channel Management": [3, 3, 3], "Communications": [1, 0, 1],
+      "Customer Relations": [1, 1, 1], "Economics": [3, 3, 2], "Emotional Intelligence": [6, 6, 4],
+      "Entrepreneurship": [14, 13, 14], "Financial Analysis": [10, 9, 11],
+      "Human Resources Management": [5, 4, 4], "Information Management": [4, 3, 2],
+      "Market Planning": [5, 6, 6], "Marketing": [1, 1, 1], "Marketing-Information Management": [2, 3, 2],
+      "Operations": [13, 13, 14], "Pricing": [2, 3, 2], "Product/Service Management": [4, 4, 4],
+      "Professional Development": [5, 5, 4], "Promotion": [6, 7, 8], "Quality Management": [1, 1, 1],
+      "Risk Management": [2, 3, 4], "Selling": [1, 1, 1], "Strategic Management": [7, 7, 8]
+    },
+    "Finance": {
+      "Business Law": [7, 8, 7], "Communications": [5, 4, 3], "Customer Relations": [5, 5, 4],
+      "Economics": [6, 5, 4], "Emotional Intelligence": [9, 8, 6], "Entrepreneurship": [1, 0, 0],
+      "Financial Analysis": [24, 28, 30], "Financial-Information Management": [9, 10, 12],
+      "Human Resources Management": [1, 0, 0], "Information Management": [6, 5, 5], "Marketing": [1, 1, 1],
+      "Operations": [6, 5, 4], "Professional Development": [13, 14, 15], "Risk Management": [6, 7, 9],
+      "Strategic Management": [1, 0, 0]
+    },
+    "Hospitality + Tourism": {
+      "Business Law": [3, 3, 2], "Communications": [5, 4, 3], "Customer Relations": [8, 9, 9],
+      "Economics": [6, 6, 5], "Emotional Intelligence": [9, 9, 7], "Entrepreneurship": [1, 0, 0],
+      "Financial Analysis": [8, 7, 7], "Human Resources Management": [2, 1, 1],
+      "Information Management": [14, 15, 15], "Knowledge Management": [0, 1, 1], "Market Planning": [1, 1, 2],
+      "Marketing": [1, 1, 2], "Operations": [13, 13, 13], "Pricing": [1, 1, 1],
+      "Product/Service Management": [6, 7, 9], "Professional Development": [8, 7, 6], "Promotion": [2, 3, 3],
+      "Quality Management": [1, 1, 1], "Risk Management": [1, 1, 2], "Selling": [7, 8, 9],
+      "Strategic Management": [3, 2, 2]
+    },
+    "Marketing": {
+      "Business Law": [2, 2, 1], "Channel Management": [5, 6, 7], "Communications": [5, 4, 3],
+      "Customer Relations": [2, 2, 1], "Economics": [6, 5, 4], "Emotional Intelligence": [9, 8, 6],
+      "Entrepreneurship": [1, 0, 0], "Financial Analysis": [6, 5, 4], "Human Resources Management": [1, 0, 0],
+      "Information Management": [5, 4, 3], "Market Planning": [4, 4, 5], "Marketing": [1, 1, 1],
+      "Marketing-Information Management": [11, 14, 16], "Operations": [6, 5, 4], "Pricing": [3, 4, 4],
+      "Product/Service Management": [11, 13, 15], "Professional Development": [6, 5, 5],
+      "Promotion": [9, 11, 13], "Selling": [6, 7, 8], "Strategic Management": [1, 0, 0]
+    },
+    "Personal Financial Literacy": {
+      "Earning Income": [25, 20, 16], "Spending": [14, 14, 14], "Saving": [15, 14, 13],
+      "Investing": [15, 19, 21], "Managing Credit": [16, 19, 21], "Managing Risk": [15, 14, 15]
+    }
+  }
+}
