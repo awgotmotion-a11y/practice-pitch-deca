@@ -21,7 +21,7 @@ export type Scenario = {
 export type Line = { who: "student" | "judge"; text: string };
 export type ScoreResult = {
   pis: { pi: string; score: number; level: string; quote: string; feedback: string; fix: string }[];
-  skills: { skill: string; score: number; feedback: string }[];
+  skills: { skill: string; score: number; max: number; feedback: string }[];
   summary: string;
   topFixes: string[];
   piMax: number;

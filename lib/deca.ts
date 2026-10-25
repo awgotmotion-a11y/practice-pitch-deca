@@ -32,6 +32,7 @@ export const EVENTS: DecaEvent[] = [
   { code: "ASM", name: "Automotive Services Marketing Series", cluster: "Marketing" },
   { code: "BSM", name: "Business Services Marketing Series", cluster: "Marketing" },
   { code: "FMS", name: "Food Marketing Series", cluster: "Marketing" },
+  { code: "MCS", name: "Marketing Communications Series", cluster: "Marketing" },
   { code: "MMS", name: "Marketing Management Series", cluster: "Marketing" },
   { code: "RMS", name: "Retail Merchandising Series", cluster: "Marketing" },
   { code: "SEM", name: "Sports and Entertainment Marketing Series", cluster: "Marketing" },
@@ -51,14 +52,38 @@ export const eventByCode = (code: string) => EVENTS.find((e) => e.code === code)
 /** Prep and presentation minutes, per the DECA Guide format. */
 export const timing = (e: DecaEvent) => (e.team ? { prep: 30, present: 15 } : { prep: 10, present: 10 });
 
-/** 21st Century Skills rows on the role-play evaluation form, 0-6 each. */
-export const SKILLS = [
-  "Reason effectively and use systems thinking",
-  "Make judgments and decisions, and solve problems",
-  "Communicate clearly",
-  "Show evidence of creativity",
-  "Overall impression and responses to the judge's questions",
-];
+/** Inclusive score ranges for Little/No Value, Below, Meets and Exceeds Expectations. */
+export type Bands = [number, number][];
+export type Form = { pis: number; piBands: Bands; skills: { name: string; bands: Bands }[] };
+
+const REASON = "Reason effectively and use systems thinking";
+const JUDGE = "Make judgments and decisions, and solve problems";
+const CREATIVE = "Show evidence of creativity";
+const OVERALL = "Overall impression and responses to the judge's questions";
+const SKILL7: Bands = [[0, 1], [2, 3], [4, 5], [6, 7]];
+const SKILL6: Bands = [[0, 1], [2, 3], [4, 4], [5, 6]];
+const rows = (names: string[], bands: Bands) => names.map((name) => ({ name, bands }));
+
+/**
+ * The judge evaluation form for an event; every form totals 100.
+ * Sources: DECA public sample events (Principles PMK, Series BFS 2023, PFL 2025).
+ * ponytail: TDM layout is from a 2014 sample, the newest public one; re-check against the current DECA Guide.
+ */
+export function formFor(e: DecaEvent): Form {
+  if (e.code === "PFL")
+    return { pis: 3, piBands: [[0, 8], [9, 13], [14, 18], [19, 24]], skills: rows([REASON, "Communicate clearly", CREATIVE, OVERALL], SKILL7) };
+  if (e.cluster === "Business Administration Core")
+    return { pis: 4, piBands: [[0, 5], [6, 10], [11, 14], [15, 18]], skills: rows([REASON, "Communicate clearly", CREATIVE, OVERALL], SKILL7) };
+  if (e.team)
+    return {
+      pis: 7,
+      piBands: [[0, 3], [4, 6], [7, 8], [9, 10]],
+      skills: rows([REASON, JUDGE, "Communicate clearly and show evidence of collaboration", CREATIVE, OVERALL], SKILL6),
+    };
+  return { pis: 5, piBands: [[0, 4], [5, 8], [9, 11], [12, 14]], skills: rows([REASON, JUDGE, "Communicate clearly", CREATIVE, OVERALL], SKILL6) };
+}
+
+export const maxOf = (b: Bands) => b[b.length - 1][1];
 
 const LEVEL_INDEX: Record<Level, number> = { district: 0, association: 1, icdc: 2 };
 

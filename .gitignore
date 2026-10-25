@@ -43,3 +43,7 @@ next-env.d.ts
 # browser test artifacts
 .playwright-mcp/
 !.env.example
+
+# local agent tooling state
+.claude-flow/
+.swarm/

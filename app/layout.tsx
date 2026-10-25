@@ -37,7 +37,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </header>
         <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8">{children}</main>
         <footer className="border-t border-line px-4 py-4 text-center text-xs text-muted">
-          Original practice content. Not affiliated with or endorsed by DECA Inc. DECA is a registered trademark of DECA Inc.
+          Original practice content. Not affiliated with or endorsed by DECA Inc. DECA is a registered trademark of DECA Inc. ·{" "}
+          <Link href="/privacy" className="underline">Privacy</Link>
         </footer>
       </body>
     </html>

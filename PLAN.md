@@ -106,15 +106,36 @@ Native mobile app (build a PWA first), social features, live human-judge marketp
 
 ---
 
-## Beta status (2026-10-22)
-Built:
-- Blueprint mock exams and topic drills (222 original seed items across all 31 instructional areas).
-- Vocab: 165 terms, flashcards and a 60s Blitz.
-- Weak-area loop: dashboard → drill / vocab / targeted role-play.
-- Voice AI judge: Web Speech API, follow-ups per level, scoring on 70 PI + 30 21st Century Skills points, delivery stats.
-- Access-code gate.
+## Beta status (updated 2026-10-25)
 
-Not yet built: accounts and server DB, advisor dashboard, calibration eval set, pitch / written-event mode, payments, reviewed bank at 3–5k items (run `scripts/generate-items.mjs`).
+Built and tested:
+- **Mock exams:** a full 100 questions at every level for all 7 clusters, from 417 original validated items (`npm run check`).
+- **Vocab:** 165 terms, flashcards and a 60-second blitz.
+- **Weak-area loop:** the dashboard sends members to drills, vocab and targeted role-plays.
+- **Events:** all 29 role-play events from DECA's current list, including Marketing Communications Series.
+- **Scoring forms by event type:**
+  - Principles: 4 indicators × 18 + 4 skills × 7
+  - Series: 5 × 14 + 5 × 6
+  - Team Decision Making: 7 × 10 + 5 × 6
+  - PFL: 3 × 24 + 4 × 7
+- **Score safety:** the server clamps AI scores to each form and derives band labels from the scores.
+- **End-to-end test:** the full flow ran against a local fake API, at phone width.
+- **Privacy page** and access-code gate.
+
+Waiting on a human (README → Launch checklist):
+- API key and spend limit
+- Vercel deploy
+- Officer test run with real AI scoring
+- Advisor OK
+
+Not yet built:
+- accounts and server database
+- advisor dashboard
+- calibration set comparing AI scores with human judges
+- pitch / written-event mode
+- two-partner team mode
+- payments
+- a deeper bank to avoid repeats (`scripts/generate-items.mjs` once a key exists)
 
 ## 6. Course of action
 

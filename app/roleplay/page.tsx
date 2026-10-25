@@ -1,7 +1,7 @@
 "use client";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { areasFor, eventByCode, timing, LEVELS, SKILLS, type Level } from "@/lib/deca";
+import { areasFor, eventByCode, timing, LEVELS, type Level } from "@/lib/deca";
 import {
   now, useStored, useHydrated, accuracyByArea, DEFAULT_PROFILE,
   type Attempt, type Delivery, type Line, type Profile, type Scenario, type ScoreResult, type Session,
@@ -184,7 +184,10 @@ function Roleplay() {
           {!speechOk && <p className="text-sm text-amber-600">This browser can&apos;t transcribe speech. Use Chrome or Edge to present out loud, or type your answers here.</p>}
           <button className="btn-primary" onClick={generate}>Generate scenario & start prep</button>
         </div>
-        <p className="text-xs text-muted">Change your event on the Dashboard. Scores are AI estimates meant for practice, not official results.</p>
+        <p className="text-xs text-muted">
+          Change your event on the Dashboard. Scores are AI estimates meant for practice, not official results. Your answers are sent to
+          an AI service for scoring, so leave out personal details. <a href="/privacy" className="underline">Privacy</a>
+        </p>
       </div>
     );
 
@@ -292,7 +295,7 @@ function Results({ s, onAgain }: { s: Session; onAgain: () => void }) {
         <div>
           <div className="label">{s.scenario.title}</div>
           <div className="text-5xl font-bold tabular-nums">{s.total}<span className="text-xl text-muted">/100</span></div>
-          <p className="text-sm text-muted">Performance indicators {piTotal}/{score.piMax * score.pis.length} · 21st Century Skills {skillTotal}/{SKILLS.length * 6}</p>
+          <p className="text-sm text-muted">Performance indicators {piTotal}/{score.piMax * score.pis.length} · 21st Century Skills {skillTotal}/{score.skills.reduce((n, k) => n + k.max, 0)}</p>
         </div>
         <button className="btn-primary" onClick={onAgain}>New role-play</button>
       </section>
@@ -323,7 +326,7 @@ function Results({ s, onAgain }: { s: Session; onAgain: () => void }) {
         <h2 className="font-semibold">21st Century Skills</h2>
         {score.skills.map((k) => (
           <div key={k.skill} className="text-sm">
-            <div className="flex justify-between"><b>{k.skill}</b><span className="tabular-nums">{k.score}/6</span></div>
+            <div className="flex justify-between"><b>{k.skill}</b><span className="tabular-nums">{k.score}/{k.max}</span></div>
             <p className="text-muted">{k.feedback}</p>
           </div>
         ))}

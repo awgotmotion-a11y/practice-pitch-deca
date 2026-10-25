@@ -63,7 +63,7 @@ function Exam() {
       <section className="card">
         <h2 className="font-semibold">Mock exam — {event.cluster}, {levelLabel}</h2>
         <p className="mb-4 mt-1 text-sm text-muted">
-          Questions drawn to match the official 2026–27 blueprint for this level. The real exam is 100 questions; this one has {mockCount} while the bank grows.
+          {mockCount} questions drawn to match the official 2026–27 blueprint for this level{mockCount < 100 ? " (the real exam has 100; this area of the bank is still growing)" : ", the same length as the real exam"}.
         </p>
         <button className="btn-primary" onClick={() => start("mock", buildMockExam(event.cluster, profile.level))}>Start mock exam</button>
         <details className="mt-4 text-sm">

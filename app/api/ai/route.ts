@@ -1,7 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
 import { z } from "zod";
-import { SKILLS } from "@/lib/deca";
+import { eventByCode, formFor, maxOf, type Bands } from "@/lib/deca";
 
 export const maxDuration = 120;
 
@@ -69,6 +69,9 @@ async function ask<T extends z.ZodType>(schema: T, system: string, user: string,
   return res.parsed_output as z.infer<T>;
 }
 
+const LABELS = ["Little/No Value", "Below Expectations", "Meets Expectations", "Exceeds Expectations"];
+const bandText = (b: Bands) => b.map(([lo, hi], i) => `${LABELS[i]} ${lo}-${hi}`).join(", ");
+
 const SYSTEM = `You simulate DECA competitive-event role-plays for high school students practicing for competition.
 Everything you write must be original. Never reproduce or paraphrase official DECA exams or scenarios.`;
 
@@ -80,8 +83,10 @@ export async function POST(req: Request) {
   const parsed = Body.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return Response.json({ error: "Bad request" }, { status: 400 });
   const b = parsed.data;
-  const nPis = b.event.team ? 7 : 5;
-  const ctx = `Event: ${b.event.name} (${b.event.code}), ${b.event.cluster} cluster, ${b.level} level${b.event.team ? ", team of two" : ""}.`;
+  // Trust our own event table, not the client's copy of it.
+  const ev = eventByCode(b.event.code);
+  const form = formFor(ev);
+  const ctx = `Event: ${ev.name} (${ev.code}), ${ev.cluster} cluster, ${b.level} level${ev.team ? ", team of two presenting together" : ""}.`;
 
   try {
     if (b.kind === "scenario") {
@@ -90,7 +95,7 @@ export async function POST(req: Request) {
         SYSTEM,
         `${ctx}
 Write a new, realistic role-play scenario in the style of DECA ${b.level} competition.
-- Exactly ${nPis} performance indicators written the way DECA phrases them ("Explain...", "Describe...", "Discuss...", "Determine...").
+- Exactly ${form.pis} performance indicators written the way DECA phrases them ("Explain...", "Describe...", "Discuss...", "Determine...").
 - Each PI's "ia" must be one of these instructional areas: ${b.areas.join(", ")}.
 ${b.focus.length ? `- At least 2 PIs must come from these areas the student is weak in: ${b.focus.join(", ")}.` : ""}
 - Include concrete details (numbers, constraints, a stakeholder concern) that reward analytical thinking.
@@ -121,7 +126,7 @@ ${s.pis.map((p, i) => `${i + 1}. ${p.text} (${p.ia})`).join("\n")}`;
       return Response.json(out);
     }
 
-    const piMax = Math.round(70 / s.pis.length);
+    const piMax = maxOf(form.piBands);
     const out = await ask(
       Score,
       `${SYSTEM}\nYou are a calibrated DECA judge scoring with the official-style evaluation form. Be honest: name-dropping a concept is not demonstrating it. Most first attempts land in Below or Meets Expectations.`,
@@ -131,12 +136,25 @@ TRANSCRIPT:
 ${transcript || "(no response given)"}
 ${b.delivery ? `\nDELIVERY: ${b.delivery.wpm} words/min, ${b.delivery.fillersPerMin} filler words/min, ${b.delivery.longPauses} long pauses.` : ""}
 
-Score each PI from 0 to ${piMax}: Little/No Value 0-${Math.round(piMax * 0.3)}, Below ${Math.round(piMax * 0.3) + 1}-${Math.round(piMax * 0.6)}, Meets ${Math.round(piMax * 0.6) + 1}-${Math.round(piMax * 0.85)}, Exceeds ${Math.round(piMax * 0.85) + 1}-${piMax}.
-Score each of these 21st Century Skills from 0 to 6: ${SKILLS.join("; ")}.
+Score each PI from 0 to ${piMax} (${bandText(form.piBands)}).
+Score each of these 21st Century Skills, in this order and with these exact names:
+${form.skills.map((k) => `- ${k.name}: 0 to ${maxOf(k.bands)} (${bandText(k.bands)})`).join("\n")}
 Quotes must be copied exactly from the participant's words. Give 3 top fixes, most impactful first.`,
       "high",
     );
-    return Response.json({ ...out, piMax });
+    // Keep scores on the form even if the model drifts outside a range.
+    const clamp = (n: number, max: number) => Math.max(0, Math.min(max, Math.round(n)));
+    const pis = out.pis.map((p) => {
+      const score = clamp(p.score, piMax);
+      return { ...p, score, level: LABELS[form.piBands.findIndex(([lo, hi]) => score >= lo && score <= hi)] };
+    });
+    const skills = form.skills.map((k, i) => ({
+      skill: k.name,
+      score: clamp(out.skills[i]?.score ?? 0, maxOf(k.bands)),
+      max: maxOf(k.bands),
+      feedback: out.skills[i]?.feedback ?? "",
+    }));
+    return Response.json({ ...out, pis, skills, piMax });
   } catch (err) {
     if (err instanceof Anthropic.AuthenticationError || /authentication method/i.test((err as Error).message)) {
       return Response.json({ error: "Server is missing a valid ANTHROPIC_API_KEY." }, { status: 500 });

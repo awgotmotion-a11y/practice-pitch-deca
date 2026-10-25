@@ -30,7 +30,22 @@ New items land in `data/items.generated.json` and show up in the app right away.
 
 **Content rule:** everything must be original. Never paste in DECA+ exams/scenarios or questions from other prep sites.
 
-## Deploy for your chapter (Vercel)
-1. Push to GitHub and import the repo at vercel.com.
-2. Add `ANTHROPIC_API_KEY` and `BETA_ACCESS_CODE` in Project → Settings → Environment Variables.
-3. Share the URL and access code with members. Voice input works in Chrome and Edge. Other browsers can type.
+## Launch checklist (what's left for a human)
+Everything else is built and tested. These steps need your accounts:
+
+1. **Get an API key.** Create one at console.anthropic.com. Under Billing → Limits, set a **monthly spend limit** (start around $25 for a beta). Everyone shares the access code, so the spend limit is your real cost protection.
+2. **Deploy on Vercel.** Sign in at vercel.com with GitHub, then **Add New → Project** and import `practice-pitch-deca`. The defaults work. Before deploying, add these environment variables:
+   - `ANTHROPIC_API_KEY`: your key
+   - `BETA_ACCESS_CODE`: a code only chapter members get
+3. **Officer test run (about 30 minutes).** Before sharing, have 2–3 strong competitors each run 2–3 role-plays across different events and levels. Check that:
+   - scenarios read like real DECA role-plays
+   - the judge's questions respond to what was actually said
+   - scores land within roughly ±10 of what an experienced judge would give
+   Note anything off and send it back.
+4. **Advisor OK.** Show your advisor the Privacy page (`/privacy`). Answers are sent to an AI service, members are minors, and nothing is stored on a server.
+5. **Share** the URL and access code with members. Voice input works best in Chrome and Edge on a laptop. On phones, typing is more reliable.
+
+**Re-check the scoring forms each season.** Forms per event type live in `formFor()` in `lib/deca.ts`. Principles, Series and PFL were checked against DECA's public 2023–2025 sample events. The Team Decision Making form comes from an older public sample, so confirm it against the current DECA Guide.
+
+## Checking the data
+`npm run check` validates every question and prints how full each cluster's mock exam is. Run it after adding questions.
