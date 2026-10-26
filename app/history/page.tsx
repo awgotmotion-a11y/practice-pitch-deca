@@ -49,7 +49,7 @@ function History() {
     <div className="space-y-10">
       <h1 className="text-4xl font-bold">History</h1>
       {trials.length === 0 ? (
-        <p className="text-muted">No trials yet. Finish a <Link href="/roleplay">role-play</Link> or a <Link href="/room">Pitch Room</Link> session and it shows up here.</p>
+        <p className="text-muted">No trials yet. Finish a <Link href="/roleplay">role-play</Link> or a <Link href="/room">Pitch Room</Link> session, or get a <Link href="/written">written entry</Link> scored, and it shows up here.</p>
       ) : (
         <>
           <Trend trials={trials} />
@@ -63,8 +63,8 @@ function History() {
                       <b className="block truncate text-lg font-semibold">{t.title}</b>
                       <span className="mono text-xs text-muted">{t.mode.toUpperCase()}{t.event ? ` · ${t.event}` : ""} · {new Date(t.date).toLocaleDateString()}</span>
                     </span>
-                    <span className="mono text-sm"><span className="text-muted">LEN </span>{mmss(t.durationSec)}</span>
-                    <span className="mono text-sm"><span className="text-muted">WPM </span>{m.wpm ?? "n/a"} · <span className="text-muted">F/M </span>{m.fillersPerMin}</span>
+                    <span className="mono text-sm">{m && <><span className="text-muted">LEN </span>{mmss(t.durationSec)}</>}</span>
+                    <span className="mono text-sm">{m && <><span className="text-muted">WPM </span>{m.wpm ?? "n/a"} · <span className="text-muted">F/M </span>{m.fillersPerMin}</>}</span>
                     <span className="mono text-sm text-amber">{t.outcome ?? ""}</span>
                     <b className="mono text-lg tabular-nums">{t.total ?? "--"}/{t.max ?? 100}</b>
                   </Link>

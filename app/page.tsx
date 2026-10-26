@@ -102,7 +102,8 @@ export default function Dashboard() {
           <Row n="04" tone="amber" href="/room?mode=plan" title="DECA Judge" desc="Present your business plan, then field a lender's questions." time="15 MIN" />
           <Row n="05" tone="amber" href="/room?mode=drill" title="Q&A Drill" desc="No presentation. Just hard questions about your plan." time="10 MIN" />
           <Row n="06" tone="amber" href="/room?mode=shark" title="Shark Tank" desc="Two minutes to pitch, then investors interrupt." time="8 MIN" />
-          <div className="border-b border-line"><Row n="07" tone="amber" href="/room?mode=cold" title="Cold call and Pro Selling" desc="Call a skeptical owner, or run a full sales meeting." time="5 OR 15 MIN" /></div>
+          <Row n="07" tone="amber" href="/room?mode=cold" title="Cold call and Pro Selling" desc="Call a skeptical owner, or run a full sales meeting." time="5 OR 15 MIN" />
+          <div className="border-b border-line"><Row n="08" tone="amber" href="/written" title="Written entry review" desc="Upload your written or pitch deck and get it scored on the official form." time="100 PTS" /></div>
         </div>
       </section>
 

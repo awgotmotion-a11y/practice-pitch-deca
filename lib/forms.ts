@@ -20,6 +20,9 @@ const B = {
   oi7: [[0, 2], [3, 4], [5, 6], [7, 7]],
   c15: [[0, 5], [6, 10], [11, 14], [15, 15]],
   t5: [[0, 1], [2, 3], [4, 4], [5, 5]],
+  w9: [[0, 3], [4, 6], [7, 8], [9, 9]],
+  w12: [[0, 3], [4, 7], [8, 11], [12, 12]],
+  w20: [[0, 7], [8, 13], [14, 19], [20, 20]],
 } satisfies Record<string, Bands>;
 
 export const maxOf = (b: Bands) => b[b.length - 1][1];
@@ -126,7 +129,145 @@ export const DRILL_FORM = custom("drill", "Q&A drill scorecard", [
   ["Composure under pressure", 25, "No defensiveness, no dodging"],
 ]);
 
-/** Self-check: `npx tsx lib/forms.ts` — every DECA form must total 100. */
+// ---------------------------------------------------------------- written entries and pitch decks
+// Written Entry Evaluation Forms from the 2026-27 DECA Guide (BOR, EIB, EBG, EFB, IBP and PM guideline PDFs).
+
+type W = [group: string, name: string, bands: Bands, desc: string];
+const written = (id: string, title: string, rows: W[]): Form => ({
+  id, title, rows: rows.map(([group, name, bands, desc]) => ({ group, name, bands, desc })),
+});
+const EXEC = "Executive Summary", PRO = "Professional Standards";
+const layout = (bands: Bands): W => [PRO, "Professional layout and grammar", bands, "Professional layout, appropriate business language and correct grammar"];
+
+const BOR_FORM = written("w-bor", "Written Entry Evaluation Form · Business Operations Research (2026–27)", [
+  [EXEC, "Executive summary", B.pi10, "Clear, concise, well-structured summary (one to three pages) covering key aspects of the project"],
+  ["Introduction", "Business description", B.sol8, "The business, its primary products or services, purpose/mission, target market and current strategy for customer loyalty"],
+  ["Research Methods", "Research design and rationale", B.sol8, "Methodologies (qualitative, quantitative, primary, secondary) and why they fit the study's goals, with a clear data collection process"],
+  ["Research Methods", "Research execution", B.sol8, "Research carried out in a clear, organized, professional way; logical and thorough"],
+  ["Findings and Conclusions", "Findings tied to objectives", B.sol8, "Interprets the findings and connects them to the study's objectives and questions"],
+  ["Findings and Conclusions", "Evidence-based conclusions", B.sol8, "Logical conclusions supported by the findings"],
+  ["Proposed Strategic Plan", "Objectives and rationale", B.w12, "Actionable objectives with a practical rationale based on data, research and logical analysis"],
+  ["Proposed Strategic Plan", "Activities and timelines", B.w12, "Actionable, logical activities with realistic timelines"],
+  ["Proposed Strategic Plan", "Metrics and KPIs", B.w12, "Effective metrics or key performance indicators to measure the plan's effectiveness"],
+  ["Proposed Budget", "Budget, viability and ROI", B.sol8, "Identifies and justifies all costs, addresses financial viability and potential ROI"],
+  layout(B.cc6),
+]);
+
+const plan = (id: string, title: string, intl: boolean): Form => written(id, title, [
+  [EXEC, "Executive summary", B.pi10, "Explains the business concept and model, summarizing key elements of the plan and the value it creates"],
+  ...(intl ? [["International Business Situation Analysis", "Country situation analysis", B.t5, "Economic, governmental, legal, cultural and market conditions of the selected country and how they affect the business"] as W] : []),
+  ["Problem & Business Opportunity", "Problem and why it matters", B.pi10, `The problem(s) addressed and why they matter${intl ? " in the international market" : " to the target market"}`],
+  ["Customer Segments & Channels", "Customers and channels", B.pi10, "Target customers and how the business will reach and serve them, aligned to their needs"],
+  ["Unique Value Proposition & Competitive Advantage", "Value proposition and advantage", B.pi10, "A clear value proposition: what makes it different and hard to copy, creating a lasting advantage"],
+  ["Solution", "Solution feasibility", intl ? B.pi10 : B.c15, `How the solution and its key features address the problem, showing it is realistic and feasible${intl ? " in the international context" : ""}`],
+  ["Revenue Model & Key Metrics", "Revenue model and metrics", B.pi10, "How the business makes money and the key metrics that track performance; a realistic path to sustainability"],
+  ["Cost Structure", "Operating costs", B.pi10, "The main costs of operating and how they relate to delivering the product or service"],
+  ["Detailed Financials", "Projections and capital plan", B.pi10, "Analyzes financial projections and a plan to meet capital needs"],
+  ["Conclusion & Financing Request", "Viability and financing request", B.pi10, "Why the venture is viable, with a clear, justified request for financing"],
+  layout(B.t5),
+]);
+
+const EBG_FORM = written("w-ebg", "Written Entry Evaluation Form · Business Growth Plan (2026–27)", [
+  [EXEC, "Executive summary", B.pi10, "Summarizes the growth plan, highlighting key strategies and the value of the proposed expansion"],
+  ["Introduction", "Current operations", B.w9, "Current business operations, products or services and unique characteristics"],
+  ["Introduction", "Current position", B.w9, "Shows an understanding of the business's current position"],
+  ["SWOT Analysis", "SWOT analysis", B.pi10, "Strengths, weaknesses, opportunities and threats of the business"],
+  ["SWOT Analysis", "How SWOT informs growth", B.pi10, "How those factors inform growth decisions"],
+  ["Growth & Expansion Strategy", "Growth opportunities", B.pi10, "Expansion strategies, market opportunities and marketing approach"],
+  ["Growth & Expansion Strategy", "Long-term growth fit", B.pi10, "How the strategy supports long-term growth"],
+  ["Financing Plan", "Finances and capital needs", B.pi10, "Current financial situation, costs and capital needs"],
+  ["Financing Plan", "Sustaining growth", B.pi10, "How the business can support and sustain growth, including the timeline to profitability"],
+  ["Conclusion", "Why the strategy will work", B.cc6, "Synthesizes why the proposed strategy will successfully expand the business"],
+  layout(B.cc6),
+]);
+
+const EFB_FORM = written("w-efb", "Written Entry Evaluation Form · Franchise Business Plan (2026–27)", [
+  [EXEC, "Executive summary", B.pi10, "Clear, well-structured summary (one to three pages) of all key aspects, including the rationale for obtaining franchise rights"],
+  ["Business History, Background & Objectives", "Company background", B.sol8, "The company, its goals, achievements and challenges, and its requirements for franchising"],
+  ["Business Environment", "Environmental factors", B.sol8, "Economic, demographic, technological and regulatory conditions and their impact in the selected market"],
+  ["Products and/or Services", "Products and services", B.sol8, "How the products or services meet customer needs and fit the franchise model"],
+  ["Present Market", "Market analysis", B.sol8, "Customer characteristics, growth potential and pricing; how the business fits the market"],
+  ["Competition", "Competitor analysis", B.sol8, "Competitors' strengths and weaknesses and the franchise's advantages and disadvantages"],
+  ["Marketing Plan", "Marketing plan", B.sol8, "Current marketing assessed, plus future strategies for brand awareness, new customers and growth"],
+  ["Management & Organization", "Management and succession", B.sol8, "The management team, how to strengthen it, a succession plan and added personnel"],
+  ["Business Resources", "Business resources", B.sol8, "Resources needed to operate efficiently and serve customers"],
+  ["Financial Plan & Data", "Financials and capital", B.pi10, "Sales and profit trends, a two-year operating statement and one-year cash flow, and a plan to obtain capital"],
+  ["Conclusion & Financial Request", "Viability and financing request", B.pi10, "Why the franchise is viable, with a clear, justified request for financing"],
+  layout(B.cc6),
+]);
+
+const PM_FORM = written("w-pm", "Written Entry Evaluation Form · Project Management (2026–27)", [
+  [EXEC, "Executive summary", B.pi10, "Clear, concise, well-structured summary (one to three pages) covering all key aspects of the project"],
+  ["Initiating", "Need and project scope", B.pi10, "Defines the need or opportunity and the project scope with depth and real-world relevance"],
+  ["Planning and Organizing", "Project plan components", B.w20, "Goals, HR plan, schedule and milestones, quality, risk and budget, justified and aligned to the goals"],
+  ["Execution", "Implementation narrative", B.w20, "Well-documented account of how the plan was carried out: coordination, adaptation and decisions"],
+  ["Monitoring and Controlling", "Monitoring and controlling", B.pi10, "How feedback, data and checkpoints tracked schedule, quality and budget and resolved problems"],
+  ["Closing the Project", "Evaluation and lessons learned", B.w20, "Success judged on key metrics, insightful lessons learned and forward-looking recommendations"],
+  layout(B.pi10),
+]);
+
+// Pitch-deck events have no written form: the deck is judged inside the presentation. We score the deck against the content
+// rows plus the three technique rows a deck shows; Delivery and Overall Impression (10 points) are only judged live.
+const DECK = "Presentation Content", TECH = "Presentation Technique (from the deck)";
+const deckTech = (persuasion: [string, string]): W[] => [
+  [TECH, "Organization", B.t5, "Logical sequence that is easy to follow"],
+  [TECH, persuasion[0], B.t5, persuasion[1]],
+  [TECH, "Presentation Design", B.t5, "Visuals and themes are appropriate, professional and add value"],
+];
+const ESB_DECK = written("d-esb", "Pitch deck review · Start-Up Business Plan (2026–27)", [
+  [DECK, "Business Concept & Solution", B.c15, "The concept, how it works and how its features meet a defined need, with evidence it can succeed"],
+  [DECK, "Problem & Business Opportunity", B.c15, "The problem, why it matters and what causes it: size, urgency, market relevance"],
+  [DECK, "Customer Segments & Channels", B.c15, "Target customers, their needs and behaviors, and how the business reaches and serves them"],
+  [DECK, "Unique Value Proposition & Competitive Advantage", B.c15, "What makes it different, with comparisons to existing options, and why it is hard to copy"],
+  [DECK, "Financial Plan & Request", B.c15, "Revenue, pricing, expenses, key metrics and a clear financial request backed by evidence"],
+  ...deckTech(["Persuasion", "A persuasive case that the plan is worth pursuing"]),
+]);
+const EIP_DECK = written("d-eip", "Pitch deck review · Innovation Plan (2026–27)", [
+  [DECK, "Overview", B.c15, "The idea, its customers and the problem it solves, and why it is worth pursuing"],
+  [DECK, "Business Opportunity", B.c15, "The underlying need: root causes, scope, urgency and relevance, with evidence"],
+  [DECK, "Customer Segments", B.c15, "Defends the chosen segments with a clear understanding of their needs, behaviors and challenges"],
+  [DECK, "Unique Value Proposition", B.c15, "What makes the solution different and why it matters, compared to existing options"],
+  [DECK, "Solution", B.c15, "Key features, how they solve the problem and support the value proposition, and feasibility"],
+  ...deckTech(["Persuasion", "A persuasive case that the innovation plan is worth pursuing"]),
+]);
+const IMC_DECK = written("d-imc", "Pitch deck review · Integrated Marketing Campaign (2026–27)", [
+  [DECK, "Knowledge of Industry/Brand", B.t5, "The industry, the organization and the product or service's position in it"],
+  [DECK, "Business Opportunity", B.t5, "The opportunity, goals and objectives, and the target market"],
+  [DECK, "Research, Insights and Connection to Campaign", B.c15, "Research method, results and how the findings shape the campaign"],
+  [DECK, "Campaign Strategy", B.c15, "Feasible, creative ideas based on data and analysis that address the opportunity"],
+  [DECK, "Campaign Activities and Schedule", B.c15, "Actionable activities with realistic timelines, aligned to target markets and channels"],
+  [DECK, "Proposed Budget", B.pi10, "Justified campaign costs, key expenses and financial viability"],
+  [DECK, "Impact and Measurement", B.pi10, "Relevant metrics to measure the campaign's results"],
+  ...deckTech(["Effectiveness", "Persuades, informs or inspires with a clear message"]),
+]);
+
+export type WrittenEvent = { code: string; name: string; group: string; form: Form; deck?: boolean };
+const BOR = "Operations Research (20-page written)", PLANS = "Business Plans", PM = "Project Management (20-page written)", IMC = "Integrated Marketing Campaign (pitch deck)";
+export const WRITTEN_EVENTS: WrittenEvent[] = [
+  { code: "BOR", name: "Business Services Operations Research", group: BOR, form: BOR_FORM },
+  { code: "BMOR", name: "Buying and Merchandising Operations Research", group: BOR, form: BOR_FORM },
+  { code: "FOR", name: "Finance Operations Research", group: BOR, form: BOR_FORM },
+  { code: "HTOR", name: "Hospitality and Tourism Operations Research", group: BOR, form: BOR_FORM },
+  { code: "SEOR", name: "Sports and Entertainment Marketing Operations Research", group: BOR, form: BOR_FORM },
+  { code: "EIB", name: "Independent Business Plan", group: PLANS, form: plan("w-eib", "Written Entry Evaluation Form · Independent Business Plan (2026–27)", false) },
+  { code: "IBP", name: "International Business Plan", group: PLANS, form: plan("w-ibp", "Written Entry Evaluation Form · International Business Plan (2026–27)", true) },
+  { code: "EBG", name: "Business Growth Plan", group: PLANS, form: EBG_FORM },
+  { code: "EFB", name: "Franchise Business Plan", group: PLANS, form: EFB_FORM },
+  { code: "ESB", name: "Start-Up Business Plan (pitch deck)", group: PLANS, form: ESB_DECK, deck: true },
+  { code: "EIP", name: "Innovation Plan (pitch deck)", group: PLANS, form: EIP_DECK, deck: true },
+  { code: "PMBS", name: "Business Solutions Project", group: PM, form: PM_FORM },
+  { code: "PMCD", name: "Career Development Project", group: PM, form: PM_FORM },
+  { code: "PMCA", name: "Community Awareness Project", group: PM, form: PM_FORM },
+  { code: "PMCG", name: "Community Giving Project", group: PM, form: PM_FORM },
+  { code: "PMFL", name: "Financial Literacy Project", group: PM, form: PM_FORM },
+  { code: "PMSP", name: "Sales Project", group: PM, form: PM_FORM },
+  { code: "IMCE", name: "Integrated Marketing Campaign: Event", group: IMC, form: IMC_DECK, deck: true },
+  { code: "IMCP", name: "Integrated Marketing Campaign: Product", group: IMC, form: IMC_DECK, deck: true },
+  { code: "IMCS", name: "Integrated Marketing Campaign: Service", group: IMC, form: IMC_DECK, deck: true },
+];
+export const writtenByCode = (code: string) => WRITTEN_EVENTS.find((e) => e.code === code);
+
+/** Self-check: `npx tsx lib/forms.ts` — every DECA form must total 100 (pitch-deck reviews 90: delivery rows are live-only). */
 if (typeof window === "undefined" && typeof process !== "undefined" && process.argv[1]?.endsWith("forms.ts")) {
   const all = [
     roleplayForm("principles", ["a", "b", "c", "d"]),
@@ -136,6 +277,9 @@ if (typeof window === "undefined" && typeof process !== "undefined" && process.a
     PLAN_FORM, SELLING_FORM, SHARK_FORM, COLD_FORM, DRILL_FORM,
   ];
   for (const f of all) console.assert(formMax(f) === 100, f.id, formMax(f));
+  for (const e of WRITTEN_EVENTS) console.assert(formMax(e.form) === (e.deck ? 90 : 100), e.code, formMax(e.form));
+  // Rows are matched to the model's answer by their first 14 characters, so those must be unique within a form.
+  for (const e of WRITTEN_EVENTS) console.assert(new Set(e.form.rows.map((r) => r.name.toLowerCase().slice(0, 14))).size === e.form.rows.length, e.code, "row prefixes");
   console.assert(levelOf(B.pi12, 9) === "Proficient" && levelOf(B.sol8, 8) === "Exemplary", "levels");
   console.log("forms self-check ok");
 }

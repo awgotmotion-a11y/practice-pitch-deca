@@ -31,6 +31,7 @@ export function Report({ trial, audio, onAgain }: { trial: Trial; audio?: Blob |
   const url = useMemo(() => (audio && audio.size ? URL.createObjectURL(audio) : null), [audio]);
 
   const groups = r ? [...new Set(r.rows.map((x) => x.group))] : [];
+  const doc = trial.mode === "written";
   return (
     <article className="space-y-12">
       <header className="grid gap-6 border-b border-line pb-8 sm:grid-cols-[1fr_auto] sm:items-end">
@@ -80,10 +81,10 @@ export function Report({ trial, audio, onAgain }: { trial: Trial; audio?: Blob |
 
       {r && r.fixes.length > 0 && (
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold">Next time, say it like this</h2>
+          <h2 className="text-2xl font-semibold">{doc ? "Revise it like this" : "Next time, say it like this"}</h2>
           {r.fixes.map((f, i) => (
             <div key={i} className="space-y-2 rounded-xl border border-line bg-card p-4 sm:p-5">
-              <p><span className="label !mb-0 inline text-amber">{f.said.startsWith("(") ? "You never said this" : "You said"}</span>{!f.said.startsWith("(") && <span className="ml-2 text-muted">&ldquo;{f.said}&rdquo;</span>}</p>
+              <p><span className="label !mb-0 inline text-amber">{f.said.startsWith("(") ? (doc ? "Missing from your entry" : "You never said this") : (doc ? "Your entry says" : "You said")}</span>{!f.said.startsWith("(") && <span className="ml-2 text-muted">&ldquo;{f.said}&rdquo;</span>}</p>
               <p><span className="label !mb-0 inline text-accent">Try</span><span className="ml-2">&ldquo;{f.try}&rdquo;</span></p>
               <p className="text-sm text-muted">{f.why}</p>
             </div>
@@ -93,10 +94,17 @@ export function Report({ trial, audio, onAgain }: { trial: Trial; audio?: Blob |
 
       {r?.drill && (
         <section className="rounded-xl border border-accent p-5">
-          <h2 className="mb-2 text-xl font-semibold">Drill for next time</h2>
+          <h2 className="mb-2 text-xl font-semibold">{doc ? "Fix this first" : "Drill for next time"}</h2>
           <p className="text-[#c4d4e6]">{r.drill}</p>
         </section>
       )}
+
+      {r?.questions?.length ? (
+        <section className="space-y-3">
+          <h2 className="text-2xl font-semibold">Questions a judge will likely ask</h2>
+          <ol className="list-decimal space-y-2 pl-5 text-[#c4d4e6]">{r.questions.map((q, i) => <li key={i}>{q}</li>)}</ol>
+        </section>
+      ) : null}
 
       {trial.scenario?.questions?.length ? (
         <section className="space-y-3">
@@ -105,7 +113,7 @@ export function Report({ trial, audio, onAgain }: { trial: Trial; audio?: Blob |
         </section>
       ) : null}
 
-      <section className="space-y-4">
+      {trial.metrics && <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Delivery</h2>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           {tiles(trial.metrics).map((t) => (
@@ -116,14 +124,14 @@ export function Report({ trial, audio, onAgain }: { trial: Trial; audio?: Blob |
             </div>
           ))}
         </div>
-      </section>
+      </section>}
 
-      <section className="space-y-3">
+      {!doc && <section className="space-y-3">
         <h2 className="text-2xl font-semibold">Recording</h2>
         {url ? <audio controls src={url} className="w-full" /> : <p className="text-muted">Recordings are not saved. Only this session&apos;s recording is playable, and only until you leave this page.</p>}
-      </section>
+      </section>}
 
-      <section>
+      {!doc && <section>
         <details className="rounded-xl border border-line p-4">
           <summary className="min-h-11 cursor-pointer py-2 font-semibold">Full transcript</summary>
           <div className="mt-3 space-y-3">
@@ -135,10 +143,10 @@ export function Report({ trial, audio, onAgain }: { trial: Trial; audio?: Blob |
             ))}
           </div>
         </details>
-      </section>
+      </section>}
 
       <div className="flex flex-wrap gap-3">
-        {onAgain && <button className="btn-primary" onClick={onAgain}>Practice again</button>}
+        {onAgain && <button className="btn-primary" onClick={onAgain}>{doc ? "Grade another draft" : "Practice again"}</button>}
         <Link className="btn" href="/history">All trials</Link>
       </div>
     </article>

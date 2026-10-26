@@ -11,6 +11,7 @@ const NAV = [
   ["/vocab", "Vocab"],
   ["/roleplay", "Role-play"],
   ["/room", "Pitch Room"],
+  ["/written", "Writtens"],
   ["/history", "History"],
 ] as const;
 

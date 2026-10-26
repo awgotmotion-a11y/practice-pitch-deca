@@ -13,12 +13,12 @@ export type VocabState = Record<string, { box: number; due: number }>;
 export type ReportRow = { name: string; group: string; max: number; score: number; level: string; why: string; quote: string };
 export type ReportData = {
   form: string; rows: ReportRow[]; total: number; max: number; outcome: string; verdict: string; drill: string;
-  strengths: string[]; fixes: { said: string; try: string; why: string }[];
+  strengths: string[]; fixes: { said: string; try: string; why: string }[]; questions?: string[];
 };
-/** One scored practice session, saved in this browser (last 50). Audio is never saved. */
+/** One scored practice session or written-entry review, saved in this browser (last 50). Audio and documents are never saved. */
 export type Trial = {
-  id: string; date: number; mode: Mode; event?: string; level?: Level; title: string; difficulty: Difficulty;
-  total?: number; max?: number; outcome?: string; report?: ReportData; transcript: Line[]; metrics: Metrics;
+  id: string; date: number; mode: Mode | "written"; event?: string; level?: Level; title: string; difficulty?: Difficulty;
+  total?: number; max?: number; outcome?: string; report?: ReportData; transcript: Line[]; metrics?: Metrics;
   scenario?: Scenario; judge?: Judge; prospect?: Prospect; durationSec: number;
 };
 

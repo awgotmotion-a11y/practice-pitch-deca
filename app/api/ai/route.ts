@@ -1,9 +1,9 @@
 import { env } from "cloudflare:workers";
 import { z } from "zod";
 import { eventByCode, isRoleplay, SELLING_BRIEFS, type Level } from "@/lib/deca";
-import { COLD_FORM, DRILL_FORM, PLAN_FORM, SELLING_FORM, SHARK_FORM, levelOf, maxOf, roleplayForm, type Form } from "@/lib/forms";
+import { COLD_FORM, DRILL_FORM, PLAN_FORM, SELLING_FORM, SHARK_FORM, levelOf, maxOf, roleplayForm, writtenByCode, type Form } from "@/lib/forms";
 import {
-  clip, persona, pickArea, realPis, scenarioPrompt, scorePrompt, SCENARIO_SCHEMA, SCORE_SCHEMA,
+  clip, persona, pickArea, realPis, scenarioPrompt, scorePrompt, writtenPrompt, SCENARIO_SCHEMA, SCORE_SCHEMA, WRITTEN_SCHEMA,
   type Judge, type Mode, type Prospect, type Scenario,
 } from "@/lib/judge";
 
@@ -42,6 +42,38 @@ async function llm(messages: Msg[], o: { effort: "low" | "medium" | "high"; max:
 
 const json = <T,>(text: string): T => JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1));
 
+type Raw = { rows: { name: string; score: number; why: string; quote: string }[]; outcome: string; verdict: string; strengths: string[]; fixes: { said: string; try: string; why: string }[]; drill: string; questions?: string[] };
+async function grade(messages: Msg[], schema: object) {
+  try {
+    return json<Raw>(await llm(messages, { effort: "medium", max: 8000, schema }));
+  } catch {
+    return json<Raw>(await llm(messages, { effort: "low", max: 8000, schema })); // one retry on a malformed reply
+  }
+}
+// Trust the model for judgement, not arithmetic: match rows to the form, clamp to each row's max, label and total here.
+function report(form: Form, fb: Raw) {
+  const rows = form.rows.map((r, i) => {
+    const key = r.name.toLowerCase().slice(0, 14);
+    const got = fb.rows.find((x) => x.name.toLowerCase().startsWith(key)) ?? fb.rows[i] ?? { score: 0, why: "", quote: "" };
+    const max = maxOf(r.bands);
+    const score = Math.max(0, Math.min(max, Math.round(Number(got.score) || 0)));
+    return { name: r.name, group: r.group, max, score, level: levelOf(r.bands, score), why: clip(got.why, 500), quote: clip(got.quote, 300) };
+  });
+  return {
+    form: form.title, rows, total: rows.reduce((n, r) => n + r.score, 0), max: rows.reduce((n, r) => n + r.max, 0),
+    outcome: clip(fb.outcome, 60), verdict: clip(fb.verdict, 600), drill: clip(fb.drill, 600),
+    strengths: fb.strengths.slice(0, 3).map((s) => clip(s, 400)),
+    fixes: fb.fixes.slice(0, 3).map((f) => ({ said: clip(f.said, 300), try: clip(f.try, 400), why: clip(f.why, 300) })),
+  };
+}
+
+// A 20-page entry is ~60k characters; past this we grade the start and say so.
+const ENTRY_MAX = 70000;
+async function toText(file: File) {
+  const r = await env.AI.toMarkdown({ name: file.name, blob: file });
+  return r.format === "error" ? "" : (r.data ?? "").trim();
+}
+
 async function speak(text: string) {
   try {
     const r = (await env.AI.run(TTS, { prompt: text, lang: "en" })) as { audio?: string };
@@ -74,6 +106,8 @@ const Body = z.discriminatedUnion("kind", [
     pitch: z.string().max(600).default(""), judge: Str, prospect: Str, metrics: z.record(z.string(), z.unknown()).optional(),
     transcript: z.array(z.object({ who: z.enum(["you", "judge"]), text: z.string().max(8000) })).max(120),
   }),
+  // Sent as multipart form data so a file can come along; text is used when pasted.
+  z.object({ kind: z.literal("written"), event: z.string(), text: z.string().max(200000).default("") }),
 ]);
 
 const toJudge = (j?: Record<string, unknown>): Judge | undefined =>
@@ -99,7 +133,9 @@ export async function GET() {
 export async function POST(req: Request) {
   const code = env.BETA_ACCESS_CODE;
   if (code && req.headers.get("x-access-code") !== code) return Response.json({ error: "Access code required" }, { status: 401 });
-  const parsed = Body.safeParse(await req.json().catch(() => null));
+  const fd = req.headers.get("content-type")?.startsWith("multipart/form-data") ? await req.formData().catch(() => null) : null;
+  const file = fd?.get("file");
+  const parsed = Body.safeParse(fd ? { kind: "written", event: fd.get("event"), text: fd.get("text") ?? "" } : await req.json().catch(() => null));
   if (!parsed.success) return Response.json({ error: "Bad request" }, { status: 400 });
   const b = parsed.data;
 
@@ -140,6 +176,26 @@ export async function POST(req: Request) {
       return Response.json({ reply, end, audio: b.voice ? await speak(clip(reply, 600)) : null });
     }
 
+    if (b.kind === "written") {
+      const we = writtenByCode(b.event);
+      if (!we) return Response.json({ error: "Pick a written or pitch-deck event." }, { status: 400 });
+      let text = b.text.trim();
+      if (!text && file && typeof file !== "string") {
+        // PDF and Word conversion is free; images would spend neurons, so they are refused.
+        if (!/\.(pdf|docx)$/i.test(file.name) || file.size > 15e6) return Response.json({ error: "Upload a PDF or Word (.docx) file under 15 MB." }, { status: 400 });
+        text = await toText(file);
+      }
+      if (text.length < 300)
+        return Response.json({ error: "Couldn't read enough text from that file. If it's scanned or made of images, export it as a PDF from Google Docs, Slides or Word, or paste the text instead." }, { status: 400 });
+      const messages: Msg[] = [
+        { role: "system", content: writtenPrompt({ form: we.form, event: `${we.name} (${we.code})`, deck: !!we.deck }) },
+        { role: "user", content: `Length: about ${text.split(/\s+/).length} words.\n<entry>\n${text.slice(0, ENTRY_MAX)}\n</entry>` },
+      ];
+      await guard(JSON.stringify(messages).length / 4 * 0.0318 + 500);
+      const fb = await grade(messages, WRITTEN_SCHEMA);
+      return Response.json({ ...report(we.form, fb), questions: (fb.questions ?? []).slice(0, 3).map((q) => clip(q, 300)), cut: text.length > ENTRY_MAX });
+    }
+
     // score
     const form = formFor(b.mode, b.event, b.scenario);
     const ev = b.event ? eventByCode(b.event) : undefined;
@@ -154,28 +210,7 @@ export async function POST(req: Request) {
       { role: "user", content: `Transcript:\n${transcript}` },
     ];
     await guard(JSON.stringify(messages).length / 4 * 0.0318 + 400);
-    type Raw = { rows: { name: string; score: number; why: string; quote: string }[]; outcome: string; verdict: string; strengths: string[]; fixes: { said: string; try: string; why: string }[]; drill: string };
-    let fb: Raw;
-    try {
-      fb = json<Raw>(await llm(messages, { effort: "medium", max: 8000, schema: SCORE_SCHEMA }));
-    } catch {
-      fb = json<Raw>(await llm(messages, { effort: "low", max: 8000, schema: SCORE_SCHEMA })); // one retry on a malformed reply
-    }
-    // Trust the model for judgement, not arithmetic: match rows to the form, clamp to each row's max, label and total here.
-    const rows = form.rows.map((r, i) => {
-      const key = r.name.toLowerCase().slice(0, 14);
-      const got = fb.rows.find((x) => x.name.toLowerCase().startsWith(key)) ?? fb.rows[i] ?? { score: 0, why: "", quote: "" };
-      const max = maxOf(r.bands);
-      const score = Math.max(0, Math.min(max, Math.round(Number(got.score) || 0)));
-      return { name: r.name, group: r.group, max, score, level: levelOf(r.bands, score), why: clip(got.why, 500), quote: clip(got.quote, 300) };
-    });
-    const total = rows.reduce((n, r) => n + r.score, 0);
-    return Response.json({
-      form: form.title, rows, total, max: rows.reduce((n, r) => n + r.max, 0),
-      outcome: clip(fb.outcome, 60), verdict: clip(fb.verdict, 600), drill: clip(fb.drill, 600),
-      strengths: fb.strengths.slice(0, 3).map((s) => clip(s, 400)),
-      fixes: fb.fixes.slice(0, 3).map((f) => ({ said: clip(f.said, 300), try: clip(f.try, 400), why: clip(f.why, 300) })),
-    });
+    return Response.json(report(form, await grade(messages, SCORE_SCHEMA)));
   } catch (err) {
     const msg = String((err as Error)?.message ?? err);
     if (err instanceof Budget || /4006|allocation|neurons/i.test(msg)) return Response.json({ error: "budget" }, { status: 429 });

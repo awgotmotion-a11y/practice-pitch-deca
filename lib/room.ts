@@ -37,8 +37,9 @@ export const speechSupported = () => typeof window !== "undefined" && !!recogniz
 export class ApiError extends Error {
   constructor(msg: string, public code: string, public status: number) { super(msg); }
 }
-export async function api<T>(body: object, accessCode: string): Promise<T> {
-  const r = await fetch("/api/ai", { method: "POST", headers: { "content-type": "application/json", "x-access-code": accessCode }, body: JSON.stringify(body) });
+export async function api<T>(body: object | FormData, accessCode: string): Promise<T> {
+  const form = body instanceof FormData; // the browser sets the multipart content type itself
+  const r = await fetch("/api/ai", { method: "POST", headers: form ? { "x-access-code": accessCode } : { "content-type": "application/json", "x-access-code": accessCode }, body: form ? body : JSON.stringify(body) });
   const data = await r.json().catch(() => ({}));
   if (!r.ok) throw new ApiError(data.error === "budget" ? "Today's free AI budget is used up. It resets at 8 PM Eastern." : data.error ?? `Request failed (${r.status})`, data.error ?? "", r.status);
   return data as T;

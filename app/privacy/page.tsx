@@ -29,6 +29,12 @@ export default function Privacy() {
         <li>PitchPrep&apos;s server doesn&apos;t save your transcripts. Your results are saved only in your browser.</li>
       </ul>
 
+      <h2 className="pt-4 text-xl font-semibold text-foreground">Written entries and pitch decks</h2>
+      <p>
+        When you grade a written entry or deck, the file (or pasted text) is sent to Cloudflare Workers AI, which pulls out the text
+        and scores it. The file and its text are not stored on our server. The score is saved only in your browser.
+      </p>
+
       <h2 className="pt-4 text-xl font-semibold text-foreground">Please don&apos;t share personal details</h2>
       <p>
         Role-plays are practice. Don&apos;t include your full name, school, address, phone number or other personal information in
