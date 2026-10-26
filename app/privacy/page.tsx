@@ -8,11 +8,12 @@ export default function Privacy() {
       <h1 className="text-4xl font-bold text-foreground">Privacy</h1>
       <p className="text-muted">Plain-language summary of what happens to your information when you use PitchPrep.</p>
 
-      <h2 className="pt-4 text-xl font-semibold text-foreground">No accounts, no tracking</h2>
+      <h2 className="pt-4 text-xl font-semibold text-foreground">Your account</h2>
       <p>
-        PitchPrep has no sign-up, ads or analytics. Your progress (exam answers, flashcard progress, role-play results) is saved
-        only in this browser on this device. Clearing your browser&apos;s site data deletes it, and it does not follow you to
-        other devices.
+        Only emails your chapter admin added can sign in. Your account holds your email, first name and a scrambled (hashed)
+        version of your password that nobody can read, including the admin. Your progress (exam answers, flashcards, role-play and written results) is saved to your
+        account on PitchPrep&apos;s server on Cloudflare, so it follows you to any device. Only you can see it. There are no ads
+        or analytics.
       </p>
 
       <h2 className="pt-4 text-xl font-semibold text-foreground">Role-plays</h2>
@@ -24,15 +25,15 @@ export default function Privacy() {
         </li>
         <li>
           <b>AI judge:</b> the scenario and the text of your answers are sent to an AI model on Cloudflare Workers AI to write the
-          judge&apos;s questions, speak them aloud and score your performance. We do not store them on our server.
+          judge&apos;s questions, speak them aloud and score your performance. The AI service doesn&apos;t keep them.
           </li>
-        <li>PitchPrep&apos;s server doesn&apos;t save your transcripts. Your results are saved only in your browser.</li>
+        <li>Your scored results, including the transcript, are saved to your account so you can review them. Audio is never saved.</li>
       </ul>
 
       <h2 className="pt-4 text-xl font-semibold text-foreground">Written entries and pitch decks</h2>
       <p>
         When you grade a written entry or deck, the file (or pasted text) is sent to Cloudflare Workers AI, which pulls out the text
-        and scores it. The file and its text are not stored on our server. The score is saved only in your browser.
+        and scores it. The file and its text are not stored. The score and feedback are saved to your account.
       </p>
 
       <h2 className="pt-4 text-xl font-semibold text-foreground">Please don&apos;t share personal details</h2>

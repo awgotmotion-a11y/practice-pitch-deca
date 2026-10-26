@@ -15,6 +15,7 @@ export default defineConfig({
       ASSETS: bindings.assets(),
       AI: bindings.ai({ dev: { remote: true } }),
       USAGE: bindings.kv({ id: "da2775cc524447b08fb3808b2504afe3" }),
+      DB: bindings.d1({ id: "ba3261f6-fa1c-464d-9a46-25c6791b0807", name: "pitchprep", dev: { remote: true } }),
     },
   }),
 });

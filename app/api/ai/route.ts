@@ -1,4 +1,5 @@
 import { env } from "cloudflare:workers";
+import { unauthorized, userFrom } from "@/lib/auth";
 import { z } from "zod";
 import { eventByCode, isRoleplay, SELLING_BRIEFS, type Level } from "@/lib/deca";
 import { COLD_FORM, DRILL_FORM, PLAN_FORM, SELLING_FORM, SHARK_FORM, levelOf, maxOf, roleplayForm, writtenByCode, type Form } from "@/lib/forms";
@@ -131,8 +132,7 @@ export async function GET() {
 }
 
 export async function POST(req: Request) {
-  const code = env.BETA_ACCESS_CODE;
-  if (code && req.headers.get("x-access-code") !== code) return Response.json({ error: "Access code required" }, { status: 401 });
+  if (!(await userFrom(req))) return unauthorized(); // members only: keeps the free AI budget for the chapter
   const fd = req.headers.get("content-type")?.startsWith("multipart/form-data") ? await req.formData().catch(() => null) : null;
   const file = fd?.get("file");
   const parsed = Body.safeParse(fd ? { kind: "written", event: fd.get("event"), text: fd.get("text") ?? "" } : await req.json().catch(() => null));

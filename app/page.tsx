@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { EVENTS, LEVELS, ITEMS, areasFor, eventByCode, isRoleplay, timing, type Level } from "@/lib/deca";
 import { PI_COUNT } from "@/lib/forms";
-import { useStored, DEFAULT_PROFILE, accuracyByArea, useHydrated, type Attempt, type Profile, type Trial } from "@/lib/store";
+import { useStored, DEFAULT_PROFILE, accuracyByArea, useHydrated, useMe, type Attempt, type Profile, type Trial } from "@/lib/store";
 import { Bar } from "@/components/Bar";
 import { EventSelect } from "@/components/EventSelect";
 import { OrbStage } from "@/components/Orb";
@@ -27,6 +27,7 @@ export default function Dashboard() {
   const [attempts] = useStored<Attempt[]>("attempts", []);
   const [trials] = useStored<Trial[]>("trials", []);
   const hydrated = useHydrated();
+  const me = useMe();
   const event = eventByCode(profile.event);
   const areas = areasFor(event.cluster);
   const acc = accuracyByArea(attempts).filter((a) => areas.includes(a.ia));
@@ -43,6 +44,7 @@ export default function Dashboard() {
     <div className="flex flex-col gap-16 sm:gap-20">
       <section className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
         <div className="flex flex-col gap-6">
+          {me && <p className="text-2xl font-semibold text-accent">Hey {me.name}, {trials.length || attempts.length ? "welcome back." : "welcome to your account."}</p>}
           <h1 className="text-[clamp(40px,6.4vw,92px)] font-bold leading-[0.95] tracking-tight">
             Walk in having<br />already competed.
           </h1>

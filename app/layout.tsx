@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Chakra_Petch, JetBrains_Mono } from "next/font/google";
+import { Gate } from "@/components/Gate";
 import { Header } from "@/components/Header";
 import "./globals.css";
 
@@ -18,7 +19,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-full flex-col font-sans">
         <div className="mx-auto flex w-full max-w-[1360px] flex-1 flex-col px-4 sm:px-8">
           <Header />
-          <main className="w-full flex-1 py-10 sm:py-14">{children}</main>
+          <main className="w-full flex-1 py-10 sm:py-14"><Gate>{children}</Gate></main>
           <footer className="border-t border-line py-8 text-[13px] text-muted">
             Original practice content. Not affiliated with or endorsed by DECA Inc. DECA is a registered trademark of DECA Inc. ·{" "}
             <Link href="/privacy" className="underline">Privacy</Link>

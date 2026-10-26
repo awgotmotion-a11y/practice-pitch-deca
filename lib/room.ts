@@ -12,7 +12,7 @@ export type Metrics = {
 };
 export type RoomConfig = {
   mode: Mode; difficulty: "friendly" | "realistic" | "tough"; event?: string; scenario?: Scenario; plan?: string;
-  judge?: Judge; prospect?: Prospect; accessCode: string;
+  judge?: Judge; prospect?: Prospect;
   limitSec: number; present: boolean; presentMaxSec?: number; interruptAfterSec?: number;
   opener?: string; firstMessage?: string; rate?: number;
 };
@@ -37,11 +37,17 @@ export const speechSupported = () => typeof window !== "undefined" && !!recogniz
 export class ApiError extends Error {
   constructor(msg: string, public code: string, public status: number) { super(msg); }
 }
-export async function api<T>(body: object | FormData, accessCode: string): Promise<T> {
+export async function api<T>(body: object | FormData): Promise<T> {
   const form = body instanceof FormData; // the browser sets the multipart content type itself
-  const r = await fetch("/api/ai", { method: "POST", headers: form ? { "x-access-code": accessCode } : { "content-type": "application/json", "x-access-code": accessCode }, body: form ? body : JSON.stringify(body) });
+  const r = await fetch("/api/ai", { method: "POST", headers: form ? {} : { "content-type": "application/json" }, body: form ? body : JSON.stringify(body) });
   const data = await r.json().catch(() => ({}));
-  if (!r.ok) throw new ApiError(data.error === "budget" ? "Today's free AI budget is used up. It resets at 8 PM Eastern." : data.error ?? `Request failed (${r.status})`, data.error ?? "", r.status);
+  if (!r.ok)
+    throw new ApiError(
+      data.error === "budget" ? "Today's free AI budget is used up. It resets at 8 PM Eastern."
+      : r.status === 401 ? "You've been signed out. Refresh the page and sign in again."
+      : data.error ?? `Request failed (${r.status})`,
+      data.error ?? "", r.status,
+    );
   return data as T;
 }
 
@@ -129,7 +135,7 @@ export class Room {
     const opener = this.cfg.opener ?? "Hello. Go ahead whenever you're ready.";
     this.status("…");
     let audio: string | null = null;
-    try { audio = (await api<{ audio: string | null }>({ kind: "speak", text: opener }, this.cfg.accessCode)).audio; } catch (e) { if ((e as ApiError).code === "budget") return this.finish("budget"); }
+    try { audio = (await api<{ audio: string | null }>({ kind: "speak", text: opener })).audio; } catch (e) { if ((e as ApiError).code === "budget") return this.finish("budget"); }
     this.history.push({ role: "assistant", content: opener });
     await this.judgeSay(opener, audio);
     if (this.cfg.present) {
@@ -230,7 +236,7 @@ export class Room {
       const r = await api<{ reply: string; end: boolean; audio: string | null }>({
         kind: "turn", mode: c.mode, difficulty: c.difficulty, event: c.event, scenario: c.scenario, plan: c.plan ?? "",
         judge: c.judge, prospect: c.prospect, history: this.history, voice: !this.view.muted,
-      }, c.accessCode);
+      });
       this.history.push({ role: "assistant", content: r.reply });
       this.busy = false; this.set({ thinking: false });
       await this.judgeSay(r.reply, r.audio);

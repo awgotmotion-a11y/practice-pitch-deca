@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { LEVELS } from "@/lib/deca";
-import { DEFAULT_PROFILE, useHydrated, useStored, type Profile } from "@/lib/store";
+import { DEFAULT_PROFILE, useHydrated, useMe, useStored, type Profile } from "@/lib/store";
 
 const NAV = [
   ["/", "Dashboard"],
@@ -19,6 +19,7 @@ export function Header() {
   const path = usePathname();
   const [profile] = useStored<Profile>("profile", DEFAULT_PROFILE);
   const hydrated = useHydrated();
+  const me = useMe();
   const [pct, setPct] = useState<number | null>(null);
   useEffect(() => {
     fetch("/api/ai", { cache: "no-store" })
@@ -37,14 +38,24 @@ export function Header() {
         </svg>
         <span className="text-[15px] font-bold tracking-[0.24em]">PITCHPREP</span>
       </Link>
+      {me && <>
       <div className="mono flex items-center gap-3 text-xs text-muted sm:order-3">
         <Link href="/" className="inline-flex min-h-11 items-center rounded-md border border-amber px-3 text-amber no-underline hover:text-amber" aria-label="Your event, change on dashboard">
           {hydrated ? `${profile.event} · ${level}` : "EVENT"}
         </Link>
         <span>AI TODAY <b className="text-foreground">{pct === null ? "--" : `${pct}%`}</b></span>
+        <span className="text-foreground">HI, {me.name.toUpperCase()}</span>
+        <button
+          className="inline-flex min-h-11 items-center text-muted underline hover:text-foreground"
+          // A full reload, not a client route change, so the last member's data is wiped from memory.
+          // eslint-disable-next-line @next/next/no-location-assign-relative-destination
+          onClick={() => fetch("/api/auth/logout", { method: "POST" }).finally(() => location.assign("/"))}
+        >
+          Sign out
+        </button>
       </div>
       <nav aria-label="Main" className="flex w-full flex-wrap gap-1 rounded-3xl border border-line p-1 sm:order-2 sm:w-auto sm:rounded-full">
-        {NAV.map(([href, label]) => {
+        {[...NAV, ...(me.admin ? ([["/members", "Members"]] as const) : [])].map(([href, label]) => {
           const on = href === "/" ? path === "/" : path.startsWith(href);
           return (
             <Link
@@ -58,6 +69,7 @@ export function Header() {
           );
         })}
       </nav>
+      </>}
     </header>
   );
 }

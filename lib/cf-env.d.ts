@@ -1,5 +1,13 @@
 // Just the Cloudflare bindings the API route uses (see cloudflare.config.ts).
 // ponytail: hand-typed to keep workerd's global types away from the browser code; add ".cloudflare/types" to tsconfig if more bindings arrive.
+type D1Stmt = {
+  bind(...values: unknown[]): D1Stmt;
+  first<T = Record<string, unknown>>(): Promise<T | null>;
+  all<T = Record<string, unknown>>(): Promise<{ results: T[] }>;
+  run(): Promise<unknown>;
+};
+type D1 = { prepare(sql: string): D1Stmt; batch(stmts: D1Stmt[]): Promise<unknown[]> };
+
 declare module "cloudflare:workers" {
   export const env: {
     AI: {
@@ -10,6 +18,6 @@ declare module "cloudflare:workers" {
       get(key: string): Promise<string | null>;
       put(key: string, value: string, opts?: { expirationTtl?: number }): Promise<void>;
     };
-    BETA_ACCESS_CODE?: string;
+    DB: D1;
   };
 }

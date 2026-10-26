@@ -7,7 +7,6 @@ import { CATEGORIES, ATTITUDES, JUDGES, makeJudge, makeProspect } from "@/lib/pe
 import type { Difficulty, Judge, Mode, Prospect } from "@/lib/judge";
 import type { RoomConfig, RoomResult } from "@/lib/room";
 import { DEFAULT_PROFILE, useStored, type Profile } from "@/lib/store";
-import { useAccessCode } from "@/components/AccessCode";
 import { Debrief } from "@/components/Debrief";
 import { EventSelect } from "@/components/EventSelect";
 import { LiveRoom } from "@/components/LiveRoom";
@@ -36,7 +35,6 @@ type Run = { cfg: RoomConfig; judgeName: string; judgeRole: string; subtitle?: s
 function Room() {
   const param = useSearchParams().get("mode");
   const mode = MODES.find((m) => m.id === param) ?? null;
-  const [accessCode, setAccessCode] = useAccessCode();
   const [profile] = useStored<Profile>("profile", DEFAULT_PROFILE);
   const [plan, setPlan] = useStored<string>("planNotes", "");
   const [pitch, setPitch] = useStored<string>("pitch", "");
@@ -96,7 +94,7 @@ function Room() {
 
   function go() {
     if (!mode) return;
-    const base = { difficulty: diff, accessCode, plan: plan.trim() };
+    const base = { difficulty: diff, plan: plan.trim() };
     let r: Run;
     if (mode.id === "plan" || mode.id === "drill") {
       const { rate, ...judge } = makeJudge("plan", judgeIdx >= 0 ? judgeIdx : undefined);
@@ -205,10 +203,6 @@ function Room() {
           </details>
         )}
         <p className="border-l-2 border-amber pl-3 text-sm text-soft">{mode.tip}</p>
-        <details>
-          <summary className="min-h-11 cursor-pointer py-2 text-sm text-muted">Access code (only if your advisor gave you one)</summary>
-          <input className="field mt-2" aria-label="Access code" value={accessCode} onChange={(e) => setAccessCode(e.target.value)} autoComplete="off" />
-        </details>
         <button className="btn-primary" disabled={!ready} onClick={go}>Go to the room</button>
       </div>
     </div>

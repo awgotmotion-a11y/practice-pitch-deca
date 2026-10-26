@@ -1,16 +1,14 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { ApiError, api, type RoomResult } from "@/lib/room";
+import { api, type RoomResult } from "@/lib/room";
 import { now, useStored, type ReportData, type Trial } from "@/lib/store";
-import { AccessCodeForm, useAccessCode } from "./AccessCode";
 import { Report } from "./Report";
 
 type Base = Pick<Trial, "mode" | "event" | "level" | "title" | "difficulty" | "scenario" | "judge" | "prospect">;
-type Status = "scoring" | "short" | "error" | "code" | "done";
+type Status = "scoring" | "short" | "error" | "done";
 
 /** Scores a finished session and saves it as a trial. Sessions with under 20 spoken words are neither scored nor saved. */
 export function Debrief({ base, body, result, onAgain }: { base: Base; body: object; result: RoomResult; onAgain: () => void }) {
-  const [accessCode] = useAccessCode();
   const [, setTrials] = useStored<Trial[]>("trials", []);
   const words = result.metrics.words;
   const [status, setStatus] = useState<Status>(words < 20 ? "short" : "scoring");
@@ -23,7 +21,7 @@ export function Debrief({ base, body, result, onAgain }: { base: Base; body: obj
       const report = await api<ReportData>({
         kind: "score", ...body, metrics: result.metrics,
         transcript: result.transcript.map((l) => ({ who: l.who, text: l.text })),
-      }, accessCode);
+      });
       const t: Trial = {
         ...base, id: crypto.randomUUID(), date: now(), total: report.total, max: report.max, outcome: report.outcome, report,
         transcript: result.transcript, metrics: result.metrics, durationSec: result.durationSec,
@@ -31,8 +29,7 @@ export function Debrief({ base, body, result, onAgain }: { base: Base; body: obj
       setTrials((prev) => [t, ...prev].slice(0, 50));
       setTrial(t); setStatus("done");
     } catch (e) {
-      if (e instanceof ApiError && e.status === 401) setStatus("code");
-      else { setMsg((e as Error).message); setStatus("error"); }
+      setMsg((e as Error).message); setStatus("error");
     }
   }
   useEffect(() => {
@@ -43,7 +40,6 @@ export function Debrief({ base, body, result, onAgain }: { base: Base; body: obj
   }, []);
 
   if (status === "done" && trial) return <Report trial={trial} audio={result.audio} onAgain={onAgain} />;
-  if (status === "code") return <AccessCodeForm onSaved={() => { setStatus("scoring"); void run(); }} />;
   return (
     <div className="card mx-auto max-w-xl space-y-4">
       {status === "scoring" && (

@@ -1,16 +1,14 @@
 "use client";
 import { useState } from "react";
 import { formMax, WRITTEN_EVENTS, writtenByCode } from "@/lib/forms";
-import { ApiError, api } from "@/lib/room";
+import { api } from "@/lib/room";
 import { DEFAULT_PROFILE, now, useStored, type Profile, type ReportData, type Trial } from "@/lib/store";
-import { AccessCodeForm, useAccessCode } from "@/components/AccessCode";
 import { Report } from "@/components/Report";
 
-type Status = "idle" | "grading" | "error" | "code";
+type Status = "idle" | "grading" | "error";
 const GROUPS = [...new Set(WRITTEN_EVENTS.map((e) => e.group))];
 
 export default function WrittenPage() {
-  const [accessCode, setAccessCode] = useAccessCode();
   const [profile] = useStored<Profile>("profile", DEFAULT_PROFILE);
   const [picked, setPicked] = useStored<string>("writtenEvent", "");
   const [, setTrials] = useStored<Trial[]>("trials", []);
@@ -33,7 +31,7 @@ export default function WrittenPage() {
     if (pasted) fd.set("text", text.trim());
     else if (file) fd.set("file", file);
     try {
-      const report = await api<ReportData & { cut: boolean }>(fd, accessCode);
+      const report = await api<ReportData & { cut: boolean }>(fd);
       const trial: Trial = {
         id: crypto.randomUUID(), date: now(), mode: "written", event: ev.code, title: `${ev.name}${!pasted && file ? ` · ${file.name}` : ""}`,
         total: report.total, max: report.max, outcome: report.outcome, report, transcript: [], durationSec: 0,
@@ -42,8 +40,7 @@ export default function WrittenPage() {
       setResult({ trial, cut: report.cut });
       setStatus("idle");
     } catch (e) {
-      if (e instanceof ApiError && e.status === 401) setStatus("code");
-      else { setMsg((e as Error).message); setStatus("error"); }
+      setMsg((e as Error).message); setStatus("error");
     }
   }
 
@@ -54,7 +51,6 @@ export default function WrittenPage() {
         <Report trial={result.trial} onAgain={() => { setResult(null); setFile(null); setText(""); }} />
       </div>
     );
-  if (status === "code") return <AccessCodeForm onSaved={() => void grade()} />;
   if (status === "grading")
     return (
       <div className="card mx-auto max-w-xl space-y-4">
@@ -111,10 +107,6 @@ export default function WrittenPage() {
 
         <p className="border-l-2 border-amber pl-3 text-sm text-soft">Leave out names, your school and contact details. The file is read once to grade it and is never stored.</p>
         {status === "error" && <p role="alert" className="text-danger">{msg}</p>}
-        <details>
-          <summary className="min-h-11 cursor-pointer py-2 text-sm text-muted">Access code (only if your advisor gave you one)</summary>
-          <input className="field mt-2" aria-label="Access code" value={accessCode} onChange={(e) => setAccessCode(e.target.value)} autoComplete="off" />
-        </details>
         <button className="btn-primary" disabled={!ready} onClick={() => void grade()}>Grade my {ev.deck ? "deck" : "entry"}</button>
       </div>
     </div>

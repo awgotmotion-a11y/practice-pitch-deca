@@ -3,10 +3,9 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { LEVELS, areasFor, eventByCode, isRoleplay, timing, type Level } from "@/lib/deca";
-import { ApiError, api, type RoomResult } from "@/lib/room";
+import { api, type RoomResult } from "@/lib/room";
 import type { Difficulty, Scenario } from "@/lib/judge";
 import { DEFAULT_PROFILE, accuracyByArea, now, useStored, type Attempt, type Profile } from "@/lib/store";
-import { AccessCodeForm, useAccessCode } from "@/components/AccessCode";
 import { Debrief } from "@/components/Debrief";
 import { EventSelect } from "@/components/EventSelect";
 import { LiveRoom } from "@/components/LiveRoom";
@@ -29,14 +28,12 @@ function Roleplay() {
   const params = useSearchParams();
   const [profile, setProfile] = useStored<Profile>("profile", DEFAULT_PROFILE);
   const [attempts] = useStored<Attempt[]>("attempts", []);
-  const [accessCode, setAccessCode] = useAccessCode();
   const ev = eventByCode(profile.event);
   const t = timing(ev);
   const weak = accuracyByArea(attempts).filter((a) => areasFor(ev.cluster).includes(a.ia) && a.pct < 80).slice(0, 3).map((a) => a.ia);
 
   const [phase, setPhase] = useState<Phase>("setup");
   const [error, setError] = useState("");
-  const [needCode, setNeedCode] = useState(false);
   const [useFocus, setUseFocus] = useState(params.get("focus") === "weak");
   const [voice, setVoice] = useState(true);
   const [scenario, setScenario] = useState<Scenario | null>(null);
@@ -48,14 +45,13 @@ function Roleplay() {
   async function generate() {
     setError(""); setPhase("loading");
     try {
-      const s = await api<Scenario>({ kind: "scenario", event: ev.code, level: profile.level, focus: useFocus ? weak : [] }, accessCode);
+      const s = await api<Scenario>({ kind: "scenario", event: ev.code, level: profile.level, focus: useFocus ? weak : [] });
       setScenario(s); setNotes("");
       prepEnd.current = now() + t.prep * 60_000;
       setLeft(t.prep * 60);
       setPhase("prep");
     } catch (e) {
-      if (e instanceof ApiError && e.status === 401) setNeedCode(true);
-      else setError((e as Error).message);
+      setError((e as Error).message);
       setPhase("setup");
     }
   }
@@ -71,8 +67,6 @@ function Roleplay() {
   }, [phase]);
 
   const again = () => { setResult(null); setScenario(null); setPhase("setup"); };
-
-  if (needCode) return <AccessCodeForm onSaved={() => { setNeedCode(false); void generate(); }} />;
 
   if (phase === "debrief" && result && scenario)
     return (
@@ -134,7 +128,7 @@ function Roleplay() {
       <div className="space-y-8">
         <LiveRoom
           cfg={{
-            mode: "roleplay", difficulty: DIFF[profile.level], event: ev.code, scenario, accessCode, limitSec: t.present * 60, present: true,
+            mode: "roleplay", difficulty: DIFF[profile.level], event: ev.code, scenario, limitSec: t.present * 60, present: true,
             opener: `Hi, I'm ${scenario.judgeName}. Thanks for coming in. I'd like to hear your ideas.`,
           }}
           judgeName={scenario.judgeName}
@@ -185,10 +179,6 @@ function Roleplay() {
           <input type="checkbox" className="size-5 accent-[#3FD8FF]" checked={voice} onChange={(e) => setVoice(e.target.checked)} />
           Judge voice on
         </label>
-        <details>
-          <summary className="min-h-11 cursor-pointer py-2 text-sm text-muted">Access code (only if your advisor gave you one)</summary>
-          <input className="field mt-2" aria-label="Access code" value={accessCode} onChange={(e) => setAccessCode(e.target.value)} autoComplete="off" />
-        </details>
         <button className="btn-primary" disabled={!isRoleplay(ev)} onClick={() => void generate()}>Get my scenario</button>
       </div>
     </div>
