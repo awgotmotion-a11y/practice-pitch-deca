@@ -59,9 +59,9 @@ function Exam() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold">Cluster exams</h1>
+      <h1 className="text-4xl font-bold">Cluster exams</h1>
       <section className="card">
-        <h2 className="font-semibold">Mock exam — {event.cluster}, {levelLabel}</h2>
+        <h2 className="text-2xl font-semibold">Mock exam: {event.cluster}, {levelLabel}</h2>
         <p className="mb-4 mt-1 text-sm text-muted">
           {mockCount} questions drawn to match the official 2026–27 blueprint for this level{mockCount < 100 ? " (the real exam has 100; this area of the bank is still growing)" : ", the same length as the real exam"}.
         </p>
@@ -77,7 +77,7 @@ function Exam() {
       </section>
 
       <section className="card">
-        <h2 className="font-semibold">Topic drill</h2>
+        <h2 className="text-2xl font-semibold">Topic drill</h2>
         <p className="mb-3 mt-1 text-sm text-muted">Pick one or more instructional areas.</p>
         <div className="mb-4 flex flex-wrap gap-2">
           {areas.map((ia) => {
@@ -85,7 +85,7 @@ function Exam() {
             const n = ITEMS.filter((i) => i.ia === ia).length;
             return (
               <button key={ia} disabled={!n} onClick={() => setPicked(on ? picked.filter((p) => p !== ia) : [...picked, ia])}
-                className={`rounded-full border px-3 py-1 text-xs ${on ? "border-accent bg-accent-soft text-accent" : "border-line"} disabled:opacity-40`}>
+                className={`min-h-11 rounded-full border px-4 text-sm ${on ? "border-accent bg-accent-soft text-accent" : "border-line-strong text-soft hover:border-accent"} disabled:opacity-40`}>
                 {ia} <span className="text-muted">({n})</span>
               </button>
             );
@@ -134,12 +134,12 @@ function Runner({ run, setRun, onFinish }: { run: Run; setRun: (r: Run) => void;
         <p className="text-lg font-medium">{item.q}</p>
         {item.c.map((c, k) => {
           const reveal = instant && chosen !== null;
-          const style = reveal && k === item.a ? "border-emerald-500 bg-emerald-500/10"
-            : reveal && k === chosen ? "border-rose-500 bg-rose-500/10"
-            : chosen === k ? "border-accent bg-accent-soft" : "border-line hover:border-accent";
+          const style = reveal && k === item.a ? "border-good bg-good/10"
+            : reveal && k === chosen ? "border-danger bg-danger/10"
+            : chosen === k ? "border-accent bg-accent-soft" : "border-line-strong hover:border-accent";
           return (
-            <button key={k} onClick={() => pick(k)} className={`flex w-full gap-3 rounded-lg border p-3 text-left text-sm ${style}`}>
-              <b>{"ABCD"[k]}.</b> {c}
+            <button key={k} onClick={() => pick(k)} className={`flex w-full gap-3 min-h-11 rounded-lg border p-3 text-left text-sm ${style}`}>
+              <b className="mono">{"ABCD"[k]}.</b> {c}
             </button>
           );
         })}
@@ -179,7 +179,7 @@ function Results({ run, onRestart }: { run: Run; onRestart: () => void }) {
       <section className="card flex flex-wrap items-center justify-between gap-4">
         <div>
           <div className="label">Score</div>
-          <div className="text-4xl font-bold tabular-nums">{correct}/{run.items.length} <span className="text-xl text-muted">({Math.round((100 * correct) / run.items.length)}%)</span></div>
+          <div className="mono text-4xl font-semibold tabular-nums">{correct}/{run.items.length} <span className="text-xl text-muted">({Math.round((100 * correct) / run.items.length)}%)</span></div>
           <p className="text-sm text-muted">{answered.length} answered</p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -188,7 +188,7 @@ function Results({ run, onRestart }: { run: Run; onRestart: () => void }) {
         </div>
       </section>
       <section className="card">
-        <h2 className="mb-3 font-semibold">By instructional area</h2>
+        <h2 className="mb-3 text-2xl font-semibold">By instructional area</h2>
         <ul className="space-y-2">
           {Object.entries(byIa).sort((a, b) => a[1].ok / a[1].n - b[1].ok / b[1].n).map(([ia, s]) => (
             <li key={ia} className="flex items-center gap-3 text-sm">
@@ -201,13 +201,13 @@ function Results({ run, onRestart }: { run: Run; onRestart: () => void }) {
       </section>
       {missed.length > 0 && (
         <section className="card">
-          <h2 className="mb-3 font-semibold">Review missed questions</h2>
+          <h2 className="mb-3 text-2xl font-semibold">Review missed questions</h2>
           <ol className="space-y-4">
             {missed.map(({ it, a }) => (
               <li key={it.id} className="text-sm">
                 <p className="font-medium">{it.q}</p>
-                {a !== null && <p className="text-rose-600 dark:text-rose-400">Your answer: {it.c[a]}</p>}
-                <p className="text-emerald-700 dark:text-emerald-400">Correct: {it.c[it.a]}</p>
+                {a !== null && <p className="text-danger">Your answer: {it.c[a]}</p>}
+                <p className="text-good">Correct: {it.c[it.a]}</p>
                 <p className="text-muted">{it.e}</p>
               </li>
             ))}

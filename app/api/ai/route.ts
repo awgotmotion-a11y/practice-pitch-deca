@@ -1,170 +1,184 @@
-import Anthropic from "@anthropic-ai/sdk";
-import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
+import { env } from "cloudflare:workers";
 import { z } from "zod";
-import { eventByCode, formFor, maxOf, type Bands } from "@/lib/deca";
+import { eventByCode, isRoleplay, SELLING_BRIEFS, type Level } from "@/lib/deca";
+import { COLD_FORM, DRILL_FORM, PLAN_FORM, SELLING_FORM, SHARK_FORM, levelOf, maxOf, roleplayForm, type Form } from "@/lib/forms";
+import {
+  clip, persona, pickArea, realPis, scenarioPrompt, scorePrompt, SCENARIO_SCHEMA, SCORE_SCHEMA,
+  type Judge, type Mode, type Prospect, type Scenario,
+} from "@/lib/judge";
 
-export const maxDuration = 120;
+// Free Workers AI: the account gets 10,000 neurons a day; DAILY_CAP keeps the whole club under it so nothing is ever billed.
+// ponytail: one global cap; add per-student limits if one person starts eating the day.
+const MODEL = "@cf/openai/gpt-oss-120b";
+const TTS = "@cf/myshell-ai/melotts";
+const DAILY_CAP = 9000;
+const TTS_PER_CHAR = 18.63 / 900; // MeloTTS: 18.63 neurons per audio minute, ~900 spoken characters a minute
 
-const client = new Anthropic();
-const MODEL = "claude-opus-5-5";
-
-
-const Scenario = z.object({
-  title: z.string(),
-  company: z.string(),
-  studentRole: z.string().describe("Who the participant plays, e.g. 'marketing consultant'"),
-  judgeName: z.string(),
-  judgeRole: z.string().describe("Who the judge plays, e.g. 'owner of FreshBlend'"),
-  situation: z.string().describe("3-5 short paragraphs of background, constraints and numbers"),
-  task: z.string().describe("What the participant must present and recommend"),
-  pis: z.array(z.object({ text: z.string(), ia: z.string() })),
-});
-
-const Question = z.object({ say: z.string() });
-
-const Score = z.object({
-  pis: z.array(
-    z.object({
-      pi: z.string(),
-      score: z.number(),
-      level: z.enum(["Little/No Value", "Below Expectations", "Meets Expectations", "Exceeds Expectations"]),
-      quote: z.string().describe("Exact words from the transcript that earned the credit, or '' if none"),
-      feedback: z.string(),
-      fix: z.string().describe("One concrete thing to say or do next time"),
-    }),
-  ),
-  skills: z.array(z.object({ skill: z.string(), score: z.number(), feedback: z.string() })),
-  summary: z.string(),
-  topFixes: z.array(z.string()),
-});
-
-const PERSONAS: Record<string, string> = {
-  district: "a friendly, encouraging district-level judge. Ask clear, fair follow-up questions.",
-  association: "an experienced state-level judge. Ask probing follow-ups that test whether the plan would really work.",
-  icdc: "a demanding ICDC judge and seasoned executive. Push back on weak reasoning, ask for numbers, timelines and trade-offs, and challenge one assumption directly.",
-};
-
-const Body = z.object({
-  kind: z.enum(["scenario", "question", "score"]),
-  event: z.object({ code: z.string(), name: z.string(), cluster: z.string(), team: z.boolean().optional() }),
-  level: z.enum(["district", "association", "icdc"]),
-  areas: z.array(z.string()).max(30).default([]),
-  focus: z.array(z.string()).max(5).default([]),
-  scenario: Scenario.optional(),
-  transcript: z.array(z.object({ who: z.enum(["student", "judge"]), text: z.string().max(20000) })).max(20).default([]),
-  delivery: z.object({ wpm: z.number(), fillersPerMin: z.number(), longPauses: z.number() }).optional(),
-});
-
-async function ask<T extends z.ZodType>(schema: T, system: string, user: string, effort: "low" | "medium" | "high") {
-  const res = await client.beta.messages.parse({
-    model: MODEL,
-    max_tokens: 16000,
-    betas: ["server-side-fallback-2026-07-01"],
-    fallbacks: "default",
-    output_config: { effort, format: betaZodOutputFormat(schema) },
-    system,
-    messages: [{ role: "user", content: user }],
-  });
-  if (res.stop_reason === "refusal" || !res.parsed_output) throw new Error("The AI declined or returned no result. Try again.");
-  return res.parsed_output as z.infer<T>;
+const today = () => new Date().toISOString().slice(0, 10);
+const used = async () => Number(await env.USAGE.get("n:" + today())) || 0;
+async function spend(n: number) {
+  const k = "n:" + today();
+  await env.USAGE.put(k, String(Math.round(((Number(await env.USAGE.get(k)) || 0) + n) * 10) / 10), { expirationTtl: 172800 });
+}
+class Budget extends Error {}
+async function guard(estimate: number) {
+  if ((await used()) + estimate > DAILY_CAP) throw new Budget();
 }
 
-const LABELS = ["Little/No Value", "Below Expectations", "Meets Expectations", "Exceeds Expectations"];
-const bandText = (b: Bands) => b.map(([lo, hi], i) => `${LABELS[i]} ${lo}-${hi}`).join(", ");
+type Msg = { role: "system" | "user" | "assistant"; content: string };
+type Out = { output?: { type: string; content?: { text?: string }[] }[]; usage?: { neurons?: number; input_tokens?: number; output_tokens?: number } };
 
-const SYSTEM = `You simulate DECA competitive-event role-plays for high school students practicing for competition.
-Everything you write must be original. Never reproduce or paraphrase official DECA exams or scenarios.`;
+async function llm(messages: Msg[], o: { effort: "low" | "medium" | "high"; max: number; schema?: object }) {
+  const out = (await env.AI.run(MODEL, {
+    input: messages,
+    reasoning: { effort: o.effort },
+    max_output_tokens: o.max,
+    ...(o.schema ? { text: { format: { type: "json_schema", name: "result", schema: o.schema, strict: true } } } : {}),
+  })) as Out;
+  const u = out.usage ?? {};
+  await spend(u.neurons ?? (u.input_tokens ?? 2000) * 0.0318 + (u.output_tokens ?? o.max) * 0.0682);
+  return (out.output ?? []).filter((x) => x.type === "message").flatMap((x) => x.content ?? []).map((c) => c.text ?? "").join("").trim();
+}
+
+const json = <T,>(text: string): T => JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1));
+
+async function speak(text: string) {
+  try {
+    const r = (await env.AI.run(TTS, { prompt: text, lang: "en" })) as { audio?: string };
+    await spend(text.length * TTS_PER_CHAR);
+    return typeof r?.audio === "string" ? r.audio : null;
+  } catch {
+    return null; // the browser falls back to its own voice
+  }
+}
+
+// ---------------------------------------------------------------- request shapes
+const Level = z.enum(["district", "association", "icdc"]);
+const ModeZ = z.enum(["roleplay", "plan", "drill", "shark", "cold", "selling"]);
+const Difficulty = z.enum(["friendly", "realistic", "tough"]).default("realistic");
+const Str = z.record(z.string(), z.unknown()).optional();
+const ScenarioZ = z.object({
+  title: z.string(), company: z.string(), studentRole: z.string(), judgeName: z.string(), judgeRole: z.string(),
+  situation: z.string(), task: z.string(), pis: z.array(z.object({ text: z.string(), ia: z.string() })).max(8), questions: z.array(z.string()).max(4),
+});
+const Body = z.discriminatedUnion("kind", [
+  z.object({ kind: z.literal("scenario"), event: z.string(), level: Level, focus: z.array(z.string()).max(5).default([]) }),
+  z.object({
+    kind: z.literal("turn"), mode: ModeZ, difficulty: Difficulty, event: z.string().optional(), scenario: ScenarioZ.optional(),
+    plan: z.string().max(12000).default(""), judge: Str, prospect: Str, voice: z.boolean().default(true),
+    history: z.array(z.object({ role: z.enum(["user", "assistant"]), content: z.string().max(12000) })).max(60),
+  }),
+  z.object({ kind: z.literal("speak"), text: z.string().max(600) }),
+  z.object({
+    kind: z.literal("score"), mode: ModeZ, event: z.string().optional(), scenario: ScenarioZ.optional(), plan: z.string().max(12000).default(""),
+    pitch: z.string().max(600).default(""), judge: Str, prospect: Str, metrics: z.record(z.string(), z.unknown()).optional(),
+    transcript: z.array(z.object({ who: z.enum(["you", "judge"]), text: z.string().max(8000) })).max(120),
+  }),
+]);
+
+const toJudge = (j?: Record<string, unknown>): Judge | undefined =>
+  j ? { name: clip(j.name, 60), role: clip(j.role, 120), style: clip(j.style, 300), focus: clip(j.focus, 300) } : undefined;
+const toProspect = (p?: Record<string, unknown>): Prospect | undefined =>
+  p ? Object.fromEntries(Object.entries(p).slice(0, 30).map(([k, v]) => [k, clip(v, 500)])) : undefined;
+const scenarioText = (s: Scenario) =>
+  `SCENARIO: ${s.title} at ${s.company}. Participant: ${s.studentRole}. Judge: ${s.judgeName}, ${s.judgeRole}.\n${s.situation}\nTASK: ${s.task}\nPERFORMANCE INDICATORS:\n${s.pis.map((p, i) => `${i + 1}. ${p.text}`).join("\n")}\nJUDGE QUESTIONS: ${s.questions.join(" | ")}`;
+
+function formFor(mode: Mode, event: string | undefined, scenario?: Scenario): Form {
+  if (mode === "roleplay") {
+    const ev = eventByCode(event ?? "");
+    return roleplayForm(isRoleplay(ev) ? ev.kind : "principles", (scenario?.pis ?? []).map((p) => clip(p.text, 200)));
+  }
+  return { plan: PLAN_FORM, selling: SELLING_FORM, shark: SHARK_FORM, cold: COLD_FORM, drill: DRILL_FORM }[mode];
+}
+
+// ---------------------------------------------------------------- routes
+export async function GET() {
+  return Response.json({ used: Math.round(await used()), cap: DAILY_CAP }, { headers: { "cache-control": "no-store" } });
+}
 
 export async function POST(req: Request) {
-  const code = process.env.BETA_ACCESS_CODE;
-  if (code && req.headers.get("x-access-code") !== code) {
-    return Response.json({ error: "Access code required" }, { status: 401 });
-  }
+  const code = env.BETA_ACCESS_CODE;
+  if (code && req.headers.get("x-access-code") !== code) return Response.json({ error: "Access code required" }, { status: 401 });
   const parsed = Body.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return Response.json({ error: "Bad request" }, { status: 400 });
   const b = parsed.data;
-  // Trust our own event table, not the client's copy of it.
-  const ev = eventByCode(b.event.code);
-  const form = formFor(ev);
-  const ctx = `Event: ${ev.name} (${ev.code}), ${ev.cluster} cluster, ${b.level} level${ev.team ? ", team of two presenting together" : ""}.`;
 
   try {
+    if (b.kind === "speak") {
+      await guard(15);
+      return Response.json({ audio: await speak(b.text) });
+    }
+
     if (b.kind === "scenario") {
-      const out = await ask(
-        Scenario,
-        SYSTEM,
-        `${ctx}
-Write a new, realistic role-play scenario in the style of DECA ${b.level} competition.
-- Exactly ${form.pis} performance indicators written the way DECA phrases them ("Explain...", "Describe...", "Discuss...", "Determine...").
-- Each PI's "ia" must be one of these instructional areas: ${b.areas.join(", ")}.
-${b.focus.length ? `- At least 2 PIs must come from these areas the student is weak in: ${b.focus.join(", ")}.` : ""}
-- Include concrete details (numbers, constraints, a stakeholder concern) that reward analytical thinking.
-- ${b.level === "icdc" ? "Make the problem complex with competing priorities." : b.level === "association" ? "Moderate complexity." : "Keep it approachable."}`,
-        "medium",
-      );
-      return Response.json(out);
+      // Trust our own event table, not the client's copy of it.
+      const ev = eventByCode(b.event);
+      if (!isRoleplay(ev)) return Response.json({ error: "That event has no role-play." }, { status: 400 });
+      const area = pickArea(ev, b.level as Level, b.focus);
+      const given = ev.kind === "principles" ? realPis(area, 4) : [];
+      await guard(400);
+      const s = json<Scenario>(await llm([{ role: "user", content: scenarioPrompt(ev, b.level as Level, area, given) }], { effort: "medium", max: 6000, schema: SCENARIO_SCHEMA }));
+      if (given.length) s.pis = given;
+      s.questions = s.questions.slice(0, 2);
+      return Response.json({ ...s, area });
     }
 
-    if (!b.scenario) return Response.json({ error: "Missing scenario" }, { status: 400 });
-    const s = b.scenario;
-    const scenarioText = `${ctx}
-SCENARIO: ${s.title} — ${s.company}
-Participant role: ${s.studentRole}. Judge role: ${s.judgeName}, ${s.judgeRole}.
-${s.situation}
-TASK: ${s.task}
-PERFORMANCE INDICATORS:
-${s.pis.map((p, i) => `${i + 1}. ${p.text} (${p.ia})`).join("\n")}`;
-    const transcript = b.transcript.map((t) => `${t.who === "judge" ? "JUDGE" : "PARTICIPANT"}: ${t.text}`).join("\n\n");
-
-    if (b.kind === "question") {
-      const out = await ask(
-        Question,
-        `${SYSTEM}\nYou are role-playing ${s.judgeName}, ${s.judgeRole}. You are ${PERSONAS[b.level]}`,
-        `${scenarioText}\n\nTRANSCRIPT SO FAR:\n${transcript}\n\nAsk your next single follow-up question, in character, spoken aloud (1-2 sentences). Base it on what the participant actually said or skipped. Don't repeat a question already asked. Output only the question.`,
-        "low",
-      );
-      return Response.json(out);
+    if (b.kind === "turn") {
+      const sys = persona({
+        mode: b.mode, difficulty: b.difficulty, ev: b.event ? eventByCode(b.event) : undefined, scenario: b.scenario,
+        plan: b.plan, judge: toJudge(b.judge), prospect: toProspect(b.prospect),
+      });
+      const messages: Msg[] = [{ role: "system", content: sys }, ...b.history.slice(-40)];
+      await guard(JSON.stringify(messages).length / 4 * 0.0318 + 60);
+      let reply = (await llm(messages, { effort: "low", max: 700 })).replace(/[*_#`]/g, "");
+      let end = /\[END\]/i.test(reply);
+      reply = reply.replace(/\[END\]/gi, "").trim() || "Could you say that again?";
+      // A question still needs an answer: drop any sign-off tacked on after it and keep the round open.
+      if (end && b.mode === "roleplay" && reply.includes("?") && b.history.length < 50) {
+        reply = reply.slice(0, reply.lastIndexOf("?") + 1);
+        end = false;
+      }
+      return Response.json({ reply, end, audio: b.voice ? await speak(clip(reply, 600)) : null });
     }
 
-    const piMax = maxOf(form.piBands);
-    const out = await ask(
-      Score,
-      `${SYSTEM}\nYou are a calibrated DECA judge scoring with the official-style evaluation form. Be honest: name-dropping a concept is not demonstrating it. Most first attempts land in Below or Meets Expectations.`,
-      `${scenarioText}
-
-TRANSCRIPT:
-${transcript || "(no response given)"}
-${b.delivery ? `\nDELIVERY: ${b.delivery.wpm} words/min, ${b.delivery.fillersPerMin} filler words/min, ${b.delivery.longPauses} long pauses.` : ""}
-
-Score each PI from 0 to ${piMax} (${bandText(form.piBands)}).
-Score each of these 21st Century Skills, in this order and with these exact names:
-${form.skills.map((k) => `- ${k.name}: 0 to ${maxOf(k.bands)} (${bandText(k.bands)})`).join("\n")}
-Quotes must be copied exactly from the participant's words. Give 3 top fixes, most impactful first.`,
-      "high",
-    );
-    // Keep scores on the form even if the model drifts outside a range.
-    const clamp = (n: number, max: number) => Math.max(0, Math.min(max, Math.round(n)));
-    const pis = out.pis.map((p) => {
-      const score = clamp(p.score, piMax);
-      return { ...p, score, level: LABELS[form.piBands.findIndex(([lo, hi]) => score >= lo && score <= hi)] };
+    // score
+    const form = formFor(b.mode, b.event, b.scenario);
+    const ev = b.event ? eventByCode(b.event) : undefined;
+    const context =
+      b.mode === "roleplay" && b.scenario ? scenarioText(b.scenario)
+      : b.mode === "selling" && ev ? `Participant: ${SELLING_BRIEFS[ev.code]?.you}. Buyer: ${SELLING_BRIEFS[ev.code]?.buyer}, who wants ${SELLING_BRIEFS[ev.code]?.wants}.`
+      : b.mode === "cold" ? (b.pitch ? `What the student was selling: ${b.pitch}` : "")
+      : b.plan;
+    const transcript = b.transcript.map((x) => `${x.who === "you" ? "YOU" : "THEM"}: ${x.text}`).join("\n").slice(-40000);
+    const messages: Msg[] = [
+      { role: "system", content: scorePrompt({ mode: b.mode, form, context, metrics: b.metrics, prospect: toProspect(b.prospect), judge: toJudge(b.judge) }) },
+      { role: "user", content: `Transcript:\n${transcript}` },
+    ];
+    await guard(JSON.stringify(messages).length / 4 * 0.0318 + 400);
+    type Raw = { rows: { name: string; score: number; why: string; quote: string }[]; outcome: string; verdict: string; strengths: string[]; fixes: { said: string; try: string; why: string }[]; drill: string };
+    let fb: Raw;
+    try {
+      fb = json<Raw>(await llm(messages, { effort: "medium", max: 8000, schema: SCORE_SCHEMA }));
+    } catch {
+      fb = json<Raw>(await llm(messages, { effort: "low", max: 8000, schema: SCORE_SCHEMA })); // one retry on a malformed reply
+    }
+    // Trust the model for judgement, not arithmetic: match rows to the form, clamp to each row's max, label and total here.
+    const rows = form.rows.map((r, i) => {
+      const key = r.name.toLowerCase().slice(0, 14);
+      const got = fb.rows.find((x) => x.name.toLowerCase().startsWith(key)) ?? fb.rows[i] ?? { score: 0, why: "", quote: "" };
+      const max = maxOf(r.bands);
+      const score = Math.max(0, Math.min(max, Math.round(Number(got.score) || 0)));
+      return { name: r.name, group: r.group, max, score, level: levelOf(r.bands, score), why: clip(got.why, 500), quote: clip(got.quote, 300) };
     });
-    const skills = form.skills.map((k, i) => ({
-      skill: k.name,
-      score: clamp(out.skills[i]?.score ?? 0, maxOf(k.bands)),
-      max: maxOf(k.bands),
-      feedback: out.skills[i]?.feedback ?? "",
-    }));
-    return Response.json({ ...out, pis, skills, piMax });
+    const total = rows.reduce((n, r) => n + r.score, 0);
+    return Response.json({
+      form: form.title, rows, total, max: rows.reduce((n, r) => n + r.max, 0),
+      outcome: clip(fb.outcome, 60), verdict: clip(fb.verdict, 600), drill: clip(fb.drill, 600),
+      strengths: fb.strengths.slice(0, 3).map((s) => clip(s, 400)),
+      fixes: fb.fixes.slice(0, 3).map((f) => ({ said: clip(f.said, 300), try: clip(f.try, 400), why: clip(f.why, 300) })),
+    });
   } catch (err) {
-    if (err instanceof Anthropic.AuthenticationError || /authentication method/i.test((err as Error).message)) {
-      return Response.json({ error: "Server is missing a valid ANTHROPIC_API_KEY." }, { status: 500 });
-    }
-    if (err instanceof Anthropic.RateLimitError) {
-      return Response.json({ error: "Too many requests right now. Wait a minute and try again." }, { status: 429 });
-    }
-    if (err instanceof Anthropic.APIError) {
-      return Response.json({ error: `AI service error (${err.status ?? "network"}).` }, { status: 502 });
-    }
-    return Response.json({ error: (err as Error).message }, { status: 500 });
+    const msg = String((err as Error)?.message ?? err);
+    if (err instanceof Budget || /4006|allocation|neurons/i.test(msg)) return Response.json({ error: "budget" }, { status: 429 });
+    return Response.json({ error: msg.slice(0, 300) }, { status: 500 });
   }
 }

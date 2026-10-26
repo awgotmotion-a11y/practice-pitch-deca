@@ -31,7 +31,7 @@ function Vocab() {
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap items-end justify-between gap-4">
-        <h1 className="text-2xl font-bold">Vocab</h1>
+        <h1 className="text-4xl font-bold">Vocab</h1>
         <div className="flex flex-wrap gap-2">
           <select className="field w-auto" value={ia} onChange={(e) => setIa(e.target.value)} aria-label="Instructional area">
             <option value="all">All areas in my cluster</option>
@@ -71,7 +71,7 @@ function Cards({ pool }: { pool: Term[] }) {
       {card ? (
         <>
           <button onClick={() => setFlipped(!flipped)} className="card flex min-h-56 w-full flex-col items-center justify-center gap-3 text-center hover:border-accent">
-            <span className="text-xs uppercase tracking-wide text-muted">{card.ia}</span>
+            <span className="mono text-xs uppercase tracking-wider text-muted">{card.ia}</span>
             <span className="text-2xl font-semibold">{card.t}</span>
             {flipped ? <span className="text-base">{card.d}</span> : <span className="text-sm text-muted">Tap to reveal</span>}
           </button>
@@ -142,7 +142,7 @@ function Blitz({ pool }: { pool: Term[] }) {
   return (
     <div className="mx-auto max-w-xl space-y-4">
       <div className="flex justify-between text-sm"><span>Score: <b>{score.ok}</b></span><span className="tabular-nums">{left}s</span></div>
-      <div className={`card text-lg transition ${flash === true ? "border-emerald-500" : flash === false ? "border-rose-500" : ""}`}>{q.answer.d}</div>
+      <div className={`card text-lg transition ${flash === true ? "border-good" : flash === false ? "border-danger" : ""}`}>{q.answer.d}</div>
       <div className="grid gap-2 sm:grid-cols-2">
         {q.options.map((o) => <button key={o.t} className="btn justify-start" onClick={() => answer(o)}>{o.t}</button>)}
       </div>

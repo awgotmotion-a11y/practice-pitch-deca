@@ -1,1 +1,5215 @@
-[]
+[
+ {
+  "id": "g-business-law-1",
+  "ia": "Business Law",
+  "q": "A freelance designer agrees to build a website for a cafe in exchange for $2,000, and both sign an agreement. Which element shows the cafe gave something of value in return for the designer's work?",
+  "c": [
+   "Consideration",
+   "Capacity",
+   "Acceptance",
+   "Legality"
+  ],
+  "a": 0,
+  "e": "Consideration is the value each party gives (here, money for services), which is required for an enforceable contract."
+ },
+ {
+  "id": "g-business-law-2",
+  "ia": "Business Law",
+  "q": "A shop owner discovers a competitor copying the shop's original product photos for its own website. Which type of intellectual property protects the photos?",
+  "c": [
+   "Trademark",
+   "Copyright",
+   "Patent",
+   "Franchise"
+  ],
+  "a": 1,
+  "e": "Copyright protects original creative works such as photographs, writing and music."
+ },
+ {
+  "id": "g-business-law-3",
+  "ia": "Business Law",
+  "q": "A customer slips on a wet floor that had no warning sign and is injured. The customer sues the store for failing to take reasonable care. This is an example of:",
+  "c": [
+   "Breach of warranty",
+   "Fraud",
+   "Negligence",
+   "Libel"
+  ],
+  "a": 2,
+  "e": "Negligence is a tort that occurs when a person fails to use reasonable care and someone is harmed as a result."
+ },
+ {
+  "id": "g-business-law-4",
+  "ia": "Business Law",
+  "q": "A business owner wants personal assets protected from business debts and also wants to avoid double taxation of profits. Which ownership form is most likely to fit?",
+  "c": [
+   "General partnership",
+   "Sole proprietorship",
+   "C corporation",
+   "Limited liability company"
+  ],
+  "a": 3,
+  "e": "An LLC generally limits owners' personal liability while allowing profits to pass through to owners' personal tax returns."
+ },
+ {
+  "id": "g-business-law-5",
+  "ia": "Business Law",
+  "q": "A manufacturer sells machinery to a firm in another country. Which type of law most directly governs taxes and rules applied at the border?",
+  "c": [
+   "Customs regulations",
+   "Family law",
+   "Probate law",
+   "Zoning ordinance"
+  ],
+  "a": 0,
+  "e": "Customs regulations govern duties, tariffs and documentation for goods that cross national borders."
+ },
+ {
+  "id": "g-business-law-6",
+  "ia": "Business Law",
+  "q": "A sales representative signs a contract on behalf of the company with the company's authorization. The company is legally bound because of the:",
+  "c": [
+   "Statute of limitations",
+   "Agency relationship",
+   "Bankruptcy discharge",
+   "Class action"
+  ],
+  "a": 1,
+  "e": "In an agency relationship, an agent acting within authority binds the principal to contracts."
+ },
+ {
+  "id": "g-business-law-7",
+  "ia": "Business Law",
+  "q": "A federal agency issues detailed rules on workplace air quality that employers must follow. These rules are an example of:",
+  "c": [
+   "Common law",
+   "Criminal law",
+   "Administrative law",
+   "Constitutional law"
+  ],
+  "a": 2,
+  "e": "Administrative law consists of regulations created by government agencies under authority granted by legislatures."
+ },
+ {
+  "id": "g-business-law-8",
+  "ia": "Business Law",
+  "q": "A company dumps waste into a river in violation of federal rules. The company may face penalties under:",
+  "c": [
+   "Contract law",
+   "Agency law",
+   "Employment-at-will",
+   "Environmental law"
+  ],
+  "a": 3,
+  "e": "Environmental law regulates how businesses affect air, water and land."
+ },
+ {
+  "id": "g-communications-1",
+  "ia": "Communications",
+  "q": "A manager sends a long email to a customer, but the customer misunderstands it because it was full of technical terms. Which barrier to communication occurred?",
+  "c": [
+   "Use of jargon",
+   "Physical distance",
+   "Noise in the room",
+   "Time zone difference"
+  ],
+  "a": 0,
+  "e": "Jargon the receiver does not understand blocks the message from being interpreted as intended."
+ },
+ {
+  "id": "g-communications-2",
+  "ia": "Communications",
+  "q": "An employee wants to confirm a coworker understood a request. The best approach is to:",
+  "c": [
+   "Repeat the request louder",
+   "Ask the coworker to restate the request in their own words",
+   "Send the same message again unchanged",
+   "Assume silence means agreement"
+  ],
+  "a": 1,
+  "e": "Feedback that checks understanding is the way to close the communication loop."
+ },
+ {
+  "id": "g-communications-3",
+  "ia": "Communications",
+  "q": "Which of the following is the best example of active listening?",
+  "c": [
+   "Planning your reply while the speaker talks",
+   "Checking your phone during the conversation",
+   "Paraphrasing a speaker's main point and asking a follow-up question",
+   "Finishing the speaker's sentences"
+  ],
+  "a": 2,
+  "e": "Active listening means focusing on the speaker, paraphrasing and asking clarifying questions."
+ },
+ {
+  "id": "g-communications-4",
+  "ia": "Communications",
+  "q": "A business writes a short note thanking a client for a recent order. Which type of business message is this?",
+  "c": [
+   "Persuasive proposal",
+   "Formal report",
+   "Policy manual",
+   "Goodwill message"
+  ],
+  "a": 3,
+  "e": "Goodwill messages build positive relationships without asking for anything."
+ },
+ {
+  "id": "g-communications-5",
+  "ia": "Communications",
+  "q": "Before writing a report for the leadership team, a manager should first:",
+  "c": [
+   "Identify the purpose and audience",
+   "Choose the font",
+   "Add graphics",
+   "Set the print margins"
+  ],
+  "a": 0,
+  "e": "Knowing the purpose and audience shapes the content, tone and level of detail."
+ },
+ {
+  "id": "g-communications-6",
+  "ia": "Communications",
+  "q": "A presenter's slides contain full paragraphs of small text. Which change would most improve the presentation?",
+  "c": [
+   "Add more paragraphs",
+   "Use brief bullet points and larger visuals",
+   "Read the slides aloud word for word",
+   "Use a smaller font to fit more text"
+  ],
+  "a": 1,
+  "e": "Effective slides support the speaker with concise points and visuals instead of duplicating the speech."
+ },
+ {
+  "id": "g-communications-7",
+  "ia": "Communications",
+  "q": "Which communication channel is generally best for delivering sensitive, negative news to an employee?",
+  "c": [
+   "A group text message",
+   "A company-wide email",
+   "A private face-to-face meeting",
+   "A social media post"
+  ],
+  "a": 2,
+  "e": "Sensitive news is best delivered in person so tone and empathy can be conveyed and questions answered."
+ },
+ {
+  "id": "g-communications-8",
+  "ia": "Communications",
+  "q": "Eye contact, posture and facial expressions are examples of:",
+  "c": [
+   "Written communication",
+   "Formal communication",
+   "Mass communication",
+   "Nonverbal communication"
+  ],
+  "a": 3,
+  "e": "Nonverbal cues communicate messages without words and can reinforce or contradict what is said."
+ },
+ {
+  "id": "g-communications-9",
+  "ia": "Communications",
+  "q": "A team member reads an email that says 'Per my last message...' in a sarcastic tone and feels insulted. Which communication principle is most relevant?",
+  "c": [
+   "Tone affects how a message is received",
+   "Longer messages are always clearer",
+   "Email is always private",
+   "Spelling is the only thing that matters"
+  ],
+  "a": 0,
+  "e": "The words and tone chosen influence how the receiver interprets the message."
+ },
+ {
+  "id": "g-communications-10",
+  "ia": "Communications",
+  "q": "When writing an executive summary of a business report, you should:",
+  "c": [
+   "Include all raw data tables",
+   "Condense the main findings and recommendations",
+   "Leave out conclusions",
+   "Write it before knowing the results"
+  ],
+  "a": 1,
+  "e": "An executive summary gives busy readers the key points of the report in brief."
+ },
+ {
+  "id": "g-communications-11",
+  "ia": "Communications",
+  "q": "A supervisor gives an employee feedback that focuses on a specific behavior and how to improve it. This feedback is:",
+  "c": [
+   "Vague",
+   "Hostile",
+   "Constructive",
+   "Irrelevant"
+  ],
+  "a": 2,
+  "e": "Constructive feedback is specific, objective and aimed at helping the person improve."
+ },
+ {
+  "id": "g-communications-12",
+  "ia": "Communications",
+  "q": "Which question is an open-ended question that encourages a customer to share more information?",
+  "c": [
+   "Do you want the black one?",
+   "Is this your first purchase?",
+   "Will you pay cash?",
+   "What features matter most to you in a new phone?"
+  ],
+  "a": 3,
+  "e": "Open-ended questions cannot be answered with yes or no, so they draw out fuller responses."
+ },
+ {
+  "id": "g-communications-13",
+  "ia": "Communications",
+  "q": "To make a business email easier to read on a phone, a writer should:",
+  "c": [
+   "Use a clear subject line and short paragraphs",
+   "Write one long paragraph",
+   "Leave the subject line blank",
+   "Use all capital letters"
+  ],
+  "a": 0,
+  "e": "Clear subject lines and short paragraphs help readers scan and understand quickly."
+ },
+ {
+  "id": "g-communications-14",
+  "ia": "Communications",
+  "q": "A group of employees from different cultures is working together. Which action best improves communication?",
+  "c": [
+   "Speaking as quickly as possible",
+   "Avoiding slang and idioms that may not translate",
+   "Using only humor to connect",
+   "Ignoring cultural differences"
+  ],
+  "a": 1,
+  "e": "Plain language without idioms helps people with different backgrounds understand each other."
+ },
+ {
+  "id": "g-customer-relations-1",
+  "ia": "Customer Relations",
+  "q": "A restaurant customer says her meal arrived cold. The server apologizes, replaces the dish and checks back. This action demonstrates:",
+  "c": [
+   "Upselling",
+   "Market segmentation",
+   "Service recovery",
+   "Price discrimination"
+  ],
+  "a": 2,
+  "e": "Service recovery is the process of fixing a problem so the customer's trust is restored."
+ },
+ {
+  "id": "g-customer-relations-2",
+  "ia": "Customer Relations",
+  "q": "A coffee shop gives a free drink after every ten purchases. This is an example of a:",
+  "c": [
+   "Trade discount",
+   "Clearance sale",
+   "Cash discount",
+   "Customer loyalty program"
+  ],
+  "a": 3,
+  "e": "Loyalty programs reward repeat business to encourage customers to keep returning."
+ },
+ {
+  "id": "g-customer-relations-3",
+  "ia": "Customer Relations",
+  "q": "Which of the following best describes customer retention?",
+  "c": [
+   "Keeping existing customers buying over time",
+   "Attracting first-time buyers only",
+   "Lowering production costs",
+   "Hiring more staff"
+  ],
+  "a": 0,
+  "e": "Retention focuses on keeping current customers satisfied so they continue to purchase."
+ },
+ {
+  "id": "g-customer-relations-4",
+  "ia": "Customer Relations",
+  "q": "A customer calls angry about a billing mistake. What should the representative do first?",
+  "c": [
+   "Explain company policy immediately",
+   "Listen without interrupting and acknowledge the concern",
+   "Transfer the call without comment",
+   "Tell the customer to calm down"
+  ],
+  "a": 1,
+  "e": "Listening and acknowledging feelings helps de-escalate the situation before solving it."
+ },
+ {
+  "id": "g-customer-relations-5",
+  "ia": "Customer Relations",
+  "q": "A company sends short surveys after each purchase to learn how satisfied buyers are. This is a way to:",
+  "c": [
+   "Set prices",
+   "Control inventory",
+   "Gather customer feedback",
+   "Lower taxes"
+  ],
+  "a": 2,
+  "e": "Surveys collect customer opinions that help a business improve products and service."
+ },
+ {
+  "id": "g-customer-relations-6",
+  "ia": "Customer Relations",
+  "q": "An electronics store trains employees to anticipate needs and offer help before customers ask. This approach is best described as:",
+  "c": [
+   "Reactive service",
+   "Self-service",
+   "Impersonal service",
+   "Proactive service"
+  ],
+  "a": 3,
+  "e": "Proactive service means acting on likely needs before the customer has to request help."
+ },
+ {
+  "id": "g-customer-relations-7",
+  "ia": "Customer Relations",
+  "q": "Which of the following is an internal customer?",
+  "c": [
+   "A department that receives work from another department",
+   "A shopper who buys online",
+   "A competitor",
+   "A supplier's accountant"
+  ],
+  "a": 0,
+  "e": "Internal customers are employees or departments who depend on others inside the same company."
+ },
+ {
+  "id": "g-customer-relations-8",
+  "ia": "Customer Relations",
+  "q": "A company uses a database to track each client's purchases, contacts and preferences. This system is called:",
+  "c": [
+   "Supply chain management",
+   "Customer relationship management",
+   "Inventory control",
+   "Payroll processing"
+  ],
+  "a": 1,
+  "e": "CRM systems store customer data so a business can personalize service and strengthen relationships."
+ },
+ {
+  "id": "g-customer-relations-9",
+  "ia": "Customer Relations",
+  "q": "Which action is most likely to build customer trust over time?",
+  "c": [
+   "Making vague guarantees",
+   "Hiding fees until checkout",
+   "Consistently keeping promises",
+   "Ignoring complaints"
+  ],
+  "a": 2,
+  "e": "Trust grows when a business reliably delivers what it says it will."
+ },
+ {
+  "id": "g-customer-relations-10",
+  "ia": "Customer Relations",
+  "q": "A hotel guest requests a late checkout that is not normally allowed. The manager approves it as a one-time courtesy. This is an example of:",
+  "c": [
+   "Price fixing",
+   "Product recall",
+   "Market research",
+   "Exceeding customer expectations"
+  ],
+  "a": 3,
+  "e": "Going beyond what customers expect builds satisfaction and loyalty."
+ },
+ {
+  "id": "g-economics-1",
+  "ia": "Economics",
+  "q": "When the price of gasoline rises sharply, more people choose to carpool. This illustrates which basic concept?",
+  "c": [
+   "Incentives influence decisions",
+   "Perfect competition",
+   "Monopoly power",
+   "Fiscal policy"
+  ],
+  "a": 0,
+  "e": "People respond to changes in costs and benefits, which are incentives."
+ },
+ {
+  "id": "g-economics-2",
+  "ia": "Economics",
+  "q": "A bakery decides to use its oven time to make bread instead of cakes. The value of the cakes given up is the bakery's:",
+  "c": [
+   "Fixed cost",
+   "Opportunity cost",
+   "Sunk cost",
+   "Marginal revenue"
+  ],
+  "a": 1,
+  "e": "Opportunity cost is the value of the next best alternative that is given up."
+ },
+ {
+  "id": "g-economics-3",
+  "ia": "Economics",
+  "q": "A market with many small sellers, similar products and easy entry is best described as:",
+  "c": [
+   "Monopoly",
+   "Oligopoly",
+   "Perfect competition",
+   "Command economy"
+  ],
+  "a": 2,
+  "e": "Perfect competition features many buyers and sellers, identical products and free entry and exit."
+ },
+ {
+  "id": "g-economics-4",
+  "ia": "Economics",
+  "q": "The total value of all final goods and services produced in a country in a year is the:",
+  "c": [
+   "Consumer price index",
+   "Trade deficit",
+   "National debt",
+   "Gross domestic product"
+  ],
+  "a": 3,
+  "e": "GDP measures a nation's total output of final goods and services."
+ },
+ {
+  "id": "g-economics-5",
+  "ia": "Economics",
+  "q": "A sustained increase in the general price level of goods and services is called:",
+  "c": [
+   "Inflation",
+   "Deflation",
+   "Recession",
+   "Depreciation"
+  ],
+  "a": 0,
+  "e": "Inflation means the general level of prices is rising, so each dollar buys less."
+ },
+ {
+  "id": "g-economics-6",
+  "ia": "Economics",
+  "q": "If the demand for a product increases while supply stays the same, the equilibrium price will most likely:",
+  "c": [
+   "Fall",
+   "Rise",
+   "Stay the same",
+   "Drop to zero"
+  ],
+  "a": 1,
+  "e": "Greater demand with the same supply creates shortages at the old price, pushing the price up."
+ },
+ {
+  "id": "g-economics-7",
+  "ia": "Economics",
+  "q": "When the Federal Reserve lowers interest rates to encourage borrowing and spending, it is using:",
+  "c": [
+   "Fiscal policy",
+   "Trade policy",
+   "Monetary policy",
+   "Antitrust policy"
+  ],
+  "a": 2,
+  "e": "Central bank actions on money and interest rates are monetary policy."
+ },
+ {
+  "id": "g-economics-8",
+  "ia": "Economics",
+  "q": "A country has more imports than exports. This situation is called a:",
+  "c": [
+   "Trade surplus",
+   "Balanced budget",
+   "Tariff",
+   "Trade deficit"
+  ],
+  "a": 3,
+  "e": "A trade deficit means a nation imports more than it exports."
+ },
+ {
+  "id": "g-economics-9",
+  "ia": "Economics",
+  "q": "Which economic system relies primarily on private ownership and market prices to answer what to produce?",
+  "c": [
+   "Market economy",
+   "Command economy",
+   "Traditional economy",
+   "Subsistence economy"
+  ],
+  "a": 0,
+  "e": "In a market economy, individuals and businesses make decisions guided by prices and competition."
+ },
+ {
+  "id": "g-economics-10",
+  "ia": "Economics",
+  "q": "A business cycle phase marked by falling output and rising unemployment is a:",
+  "c": [
+   "Expansion",
+   "Recession",
+   "Peak",
+   "Recovery"
+  ],
+  "a": 1,
+  "e": "A recession is a period of declining economic activity."
+ },
+ {
+  "id": "g-economics-11",
+  "ia": "Economics",
+  "q": "A government places a tax on imported steel to protect domestic producers. This tax is a:",
+  "c": [
+   "Subsidy",
+   "Quota",
+   "Tariff",
+   "Embargo"
+  ],
+  "a": 2,
+  "e": "A tariff is a tax on imported goods."
+ },
+ {
+  "id": "g-emotional-intelligence-1",
+  "ia": "Emotional Intelligence",
+  "q": "Before a big presentation, an employee notices a racing heart and tight shoulders and recognizes she is nervous. Which emotional intelligence skill is she using?",
+  "c": [
+   "Empathy",
+   "Delegation",
+   "Negotiation",
+   "Self-awareness"
+  ],
+  "a": 3,
+  "e": "Self-awareness is recognizing your own emotions and how they affect you."
+ },
+ {
+  "id": "g-emotional-intelligence-2",
+  "ia": "Emotional Intelligence",
+  "q": "A manager receives harsh criticism in a meeting. Instead of snapping back, she pauses, breathes and responds calmly. This shows:",
+  "c": [
+   "Self-regulation",
+   "Avoidance",
+   "Groupthink",
+   "Procrastination"
+  ],
+  "a": 0,
+  "e": "Self-regulation is managing emotions and impulses so they do not drive poor reactions."
+ },
+ {
+  "id": "g-emotional-intelligence-3",
+  "ia": "Emotional Intelligence",
+  "q": "A coworker seems withdrawn after a difficult week. You ask how they are doing and listen without judging. You are demonstrating:",
+  "c": [
+   "Competition",
+   "Empathy",
+   "Micromanagement",
+   "Self-promotion"
+  ],
+  "a": 1,
+  "e": "Empathy is understanding and sharing another person's feelings."
+ },
+ {
+  "id": "g-emotional-intelligence-4",
+  "ia": "Emotional Intelligence",
+  "q": "Which of the following is the best example of a growth mindset?",
+  "c": [
+   "Believing talent cannot change",
+   "Avoiding challenges to prevent failure",
+   "Viewing a failed sales pitch as a chance to learn and improve",
+   "Blaming others for setbacks"
+  ],
+  "a": 2,
+  "e": "A growth mindset treats abilities as developable through effort and feedback."
+ },
+ {
+  "id": "g-emotional-intelligence-5",
+  "ia": "Emotional Intelligence",
+  "q": "An employee tends to get defensive when given feedback. What is the best first step to improve?",
+  "c": [
+   "Argue the points immediately",
+   "Ignore the feedback",
+   "Report the reviewer to HR",
+   "Pause and ask clarifying questions before responding"
+  ],
+  "a": 3,
+  "e": "Pausing and asking questions helps separate emotion from the content of the feedback."
+ },
+ {
+  "id": "g-emotional-intelligence-6",
+  "ia": "Emotional Intelligence",
+  "q": "A team is arguing over how to divide tasks. A member suggests each person state their concerns and then the group looks for a solution that works for everyone. This approach is called:",
+  "c": [
+   "Collaborative conflict resolution",
+   "Avoidance",
+   "Forcing",
+   "Surrender"
+  ],
+  "a": 0,
+  "e": "Collaboration seeks a win-win solution by addressing everyone's needs."
+ },
+ {
+  "id": "g-emotional-intelligence-7",
+  "ia": "Emotional Intelligence",
+  "q": "Resilience in the workplace is best described as the ability to:",
+  "c": [
+   "Avoid all stress",
+   "Recover from setbacks and keep going",
+   "Never make mistakes",
+   "Work without breaks"
+  ],
+  "a": 1,
+  "e": "Resilience is bouncing back from difficulties and adapting to change."
+ },
+ {
+  "id": "g-emotional-intelligence-8",
+  "ia": "Emotional Intelligence",
+  "q": "A new hire wants to build a good relationship with coworkers. Which behavior is most effective?",
+  "c": [
+   "Gossiping about coworkers",
+   "Taking credit for team results",
+   "Showing interest in others and following through on commitments",
+   "Staying silent in every meeting"
+  ],
+  "a": 2,
+  "e": "Genuine interest and reliability build trust and rapport."
+ },
+ {
+  "id": "g-emotional-intelligence-9",
+  "ia": "Emotional Intelligence",
+  "q": "A salesperson loses a major account and spends days blaming the customer. Which response would reflect higher emotional intelligence?",
+  "c": [
+   "Complaining to coworkers",
+   "Quitting immediately",
+   "Ignoring all feedback",
+   "Reflecting on what could have been done differently"
+  ],
+  "a": 3,
+  "e": "Taking ownership and reflecting turns a setback into a learning opportunity."
+ },
+ {
+  "id": "g-emotional-intelligence-10",
+  "ia": "Emotional Intelligence",
+  "q": "Setting a goal that is specific, measurable, achievable, relevant and time-bound is known as setting a:",
+  "c": [
+   "SMART goal",
+   "Vague goal",
+   "Stretch fantasy",
+   "Group norm"
+  ],
+  "a": 0,
+  "e": "SMART goals provide clarity and make progress easier to track."
+ },
+ {
+  "id": "g-emotional-intelligence-11",
+  "ia": "Emotional Intelligence",
+  "q": "A worker feels overwhelmed by deadlines. Which action is the best stress-management strategy?",
+  "c": [
+   "Skip lunch to work longer",
+   "Prioritize tasks and take short breaks",
+   "Hide the problem from the supervisor",
+   "Take on additional projects"
+  ],
+  "a": 1,
+  "e": "Prioritizing and short breaks help manage workload and reduce stress."
+ },
+ {
+  "id": "g-emotional-intelligence-12",
+  "ia": "Emotional Intelligence",
+  "q": "When two team members disagree, a leader listens to both sides before deciding. This leader is demonstrating:",
+  "c": [
+   "Favoritism",
+   "Indecision",
+   "Fairness and impartiality",
+   "Aggression"
+  ],
+  "a": 2,
+  "e": "Hearing all sides before deciding builds trust and leads to better decisions."
+ },
+ {
+  "id": "g-emotional-intelligence-13",
+  "ia": "Emotional Intelligence",
+  "q": "Which statement is an 'I' statement that expresses a concern constructively?",
+  "c": [
+   "You always change deadlines.",
+   "Nobody here plans anything.",
+   "You are careless with schedules.",
+   "I feel stressed when deadlines change without notice."
+  ],
+  "a": 3,
+  "e": "'I' statements describe your own feelings and the behavior without blaming the other person."
+ },
+ {
+  "id": "g-emotional-intelligence-14",
+  "ia": "Emotional Intelligence",
+  "q": "A new coworker is from a different cultural background and uses different greetings. The best response is to:",
+  "c": [
+   "Be open-minded and ask respectful questions",
+   "Assume they are being rude",
+   "Avoid working with them",
+   "Insist they change immediately"
+  ],
+  "a": 0,
+  "e": "Open-mindedness and curiosity support respectful, inclusive workplaces."
+ },
+ {
+  "id": "g-emotional-intelligence-15",
+  "ia": "Emotional Intelligence",
+  "q": "An employee consistently arrives on time, meets deadlines and admits mistakes. These behaviors show:",
+  "c": [
+   "Entitlement",
+   "Accountability",
+   "Indifference",
+   "Dependence"
+  ],
+  "a": 1,
+  "e": "Accountability means taking responsibility for your actions and results."
+ },
+ {
+  "id": "g-emotional-intelligence-16",
+  "ia": "Emotional Intelligence",
+  "q": "Which of the following is a sign of strong self-motivation?",
+  "c": [
+   "Waiting for constant reminders",
+   "Doing only the minimum",
+   "Starting a task without being told because it supports a goal",
+   "Quitting when challenged"
+  ],
+  "a": 2,
+  "e": "Self-motivated people act on their own drive toward goals."
+ },
+ {
+  "id": "g-emotional-intelligence-17",
+  "ia": "Emotional Intelligence",
+  "q": "A manager praises a team's specific effort after a successful event. The main benefit of this is:",
+  "c": [
+   "Increasing conflict",
+   "Lowering expectations",
+   "Reducing communication",
+   "Reinforcing positive behavior and morale"
+  ],
+  "a": 3,
+  "e": "Specific recognition encourages people to repeat effective behavior and boosts morale."
+ },
+ {
+  "id": "g-emotional-intelligence-18",
+  "ia": "Emotional Intelligence",
+  "q": "Which is the best way to handle a disagreement with a customer who is upset?",
+  "c": [
+   "Stay calm, show understanding and focus on solving the problem",
+   "Match their anger",
+   "Walk away",
+   "Tell them they are wrong"
+  ],
+  "a": 0,
+  "e": "Calm, empathetic problem solving reduces tension and leads to resolution."
+ },
+ {
+  "id": "g-emotional-intelligence-19",
+  "ia": "Emotional Intelligence",
+  "q": "A student leader invites quieter members to share ideas and thanks everyone for contributions. This demonstrates:",
+  "c": [
+   "Authoritarian leadership",
+   "Inclusive leadership",
+   "Laissez-faire neglect",
+   "Autocratic control"
+  ],
+  "a": 1,
+  "e": "Inclusive leaders ensure all voices are heard and valued."
+ },
+ {
+  "id": "g-emotional-intelligence-20",
+  "ia": "Emotional Intelligence",
+  "q": "A person asks a mentor for advice after a poor performance review and then acts on it. This shows the person is:",
+  "c": [
+   "Resistant to change",
+   "Overconfident",
+   "Open to coaching",
+   "Disengaged"
+  ],
+  "a": 2,
+  "e": "Seeking and applying advice reflects willingness to learn and improve."
+ },
+ {
+  "id": "g-emotional-intelligence-21",
+  "ia": "Emotional Intelligence",
+  "q": "Which of the following best describes social awareness?",
+  "c": [
+   "Controlling your own temper",
+   "Setting personal goals",
+   "Managing your budget",
+   "Reading the emotions and needs of people in a group"
+  ],
+  "a": 3,
+  "e": "Social awareness is accurately sensing others' feelings and group dynamics."
+ },
+ {
+  "id": "g-emotional-intelligence-22",
+  "ia": "Emotional Intelligence",
+  "q": "An employee wants to build a positive reputation at work. Which habit helps most?",
+  "c": [
+   "Being reliable and respectful in daily interactions",
+   "Taking long breaks without notice",
+   "Spreading rumors",
+   "Avoiding teamwork"
+  ],
+  "a": 0,
+  "e": "Consistent reliability and respect build credibility with others."
+ },
+ {
+  "id": "g-entrepreneurship-1",
+  "ia": "Entrepreneurship",
+  "q": "A person notices that many neighbors struggle to find affordable dog walkers and starts a service. This is an example of:",
+  "c": [
+   "Franchising",
+   "Identifying a market opportunity",
+   "Liquidation",
+   "Vertical integration"
+  ],
+  "a": 1,
+  "e": "Entrepreneurs often start by spotting an unmet need in the market."
+ },
+ {
+  "id": "g-entrepreneurship-2",
+  "ia": "Entrepreneurship",
+  "q": "An entrepreneur is opening a bakery and needs a document that describes goals, market, operations and finances to share with a lender. This document is a:",
+  "c": [
+   "Balance sheet",
+   "Invoice",
+   "Business plan",
+   "Resume"
+  ],
+  "a": 2,
+  "e": "A business plan explains the venture and is commonly used to seek financing."
+ },
+ {
+  "id": "g-entrepreneurship-3",
+  "ia": "Entrepreneurship",
+  "q": "Which of the following is the best example of entrepreneurial risk?",
+  "c": [
+   "Receiving a fixed salary",
+   "Working part-time",
+   "Opening a savings account",
+   "Investing personal savings in a new business that may not succeed"
+  ],
+  "a": 3,
+  "e": "Entrepreneurs risk time and money for the chance of profit."
+ },
+ {
+  "id": "g-entrepreneurship-4",
+  "ia": "Entrepreneurship",
+  "q": "An entrepreneur buys the right to operate under a well-known brand's name and system. This is called a:",
+  "c": [
+   "Franchise",
+   "Partnership",
+   "Cooperative",
+   "Joint venture"
+  ],
+  "a": 0,
+  "e": "A franchisee pays for the right to use a franchisor's brand and business methods."
+ },
+ {
+  "id": "g-entrepreneurship-5",
+  "ia": "Entrepreneurship",
+  "q": "A startup's founder invests $20,000 of savings in the company. This money is called:",
+  "c": [
+   "Accounts payable",
+   "Owner's equity",
+   "A bank loan",
+   "Retained liability"
+  ],
+  "a": 1,
+  "e": "Funds the owner puts in are equity, which represents ownership."
+ },
+ {
+  "id": "g-entrepreneurship-6",
+  "ia": "Entrepreneurship",
+  "q": "An entrepreneur borrows $50,000 from a bank to buy equipment and must repay it with interest. This is an example of:",
+  "c": [
+   "Equity financing",
+   "Crowdgifting",
+   "Debt financing",
+   "Bartering"
+  ],
+  "a": 2,
+  "e": "Debt financing is borrowing money that must be repaid, usually with interest."
+ },
+ {
+  "id": "g-entrepreneurship-7",
+  "ia": "Entrepreneurship",
+  "q": "A new company sells a small stake in the business to investors in exchange for cash. This is:",
+  "c": [
+   "Debt financing",
+   "Trade credit",
+   "Leasing",
+   "Equity financing"
+  ],
+  "a": 3,
+  "e": "Equity financing gives investors partial ownership in return for capital."
+ },
+ {
+  "id": "g-entrepreneurship-8",
+  "ia": "Entrepreneurship",
+  "q": "A founder tests a basic version of a product with a small group of customers before launching widely. This version is called a:",
+  "c": [
+   "Minimum viable product",
+   "Final audit",
+   "Annual report",
+   "Franchise package"
+  ],
+  "a": 0,
+  "e": "An MVP lets entrepreneurs gather feedback with limited cost."
+ },
+ {
+  "id": "g-entrepreneurship-9",
+  "ia": "Entrepreneurship",
+  "q": "Which section of a business plan summarizes the whole plan in a page or two?",
+  "c": [
+   "Appendix",
+   "Executive summary",
+   "Marketing calendar",
+   "Glossary"
+  ],
+  "a": 1,
+  "e": "The executive summary overviews the business and is written to capture readers' attention."
+ },
+ {
+  "id": "g-entrepreneurship-10",
+  "ia": "Entrepreneurship",
+  "q": "An entrepreneur who sells handmade candles at craft fairs wants to learn who buys them and why. The best first step is to conduct:",
+  "c": [
+   "Product recall",
+   "Mass layoffs",
+   "Market research",
+   "Auditing"
+  ],
+  "a": 2,
+  "e": "Market research gathers information about customers, competitors and demand."
+ },
+ {
+  "id": "g-entrepreneurship-11",
+  "ia": "Entrepreneurship",
+  "q": "Which of the following is a major advantage of a sole proprietorship?",
+  "c": [
+   "The owner has limited liability",
+   "Profits are shared with shareholders",
+   "Ownership can easily be sold to the public",
+   "The owner has full control of decisions"
+  ],
+  "a": 3,
+  "e": "Sole proprietors make all decisions, though they also bear unlimited liability."
+ },
+ {
+  "id": "g-entrepreneurship-12",
+  "ia": "Entrepreneurship",
+  "q": "A company that has a unique product that is hard to copy gains which advantage over rivals?",
+  "c": [
+   "Competitive advantage",
+   "Cost overrun",
+   "Market saturation",
+   "Product liability"
+  ],
+  "a": 0,
+  "e": "A competitive advantage lets a firm outperform rivals, such as through uniqueness or lower cost."
+ },
+ {
+  "id": "g-entrepreneurship-13",
+  "ia": "Entrepreneurship",
+  "q": "A young entrepreneur plans monthly start-up costs of $4,000 and expects monthly revenue of $6,500 with other expenses of $1,800. What is the expected monthly profit?",
+  "c": [
+   "$2,500",
+   "$700",
+   "$4,700",
+   "$10,500"
+  ],
+  "a": 1,
+  "e": "$6,500 - $4,000 - $1,800 = $700."
+ },
+ {
+  "id": "g-entrepreneurship-14",
+  "ia": "Entrepreneurship",
+  "q": "An entrepreneur adjusts the business model after learning that customers want delivery rather than in-store pickup. This ability is known as:",
+  "c": [
+   "Rigidity",
+   "Diversification",
+   "Adaptability",
+   "Outsourcing"
+  ],
+  "a": 2,
+  "e": "Successful entrepreneurs adapt to customer feedback and market changes."
+ },
+ {
+  "id": "g-financial-analysis-1",
+  "ia": "Financial Analysis",
+  "q": "A company has total assets of $180,000 and total liabilities of $75,000. What is owner's equity?",
+  "c": [
+   "$255,000",
+   "$75,000",
+   "$180,000",
+   "$105,000"
+  ],
+  "a": 3,
+  "e": "Assets = Liabilities + Equity, so equity = $180,000 - $75,000 = $105,000."
+ },
+ {
+  "id": "g-financial-analysis-2",
+  "ia": "Financial Analysis",
+  "q": "A store had net sales of $250,000 and cost of goods sold of $160,000. Its gross profit is:",
+  "c": [
+   "$90,000",
+   "$410,000",
+   "$160,000",
+   "$250,000"
+  ],
+  "a": 0,
+  "e": "Gross profit = net sales - COGS = $250,000 - $160,000 = $90,000."
+ },
+ {
+  "id": "g-financial-analysis-3",
+  "ia": "Financial Analysis",
+  "q": "Using the figures of net sales $250,000 and cost of goods sold $160,000, the gross profit margin is:",
+  "c": [
+   "64%",
+   "36%",
+   "56%",
+   "90%"
+  ],
+  "a": 1,
+  "e": "Gross margin = $90,000 / $250,000 = 0.36 or 36%."
+ },
+ {
+  "id": "g-financial-analysis-4",
+  "ia": "Financial Analysis",
+  "q": "A firm has current assets of $60,000 and current liabilities of $40,000. Its current ratio is:",
+  "c": [
+   "0.67",
+   "2.0",
+   "1.5",
+   "20,000"
+  ],
+  "a": 2,
+  "e": "Current ratio = current assets / current liabilities = 60,000 / 40,000 = 1.5."
+ },
+ {
+  "id": "g-financial-analysis-5",
+  "ia": "Financial Analysis",
+  "q": "A business had revenue of $120,000 and total expenses of $95,000. Its net income is:",
+  "c": [
+   "$215,000",
+   "$95,000",
+   "$120,000",
+   "$25,000"
+  ],
+  "a": 3,
+  "e": "Net income = revenue - expenses = $120,000 - $95,000 = $25,000."
+ },
+ {
+  "id": "g-financial-analysis-6",
+  "ia": "Financial Analysis",
+  "q": "Which financial statement reports a company's assets, liabilities and equity on a specific date?",
+  "c": [
+   "Balance sheet",
+   "Income statement",
+   "Statement of cash flows",
+   "Budget variance report"
+  ],
+  "a": 0,
+  "e": "The balance sheet is a snapshot of financial position at a point in time."
+ },
+ {
+  "id": "g-financial-analysis-7",
+  "ia": "Financial Analysis",
+  "q": "Which financial statement shows revenue and expenses over a period of time?",
+  "c": [
+   "Balance sheet",
+   "Income statement",
+   "Trial balance",
+   "Bank reconciliation"
+  ],
+  "a": 1,
+  "e": "The income statement reports profitability over a period."
+ },
+ {
+  "id": "g-financial-analysis-8",
+  "ia": "Financial Analysis",
+  "q": "A business's rent, insurance and salaried manager pay stay the same no matter how many units are sold. These are:",
+  "c": [
+   "Variable costs",
+   "Direct materials",
+   "Fixed costs",
+   "Cost of goods sold"
+  ],
+  "a": 2,
+  "e": "Fixed costs do not change with the level of output in the short run."
+ },
+ {
+  "id": "g-financial-analysis-9",
+  "ia": "Financial Analysis",
+  "q": "A product sells for $25 and has variable cost of $15 per unit. Fixed costs are $5,000. How many units must be sold to break even?",
+  "c": [
+   "200",
+   "333",
+   "1,000",
+   "500"
+  ],
+  "a": 3,
+  "e": "Contribution margin = $25 - $15 = $10. Break-even = $5,000 / $10 = 500 units."
+ },
+ {
+  "id": "g-financial-analysis-10",
+  "ia": "Financial Analysis",
+  "q": "A business borrows $8,000 at 5% simple annual interest for 3 years. How much total interest will be owed?",
+  "c": [
+   "$1,200",
+   "$400",
+   "$1,000",
+   "$2,400"
+  ],
+  "a": 0,
+  "e": "Interest = principal x rate x time = $8,000 x 0.05 x 3 = $1,200."
+ },
+ {
+  "id": "g-financial-analysis-11",
+  "ia": "Financial Analysis",
+  "q": "A company's net income is $30,000 and net sales are $400,000. The net profit margin is:",
+  "c": [
+   "13.3%",
+   "7.5%",
+   "30%",
+   "75%"
+  ],
+  "a": 1,
+  "e": "Net profit margin = $30,000 / $400,000 = 0.075 or 7.5%."
+ },
+ {
+  "id": "g-financial-analysis-12",
+  "ia": "Financial Analysis",
+  "q": "An item is purchased for $60 and sold for $90. What is the markup percentage based on cost?",
+  "c": [
+   "33%",
+   "30%",
+   "50%",
+   "67%"
+  ],
+  "a": 2,
+  "e": "Markup = $30 / $60 = 0.50 or 50% of cost."
+ },
+ {
+  "id": "g-financial-analysis-13",
+  "ia": "Financial Analysis",
+  "q": "A retailer wants a 40% markup based on cost on an item that costs $50. What is the selling price?",
+  "c": [
+   "$90",
+   "$20",
+   "$62.50",
+   "$70"
+  ],
+  "a": 3,
+  "e": "Markup = $50 x 0.40 = $20; selling price = $50 + $20 = $70."
+ },
+ {
+  "id": "g-financial-analysis-14",
+  "ia": "Financial Analysis",
+  "q": "A bakery has $12,000 in inventory at the start of the year and $18,000 at the end, with cost of goods sold of $90,000. Average inventory is $15,000. What is inventory turnover?",
+  "c": [
+   "6",
+   "5",
+   "7.5",
+   "0.17"
+  ],
+  "a": 0,
+  "e": "Turnover = COGS / average inventory = $90,000 / $15,000 = 6 times."
+ },
+ {
+  "id": "g-financial-analysis-15",
+  "ia": "Financial Analysis",
+  "q": "An accounts receivable balance represents:",
+  "c": [
+   "Money the business owes suppliers",
+   "Money owed to the business by customers",
+   "Cash in the bank",
+   "Owner investments"
+  ],
+  "a": 1,
+  "e": "Receivables are amounts customers owe the business for goods or services sold on credit."
+ },
+ {
+  "id": "g-financial-analysis-16",
+  "ia": "Financial Analysis",
+  "q": "Which of the following is a current liability?",
+  "c": [
+   "Land",
+   "Equipment",
+   "Accounts payable",
+   "Trademark"
+  ],
+  "a": 2,
+  "e": "Accounts payable is owed within a year, making it a current liability."
+ },
+ {
+  "id": "g-financial-analysis-17",
+  "ia": "Financial Analysis",
+  "q": "Depreciation is best described as:",
+  "c": [
+   "Increasing an asset's market value",
+   "Paying off a loan",
+   "Recording a sale on credit",
+   "Allocating the cost of a long-term asset over its useful life"
+  ],
+  "a": 3,
+  "e": "Depreciation spreads the cost of an asset across the years it helps generate revenue."
+ },
+ {
+  "id": "g-financial-analysis-18",
+  "ia": "Financial Analysis",
+  "q": "A machine costs $12,000, has a $2,000 salvage value and a 5-year life. Using straight-line depreciation, annual depreciation is:",
+  "c": [
+   "$2,000",
+   "$2,400",
+   "$10,000",
+   "$1,600"
+  ],
+  "a": 0,
+  "e": "($12,000 - $2,000) / 5 = $2,000 per year."
+ },
+ {
+  "id": "g-financial-analysis-19",
+  "ia": "Financial Analysis",
+  "q": "A bakery budgeted $5,000 for flour in March but actually spent $5,600. The $600 difference is called a:",
+  "c": [
+   "Variance",
+   "Depreciation",
+   "Markup",
+   "Equity"
+  ],
+  "a": 0,
+  "e": "The difference between a budgeted and an actual amount is a variance; here spending was $600 over budget."
+ },
+ {
+  "id": "g-financial-analysis-20",
+  "ia": "Financial Analysis",
+  "q": "A company expected to spend $15,000 on supplies but actually spent $17,250. What is the variance as a percentage of budget?",
+  "c": [
+   "13% over",
+   "15% under",
+   "15% over",
+   "2,250% over"
+  ],
+  "a": 2,
+  "e": "Variance = $2,250; $2,250 / $15,000 = 15% over budget."
+ },
+ {
+  "id": "g-financial-analysis-21",
+  "ia": "Financial Analysis",
+  "q": "Which ratio measures a company's ability to pay its short-term debts?",
+  "c": [
+   "Profitability ratio",
+   "Efficiency ratio",
+   "Market ratio",
+   "Liquidity ratio"
+  ],
+  "a": 3,
+  "e": "Liquidity ratios, such as the current ratio, assess ability to meet near-term obligations."
+ },
+ {
+  "id": "g-financial-analysis-22",
+  "ia": "Financial Analysis",
+  "q": "Debt-to-equity ratio compares:",
+  "c": [
+   "Total liabilities to owner's equity",
+   "Revenue to expenses",
+   "Assets to inventory",
+   "Net income to sales"
+  ],
+  "a": 0,
+  "e": "Debt-to-equity shows how much of the business is financed by creditors versus owners."
+ },
+ {
+  "id": "g-financial-analysis-23",
+  "ia": "Financial Analysis",
+  "q": "A company has liabilities of $90,000 and owner's equity of $60,000. Its debt-to-equity ratio is:",
+  "c": [
+   "0.67",
+   "1.5",
+   "2.5",
+   "0.4"
+  ],
+  "a": 1,
+  "e": "Debt-to-equity = $90,000 / $60,000 = 1.5."
+ },
+ {
+  "id": "g-financial-analysis-24",
+  "ia": "Financial Analysis",
+  "q": "Cash flow from operating activities reflects:",
+  "c": [
+   "Purchases of buildings",
+   "Stock issued to investors",
+   "Cash generated by day-to-day business operations",
+   "Loan proceeds only"
+  ],
+  "a": 2,
+  "e": "Operating cash flow shows cash from normal business activity, such as sales and payments of expenses."
+ },
+ {
+  "id": "g-financial-analysis-25",
+  "ia": "Financial Analysis",
+  "q": "Return on investment is calculated by dividing:",
+  "c": [
+   "Total sales by total cost",
+   "Assets by liabilities",
+   "Cost by net gain",
+   "Net gain from the investment by its cost"
+  ],
+  "a": 3,
+  "e": "ROI = net gain / investment cost, expressed as a percentage."
+ },
+ {
+  "id": "g-financial-analysis-26",
+  "ia": "Financial Analysis",
+  "q": "An owner invests $20,000 and earns a net gain of $3,000 in a year. The ROI is:",
+  "c": [
+   "15%",
+   "6.7%",
+   "23%",
+   "85%"
+  ],
+  "a": 0,
+  "e": "ROI = $3,000 / $20,000 = 0.15 or 15%."
+ },
+ {
+  "id": "g-financial-analysis-27",
+  "ia": "Financial Analysis",
+  "q": "Reconciling a company's bank statement with its checkbook records helps:",
+  "c": [
+   "Increase sales",
+   "Identify errors and ensure the cash balance is accurate",
+   "Reduce taxes legally",
+   "Raise interest rates"
+  ],
+  "a": 1,
+  "e": "Bank reconciliation matches internal records to bank records to detect discrepancies."
+ },
+ {
+  "id": "g-financial-analysis-28",
+  "ia": "Financial Analysis",
+  "q": "Working capital is calculated as:",
+  "c": [
+   "Total assets minus total liabilities",
+   "Revenue minus expenses",
+   "Current assets minus current liabilities",
+   "Equity plus liabilities"
+  ],
+  "a": 2,
+  "e": "Working capital measures short-term financial health: current assets - current liabilities."
+ },
+ {
+  "id": "g-financial-analysis-29",
+  "ia": "Financial Analysis",
+  "q": "A firm with current assets of $75,000 and current liabilities of $50,000 has working capital of:",
+  "c": [
+   "$125,000",
+   "$1,500",
+   "$50,000",
+   "$25,000"
+  ],
+  "a": 3,
+  "e": "$75,000 - $50,000 = $25,000."
+ },
+ {
+  "id": "g-financial-analysis-30",
+  "ia": "Financial Analysis",
+  "q": "Which cost changes in total as production volume changes?",
+  "c": [
+   "Variable cost",
+   "Fixed cost",
+   "Sunk cost",
+   "Overhead lease"
+  ],
+  "a": 0,
+  "e": "Variable costs, such as materials, rise as more units are made."
+ },
+ {
+  "id": "g-human-resources-management-1",
+  "ia": "Human Resources Management",
+  "q": "A company posts an opening, reviews applications, interviews finalists and makes an offer. This sequence is part of the:",
+  "c": [
+   "Performance appraisal",
+   "Hiring process",
+   "Termination process",
+   "Payroll cycle"
+  ],
+  "a": 1,
+  "e": "Recruiting, selecting and hiring are core HR staffing activities."
+ },
+ {
+  "id": "g-human-resources-management-2",
+  "ia": "Human Resources Management",
+  "q": "A written summary of a job's duties, responsibilities and required qualifications is a:",
+  "c": [
+   "Resume",
+   "Performance review",
+   "Job description",
+   "Contract"
+  ],
+  "a": 2,
+  "e": "Job descriptions define what the position involves and help in recruiting and evaluating."
+ },
+ {
+  "id": "g-human-resources-management-3",
+  "ia": "Human Resources Management",
+  "q": "An employer provides new hires with a session covering policies, safety and job expectations. This is:",
+  "c": [
+   "Layoff",
+   "Arbitration",
+   "Probation review",
+   "Orientation"
+  ],
+  "a": 3,
+  "e": "Orientation helps new employees understand the company and their roles."
+ },
+ {
+  "id": "g-human-resources-management-4",
+  "ia": "Human Resources Management",
+  "q": "Paid time off, health insurance and retirement contributions are examples of:",
+  "c": [
+   "Employee benefits",
+   "Wages",
+   "Overtime",
+   "Commission"
+  ],
+  "a": 0,
+  "e": "Benefits are non-wage compensation provided in addition to pay."
+ },
+ {
+  "id": "g-information-management-1",
+  "ia": "Information Management",
+  "q": "A company stores customer addresses in a spreadsheet. Which action best protects this information?",
+  "c": [
+   "Emailing the file to everyone",
+   "Using passwords and limiting access to authorized employees",
+   "Saving it on a public drive",
+   "Printing copies for all staff"
+  ],
+  "a": 1,
+  "e": "Access controls and passwords reduce the risk of unauthorized use of sensitive data."
+ },
+ {
+  "id": "g-information-management-2",
+  "ia": "Information Management",
+  "q": "A manager wants to see a quick comparison of sales by region. Which tool is best suited?",
+  "c": [
+   "A letter",
+   "A memo",
+   "A chart or graph",
+   "A presentation title slide"
+  ],
+  "a": 2,
+  "e": "Visual charts make comparisons across categories easy to see."
+ },
+ {
+  "id": "g-information-management-3",
+  "ia": "Information Management",
+  "q": "Backing up company files regularly helps a business to:",
+  "c": [
+   "Increase sales",
+   "Speed up the internet",
+   "Reduce employee turnover",
+   "Recover data after loss or system failure"
+  ],
+  "a": 3,
+  "e": "Backups preserve copies of data so operations can resume after a failure."
+ },
+ {
+  "id": "g-information-management-4",
+  "ia": "Information Management",
+  "q": "A retailer's database stores each product's SKU, price and quantity on hand. A single product's complete set of entries is called a:",
+  "c": [
+   "Record",
+   "Field",
+   "Server",
+   "Firewall"
+  ],
+  "a": 0,
+  "e": "A record contains all data about one item; fields are individual pieces within it."
+ },
+ {
+  "id": "g-information-management-5",
+  "ia": "Information Management",
+  "q": "Software designed to detect and remove malicious programs is called:",
+  "c": [
+   "Spreadsheet software",
+   "Antivirus software",
+   "Presentation software",
+   "Word processor"
+  ],
+  "a": 1,
+  "e": "Antivirus software protects systems from malware."
+ },
+ {
+  "id": "g-information-management-6",
+  "ia": "Information Management",
+  "q": "An employee receives an email that appears to be from the bank asking for a password. This is most likely:",
+  "c": [
+   "Spam filtering",
+   "Networking",
+   "Phishing",
+   "Encryption"
+  ],
+  "a": 2,
+  "e": "Phishing attempts to trick people into revealing confidential information."
+ },
+ {
+  "id": "g-information-management-7",
+  "ia": "Information Management",
+  "q": "Which of the following is an example of primary data collected by a business?",
+  "c": [
+   "A government census report",
+   "A trade magazine article",
+   "An industry directory",
+   "Results of its own customer survey"
+  ],
+  "a": 3,
+  "e": "Primary data is gathered directly by the business for a specific purpose."
+ },
+ {
+  "id": "g-information-management-8",
+  "ia": "Information Management",
+  "q": "Converting data into code to prevent unauthorized people from reading it is called:",
+  "c": [
+   "Encryption",
+   "Compression",
+   "Archiving",
+   "Formatting"
+  ],
+  "a": 0,
+  "e": "Encryption scrambles data so only authorized parties with a key can read it."
+ },
+ {
+  "id": "g-information-management-9",
+  "ia": "Information Management",
+  "q": "A business wants multiple employees to edit one document at the same time from different locations. Which technology is most appropriate?",
+  "c": [
+   "Offline word processor",
+   "Cloud-based collaboration software",
+   "Fax machine",
+   "Typewriter"
+  ],
+  "a": 1,
+  "e": "Cloud tools let teams share and edit files in real time."
+ },
+ {
+  "id": "g-information-management-10",
+  "ia": "Information Management",
+  "q": "In a spreadsheet, a formula that adds the numbers in cells B2 through B10 is written as:",
+  "c": [
+   "=ADD(B2-B10)",
+   "=TOTAL(B2,B10)",
+   "=SUM(B2:B10)",
+   "=PLUS(B2:B10)"
+  ],
+  "a": 2,
+  "e": "SUM with a range adds all the values in the range."
+ },
+ {
+  "id": "g-information-management-11",
+  "ia": "Information Management",
+  "q": "A company deletes old customer records it no longer needs, following its retention policy. This is part of:",
+  "c": [
+   "Product design",
+   "Inventory pricing",
+   "Advertising",
+   "Records management"
+  ],
+  "a": 3,
+  "e": "Records management includes keeping and disposing of information according to policy and law."
+ },
+ {
+  "id": "g-information-management-12",
+  "ia": "Information Management",
+  "q": "Which of the following is an example of a business using data analytics?",
+  "c": [
+   "Reviewing purchase patterns to decide what to stock",
+   "Painting the store",
+   "Hiring a receptionist",
+   "Choosing office chairs"
+  ],
+  "a": 0,
+  "e": "Analytics turns data into insight for decisions such as inventory selection."
+ },
+ {
+  "id": "g-information-management-13",
+  "ia": "Information Management",
+  "q": "A strong password should:",
+  "c": [
+   "Use a birthday",
+   "Combine letters, numbers and symbols and be hard to guess",
+   "Be the word 'password'",
+   "Be shared with coworkers"
+  ],
+  "a": 1,
+  "e": "Longer, complex and unique passwords are harder to crack."
+ },
+ {
+  "id": "g-information-management-14",
+  "ia": "Information Management",
+  "q": "An organization wants employees to know what is allowed when using company computers and the internet. It should create an:",
+  "c": [
+   "Income statement",
+   "Sales forecast",
+   "Acceptable use policy",
+   "Org chart"
+  ],
+  "a": 2,
+  "e": "An acceptable use policy defines proper use of technology resources."
+ },
+ {
+  "id": "g-information-management-15",
+  "ia": "Information Management",
+  "q": "A manager shares a file with a vendor using a link that anyone can open. What is the main risk?",
+  "c": [
+   "The file will be too small",
+   "The vendor will lose it",
+   "Printing costs rise",
+   "Unauthorized people could access the file"
+  ],
+  "a": 3,
+  "e": "Open links can be forwarded or discovered, so sensitive files should have restricted access."
+ },
+ {
+  "id": "g-marketing-1",
+  "ia": "Marketing",
+  "q": "The four Ps of the marketing mix are product, price, place and:",
+  "c": [
+   "Promotion",
+   "Profit",
+   "People",
+   "Planning"
+  ],
+  "a": 0,
+  "e": "The classic marketing mix elements are product, price, place and promotion."
+ },
+ {
+  "id": "g-marketing-2",
+  "ia": "Marketing",
+  "q": "A company divides its market into groups based on age, income and interests. This process is:",
+  "c": [
+   "Product recall",
+   "Market segmentation",
+   "Cost accounting",
+   "Franchising"
+  ],
+  "a": 1,
+  "e": "Segmentation separates a market into groups with similar needs or traits."
+ },
+ {
+  "id": "g-marketing-3",
+  "ia": "Marketing",
+  "q": "The group of consumers a business chooses to focus its marketing efforts on is its:",
+  "c": [
+   "Competition",
+   "Supply chain",
+   "Target market",
+   "Labor force"
+  ],
+  "a": 2,
+  "e": "A target market is the specific group a business aims to serve."
+ },
+ {
+  "id": "g-operations-1",
+  "ia": "Operations",
+  "q": "A restaurant keeps a log of food deliveries and checks them against purchase orders. This activity is:",
+  "c": [
+   "Cold calling",
+   "Market segmentation",
+   "Outsourcing payroll",
+   "Receiving and verifying goods"
+  ],
+  "a": 3,
+  "e": "Receiving procedures confirm that what arrived matches what was ordered."
+ },
+ {
+  "id": "g-operations-2",
+  "ia": "Operations",
+  "q": "A manager wants to keep only enough inventory to meet demand and avoid storage costs. Which approach does this describe?",
+  "c": [
+   "Just-in-time inventory",
+   "Overstocking",
+   "Dead stock",
+   "Consignment"
+  ],
+  "a": 0,
+  "e": "JIT orders goods as needed, reducing the cost of holding inventory."
+ },
+ {
+  "id": "g-operations-3",
+  "ia": "Operations",
+  "q": "A company moves products from the manufacturer to the retailer through a network of suppliers, warehouses and shippers. This network is the:",
+  "c": [
+   "Value statement",
+   "Supply chain",
+   "Pricing policy",
+   "Org chart"
+  ],
+  "a": 1,
+  "e": "The supply chain covers the steps and parties involved in producing and delivering a product."
+ },
+ {
+  "id": "g-operations-4",
+  "ia": "Operations",
+  "q": "A bakery makes 600 loaves in 8 hours with 3 workers. What is the output per labor hour?",
+  "c": [
+   "75 loaves",
+   "200 loaves",
+   "25 loaves",
+   "100 loaves"
+  ],
+  "a": 2,
+  "e": "Labor hours = 8 x 3 = 24; 600 / 24 = 25 loaves per labor hour."
+ },
+ {
+  "id": "g-operations-5",
+  "ia": "Operations",
+  "q": "A store's safety procedure requires employees to clean up spills immediately. The purpose is to:",
+  "c": [
+   "Increase prices",
+   "Improve advertising",
+   "Attract new vendors",
+   "Reduce the risk of accidents"
+  ],
+  "a": 3,
+  "e": "Prompt cleanup prevents slips and falls."
+ },
+ {
+  "id": "g-operations-6",
+  "ia": "Operations",
+  "q": "A business compares the cost of making a part in-house versus buying it from another company. This decision is called:",
+  "c": [
+   "Make-or-buy decision",
+   "Product recall",
+   "Break-even pricing",
+   "Pay equity"
+  ],
+  "a": 0,
+  "e": "A make-or-buy analysis weighs producing internally against purchasing externally."
+ },
+ {
+  "id": "g-operations-7",
+  "ia": "Operations",
+  "q": "Using a barcode scanner to track items as they are sold primarily helps a business:",
+  "c": [
+   "Increase rent",
+   "Maintain accurate inventory records",
+   "Reduce employee wages",
+   "Avoid taxes"
+  ],
+  "a": 1,
+  "e": "Scanning updates inventory counts automatically and reduces errors."
+ },
+ {
+  "id": "g-operations-8",
+  "ia": "Operations",
+  "q": "A manager schedules employees so the busiest hours have the most staff. This is an example of:",
+  "c": [
+   "Product placement",
+   "Collateral",
+   "Workforce scheduling",
+   "Price skimming"
+  ],
+  "a": 2,
+  "e": "Matching staffing to demand improves service and controls labor costs."
+ },
+ {
+  "id": "g-operations-9",
+  "ia": "Operations",
+  "q": "An office replaces a paper filing system with digital documents to cut costs and speed access. This is an example of improving:",
+  "c": [
+   "Product liability",
+   "Risk transfer",
+   "Brand loyalty",
+   "Operational efficiency"
+  ],
+  "a": 3,
+  "e": "Efficiency means producing results with less time, cost or waste."
+ },
+ {
+  "id": "g-operations-10",
+  "ia": "Operations",
+  "q": "A company reorders stock when inventory falls to a set level. This level is called the:",
+  "c": [
+   "Reorder point",
+   "Break-even point",
+   "Retail price",
+   "Credit limit"
+  ],
+  "a": 0,
+  "e": "The reorder point triggers a new order before stock runs out."
+ },
+ {
+  "id": "g-operations-11",
+  "ia": "Operations",
+  "q": "A shop sells 20 units a day. Supplier delivery takes 4 days. What reorder point, ignoring safety stock, avoids running out?",
+  "c": [
+   "24 units",
+   "80 units",
+   "5 units",
+   "16 units"
+  ],
+  "a": 1,
+  "e": "Reorder point = daily demand x lead time = 20 x 4 = 80 units."
+ },
+ {
+  "id": "g-operations-12",
+  "ia": "Operations",
+  "q": "Which is an example of a fixed asset a business might purchase for operations?",
+  "c": [
+   "Office paper",
+   "Raw cotton",
+   "Delivery truck",
+   "Packaging tape"
+  ],
+  "a": 2,
+  "e": "A delivery truck is a long-lived asset used in operations, unlike consumable supplies."
+ },
+ {
+  "id": "g-operations-13",
+  "ia": "Operations",
+  "q": "A manager creates step-by-step written instructions for closing the store each night. These are called:",
+  "c": [
+   "Mission statements",
+   "Promotions",
+   "Financial statements",
+   "Standard operating procedures"
+  ],
+  "a": 3,
+  "e": "SOPs document consistent ways to perform tasks."
+ },
+ {
+  "id": "g-operations-14",
+  "ia": "Operations",
+  "q": "A company cuts waste by removing steps that do not add value for customers. This approach is called:",
+  "c": [
+   "Lean operations",
+   "Overproduction",
+   "Vertical integration",
+   "Price fixing"
+  ],
+  "a": 0,
+  "e": "Lean focuses on eliminating waste while maximizing customer value."
+ },
+ {
+  "id": "g-operations-15",
+  "ia": "Operations",
+  "q": "A business hires another company to handle its customer service calls. This is an example of:",
+  "c": [
+   "Franchising",
+   "Outsourcing",
+   "Merging",
+   "Diversifying"
+  ],
+  "a": 1,
+  "e": "Outsourcing uses outside firms to perform functions."
+ },
+ {
+  "id": "g-operations-16",
+  "ia": "Operations",
+  "q": "Which of the following best describes a purchase order?",
+  "c": [
+   "A document showing employee hours",
+   "A customer's receipt",
+   "A document sent to a vendor requesting goods at agreed terms",
+   "A tax return"
+  ],
+  "a": 2,
+  "e": "A purchase order is the buyer's formal request for goods or services."
+ },
+ {
+  "id": "g-operations-17",
+  "ia": "Operations",
+  "q": "When a shipment arrives with damaged items, the receiving employee should first:",
+  "c": [
+   "Throw the items away",
+   "Sell them at full price",
+   "Ignore the problem",
+   "Document the damage and notify the supervisor"
+  ],
+  "a": 3,
+  "e": "Documentation supports claims and corrective action with carriers or vendors."
+ },
+ {
+  "id": "g-operations-18",
+  "ia": "Operations",
+  "q": "A warehouse stores the fastest-selling items closest to the shipping area. This layout strategy reduces:",
+  "c": [
+   "Picking time",
+   "Taxes",
+   "Product quality",
+   "Insurance coverage"
+  ],
+  "a": 0,
+  "e": "Placing popular items nearby shortens travel for pickers."
+ },
+ {
+  "id": "g-operations-19",
+  "ia": "Operations",
+  "q": "A manufacturer has 5% of its 2,000 units fail inspection. How many units failed?",
+  "c": [
+   "10",
+   "100",
+   "400",
+   "1,900"
+  ],
+  "a": 1,
+  "e": "2,000 x 0.05 = 100 units."
+ },
+ {
+  "id": "g-operations-20",
+  "ia": "Operations",
+  "q": "A company that tracks the number of orders shipped correctly each day is measuring:",
+  "c": [
+   "Brand awareness",
+   "Market share",
+   "Operational performance",
+   "Customer demographics"
+  ],
+  "a": 2,
+  "e": "Performance metrics, such as order accuracy, help managers evaluate operations."
+ },
+ {
+  "id": "g-operations-21",
+  "ia": "Operations",
+  "q": "Which is the best reason a business creates a contingency plan?",
+  "c": [
+   "To raise prices",
+   "To hire more staff",
+   "To redesign its logo",
+   "To keep operating if an unexpected event occurs"
+  ],
+  "a": 3,
+  "e": "Contingency plans prepare for disruptions such as outages or supply problems."
+ },
+ {
+  "id": "g-operations-22",
+  "ia": "Operations",
+  "q": "A business pays a monthly fee to rent warehouse space regardless of how much it stores. This rent is a:",
+  "c": [
+   "Fixed cost",
+   "Variable cost",
+   "Revenue",
+   "Asset"
+  ],
+  "a": 0,
+  "e": "The rent does not vary with volume, so it is a fixed cost."
+ },
+ {
+  "id": "g-operations-23",
+  "ia": "Operations",
+  "q": "An employee uses a checklist to verify that each product meets specifications before it ships. This is an example of:",
+  "c": [
+   "Price discrimination",
+   "Quality control",
+   "Market research",
+   "Product positioning"
+  ],
+  "a": 1,
+  "e": "Quality control inspects output to ensure it meets standards."
+ },
+ {
+  "id": "g-operations-24",
+  "ia": "Operations",
+  "q": "A company pools orders to ship in full truckloads instead of many small shipments. The main benefit is:",
+  "c": [
+   "Higher price per item",
+   "Less inventory accuracy",
+   "Lower transportation cost per unit",
+   "More packaging"
+  ],
+  "a": 2,
+  "e": "Consolidating shipments spreads freight costs across more goods."
+ },
+ {
+  "id": "g-operations-25",
+  "ia": "Operations",
+  "q": "A hotel uses a system that tracks room availability across all booking channels. This system helps avoid:",
+  "c": [
+   "Depreciation",
+   "Inflation",
+   "Wage disputes",
+   "Overbooking"
+  ],
+  "a": 3,
+  "e": "Centralized availability prevents selling the same room twice."
+ },
+ {
+  "id": "g-operations-26",
+  "ia": "Operations",
+  "q": "A company arranges for goods to be delivered by the supplier directly to the customer without the company holding inventory. This is called:",
+  "c": [
+   "Drop shipping",
+   "Warehousing",
+   "Stockpiling",
+   "Repossession"
+  ],
+  "a": 0,
+  "e": "In drop shipping the supplier ships directly to the buyer."
+ },
+ {
+  "id": "g-professional-development-1",
+  "ia": "Professional Development",
+  "q": "An employee takes an online course to learn a new software program used in the industry. This action is an example of:",
+  "c": [
+   "Job termination",
+   "Continuing education",
+   "Delegation",
+   "Outsourcing"
+  ],
+  "a": 1,
+  "e": "Continuing education builds skills that support career growth."
+ },
+ {
+  "id": "g-professional-development-2",
+  "ia": "Professional Development",
+  "q": "A student creates a document listing education, experience, skills and accomplishments to send to employers. This document is a:",
+  "c": [
+   "Invoice",
+   "Business plan",
+   "Resume",
+   "Contract"
+  ],
+  "a": 2,
+  "e": "A resume summarizes qualifications for prospective employers."
+ },
+ {
+  "id": "g-professional-development-3",
+  "ia": "Professional Development",
+  "q": "After a job interview, the candidate sends a brief email thanking the interviewer. This is:",
+  "c": [
+   "An unneeded step",
+   "A formal complaint",
+   "A reference check",
+   "A professional follow-up"
+  ],
+  "a": 3,
+  "e": "Thank-you notes show appreciation and keep the candidate in mind."
+ },
+ {
+  "id": "g-professional-development-4",
+  "ia": "Professional Development",
+  "q": "Arriving to work on time and dressed appropriately demonstrates:",
+  "c": [
+   "Professionalism",
+   "Insubordination",
+   "Nepotism",
+   "Inflation"
+  ],
+  "a": 0,
+  "e": "Punctuality and appropriate dress are professional behaviors."
+ },
+ {
+  "id": "g-professional-development-5",
+  "ia": "Professional Development",
+  "q": "An employee asks a respected senior colleague for guidance on advancing in the company. The colleague acts as a:",
+  "c": [
+   "Competitor",
+   "Mentor",
+   "Subordinate",
+   "Auditor"
+  ],
+  "a": 1,
+  "e": "A mentor offers experience and advice to help another person develop."
+ },
+ {
+  "id": "g-professional-development-6",
+  "ia": "Professional Development",
+  "q": "Which of the following is a career goal that is specific and measurable?",
+  "c": [
+   "Be successful someday",
+   "Get a better job",
+   "Earn a project management certification within 12 months",
+   "Do well at work"
+  ],
+  "a": 2,
+  "e": "Specific and time-bound goals clarify the steps needed and allow progress to be measured."
+ },
+ {
+  "id": "g-professional-development-7",
+  "ia": "Professional Development",
+  "q": "Making connections with people in your field to share information and opportunities is known as:",
+  "c": [
+   "Cold calling",
+   "Outsourcing",
+   "Auditing",
+   "Networking"
+  ],
+  "a": 3,
+  "e": "Networking builds relationships that can lead to jobs and advice."
+ },
+ {
+  "id": "g-professional-development-8",
+  "ia": "Professional Development",
+  "q": "A person's online posts are viewed by prospective employers. To protect a professional image, the person should:",
+  "c": [
+   "Post responsibly and review privacy settings",
+   "Delete all accounts",
+   "Post anything without thinking",
+   "Share passwords"
+  ],
+  "a": 0,
+  "e": "Employers often review online presence, so posts should reflect professionalism."
+ },
+ {
+  "id": "g-professional-development-9",
+  "ia": "Professional Development",
+  "q": "An employee misses a deadline due to poor planning. What is the most professional response?",
+  "c": [
+   "Blame a coworker",
+   "Admit the mistake, explain the plan to fix it and deliver as soon as possible",
+   "Say nothing",
+   "Quit the project"
+  ],
+  "a": 1,
+  "e": "Accountability and a plan for correction maintain credibility."
+ },
+ {
+  "id": "g-professional-development-10",
+  "ia": "Professional Development",
+  "q": "A worker uses a calendar and prioritized to-do list to manage tasks. This practice is called:",
+  "c": [
+   "Credit management",
+   "Stock rotation",
+   "Time management",
+   "Product design"
+  ],
+  "a": 2,
+  "e": "Time management organizes tasks to use time effectively."
+ },
+ {
+  "id": "g-professional-development-11",
+  "ia": "Professional Development",
+  "q": "When a job requires confidential customer information, an employee should:",
+  "c": [
+   "Share it with friends",
+   "Post it online",
+   "Sell it",
+   "Keep it private and use it only for work purposes"
+  ],
+  "a": 3,
+  "e": "Professional ethics require protecting confidentiality."
+ },
+ {
+  "id": "g-professional-development-12",
+  "ia": "Professional Development",
+  "q": "A professional portfolio typically contains:",
+  "c": [
+   "Samples of work and accomplishments",
+   "Only a list of hobbies",
+   "Tax records",
+   "Company stock certificates"
+  ],
+  "a": 0,
+  "e": "Portfolios showcase evidence of skills and achievements."
+ },
+ {
+  "id": "g-professional-development-13",
+  "ia": "Professional Development",
+  "q": "Which question is appropriate for a job candidate to ask at an interview?",
+  "c": [
+   "How soon can I take time off?",
+   "What are the main responsibilities of this position?",
+   "How much do others earn?",
+   "Can I leave early on Fridays?"
+  ],
+  "a": 1,
+  "e": "Asking about responsibilities shows interest and helps evaluate fit."
+ },
+ {
+  "id": "g-professional-development-14",
+  "ia": "Professional Development",
+  "q": "A supervisor asks an employee to complete an additional task. The employee says 'I'll make that a priority' and updates the supervisor on progress. This shows:",
+  "c": [
+   "Resistance",
+   "Disorganization",
+   "Initiative and reliability",
+   "Entitlement"
+  ],
+  "a": 2,
+  "e": "Following through and communicating progress are marks of a dependable employee."
+ },
+ {
+  "id": "g-professional-development-15",
+  "ia": "Professional Development",
+  "q": "DECA, FBLA and similar student organizations help members mainly by:",
+  "c": [
+   "Setting business taxes",
+   "Regulating banks",
+   "Licensing products",
+   "Developing leadership and career-related skills"
+  ],
+  "a": 3,
+  "e": "Career and technical student organizations build leadership, teamwork and career skills."
+ },
+ {
+  "id": "g-strategic-management-1",
+  "ia": "Strategic Management",
+  "q": "A company reviews its strengths, weaknesses, opportunities and threats before setting its direction. This tool is a:",
+  "c": [
+   "SWOT analysis",
+   "Break-even analysis",
+   "Cash flow statement",
+   "Trial balance"
+  ],
+  "a": 0,
+  "e": "SWOT helps managers assess internal and external factors for strategic planning."
+ },
+ {
+  "id": "g-strategic-management-2",
+  "ia": "Strategic Management",
+  "q": "A statement describing what a company wants to become in the future is its:",
+  "c": [
+   "Invoice",
+   "Vision statement",
+   "Budget",
+   "Job description"
+  ],
+  "a": 1,
+  "e": "A vision statement expresses the long-term aspiration of the organization."
+ },
+ {
+  "id": "g-strategic-management-3",
+  "ia": "Strategic Management",
+  "q": "A company's statement of its purpose, customers and what it does is its:",
+  "c": [
+   "Income statement",
+   "Press release",
+   "Mission statement",
+   "Org chart"
+  ],
+  "a": 2,
+  "e": "A mission statement defines why the organization exists and whom it serves."
+ },
+ {
+  "id": "g-strategic-management-4",
+  "ia": "Strategic Management",
+  "q": "A firm chooses to be the lowest-cost producer in its industry. This is a:",
+  "c": [
+   "Differentiation strategy",
+   "Divestiture strategy",
+   "Exit strategy",
+   "Cost leadership strategy"
+  ],
+  "a": 3,
+  "e": "Cost leadership competes by offering similar value at the lowest cost."
+ },
+ {
+  "id": "g-strategic-management-5",
+  "ia": "Strategic Management",
+  "q": "A company that offers unique features and a premium image to stand out from rivals is using a:",
+  "c": [
+   "Differentiation strategy",
+   "Cost leadership strategy",
+   "Liquidation strategy",
+   "Penetration pricing"
+  ],
+  "a": 0,
+  "e": "Differentiation makes a product distinct in ways customers value."
+ },
+ {
+  "id": "g-strategic-management-6",
+  "ia": "Strategic Management",
+  "q": "A growth strategy in which a business sells existing products in new geographic areas is:",
+  "c": [
+   "Product withdrawal",
+   "Market development",
+   "Downsizing",
+   "Market penetration"
+  ],
+  "a": 1,
+  "e": "Market development takes current products into new markets."
+ },
+ {
+  "id": "g-strategic-management-7",
+  "ia": "Strategic Management",
+  "q": "A manager sets measurable targets such as 'increase online sales 12 percent this year' to carry out the strategy. These targets are:",
+  "c": [
+   "Policies",
+   "Assumptions",
+   "Objectives",
+   "Risks"
+  ],
+  "a": 2,
+  "e": "Objectives are specific results to be achieved within a set time frame."
+ },
+ {
+  "id": "g-strategic-management-8",
+  "ia": "Strategic Management",
+  "q": "Which of the following is an external factor a company assesses in strategic planning?",
+  "c": [
+   "Employee skills",
+   "Company culture",
+   "Existing equipment",
+   "New government regulations"
+  ],
+  "a": 3,
+  "e": "Regulations are outside the firm's control; skills, culture and equipment are internal."
+ },
+ {
+  "id": "g-strategic-management-9",
+  "ia": "Strategic Management",
+  "q": "Strategic management typically involves planning, implementing and:",
+  "c": [
+   "Evaluating results",
+   "Ignoring competitors",
+   "Eliminating goals",
+   "Avoiding change"
+  ],
+  "a": 0,
+  "e": "Evaluation compares performance with strategy so adjustments can be made."
+ },
+ {
+  "id": "g-strategic-management-10",
+  "ia": "Strategic Management",
+  "q": "A business measures progress toward goals using targets such as customer satisfaction scores and sales growth. These measures are called:",
+  "c": [
+   "Liabilities",
+   "Key performance indicators",
+   "Tariffs",
+   "Franchise fees"
+  ],
+  "a": 1,
+  "e": "KPIs are quantifiable measures used to track progress toward objectives."
+ },
+ {
+  "id": "g-pricing-1",
+  "ia": "Pricing",
+  "q": "A clothing store wants to price a jacket that costs $40 so that the markup is 50% of the cost. What is the selling price?",
+  "c": [
+   "$80",
+   "$50",
+   "$60",
+   "$90"
+  ],
+  "a": 2,
+  "e": "Markup = $40 x 0.50 = $20; price = $40 + $20 = $60."
+ },
+ {
+  "id": "g-channel-management-1",
+  "ia": "Channel Management",
+  "q": "A manufacturer sells directly to consumers through its own website, with no middlemen. This is a:",
+  "c": [
+   "Indirect channel",
+   "Dual-intermediary channel",
+   "Wholesale channel",
+   "Direct channel"
+  ],
+  "a": 3,
+  "e": "A direct channel moves goods from producer to consumer with no intermediaries."
+ },
+ {
+  "id": "g-channel-management-2",
+  "ia": "Channel Management",
+  "q": "A wholesaler buys large quantities from manufacturers and resells smaller lots to retailers. The wholesaler's main role is:",
+  "c": [
+   "Breaking bulk and distributing goods",
+   "Setting consumer taxes",
+   "Manufacturing the goods",
+   "Providing consumer credit"
+  ],
+  "a": 0,
+  "e": "Wholesalers buy in bulk and sell smaller amounts to retailers, easing distribution."
+ },
+ {
+  "id": "g-channel-management-3",
+  "ia": "Channel Management",
+  "q": "A company wants its product available in as many stores as possible, such as bottled water and snacks. Which distribution intensity is it using?",
+  "c": [
+   "Exclusive distribution",
+   "Intensive distribution",
+   "Selective distribution",
+   "Direct distribution"
+  ],
+  "a": 1,
+  "e": "Intensive distribution places products in a wide range of outlets."
+ },
+ {
+  "id": "g-channel-management-4",
+  "ia": "Channel Management",
+  "q": "A luxury watch maker allows only a few authorized jewelers in each city to sell its watches. This is:",
+  "c": [
+   "Intensive distribution",
+   "Mass distribution",
+   "Exclusive distribution",
+   "Direct mail"
+  ],
+  "a": 2,
+  "e": "Exclusive distribution limits outlets to protect image and control service."
+ },
+ {
+  "id": "g-channel-management-5",
+  "ia": "Channel Management",
+  "q": "Which of the following channel members takes title to the goods and resells them for profit?",
+  "c": [
+   "Sales agent",
+   "Broker",
+   "Freight forwarder",
+   "Merchant wholesaler"
+  ],
+  "a": 3,
+  "e": "Merchants take ownership of goods; agents and brokers do not."
+ },
+ {
+  "id": "g-channel-management-6",
+  "ia": "Channel Management",
+  "q": "A company ships goods by rail to a regional warehouse before they go to stores. Choosing transportation modes is part of:",
+  "c": [
+   "Physical distribution",
+   "Promotion",
+   "Pricing strategy",
+   "Market segmentation"
+  ],
+  "a": 0,
+  "e": "Physical distribution covers moving and storing products from producer to buyer."
+ },
+ {
+  "id": "g-channel-management-7",
+  "ia": "Channel Management",
+  "q": "A conflict arises when a manufacturer begins selling online at lower prices than its retailers charge. This is an example of:",
+  "c": [
+   "Channel cooperation",
+   "Channel conflict",
+   "Price skimming",
+   "Vertical integration"
+  ],
+  "a": 1,
+  "e": "Channel conflict occurs when channel members disagree or compete."
+ },
+ {
+  "id": "g-market-planning-1",
+  "ia": "Market Planning",
+  "q": "A company writes a document that outlines its marketing goals, target market, strategies and budget for the coming year. This is a:",
+  "c": [
+   "Balance sheet",
+   "Production schedule",
+   "Marketing plan",
+   "Job analysis"
+  ],
+  "a": 2,
+  "e": "A marketing plan describes how a business will reach its marketing objectives."
+ },
+ {
+  "id": "g-market-planning-2",
+  "ia": "Market Planning",
+  "q": "Which marketing objective is measurable?",
+  "c": [
+   "Be the best brand",
+   "Improve customer happiness",
+   "Sell more eventually",
+   "Increase market share from 12% to 15% within one year"
+  ],
+  "a": 3,
+  "e": "Measurable objectives include a number and a time frame."
+ },
+ {
+  "id": "g-market-planning-3",
+  "ia": "Market Planning",
+  "q": "A firm expects to sell 8,000 units next year and wants to see how its plan compares to actual results each quarter. This process is:",
+  "c": [
+   "Evaluating and controlling the plan",
+   "Segmenting the market",
+   "Branding",
+   "Recruiting"
+  ],
+  "a": 0,
+  "e": "Comparing results to goals lets marketers adjust their plan."
+ },
+ {
+  "id": "g-market-planning-4",
+  "ia": "Market Planning",
+  "q": "A company positions its toothpaste as the best choice for sensitive teeth. This is its:",
+  "c": [
+   "Break-even point",
+   "Positioning statement",
+   "Tax strategy",
+   "Supply chain"
+  ],
+  "a": 1,
+  "e": "Positioning is how a business wants its product perceived relative to competitors."
+ },
+ {
+  "id": "g-market-planning-5",
+  "ia": "Market Planning",
+  "q": "A marketing manager allocates $30,000 total across advertising, events and online promotion. This allocation is part of creating the:",
+  "c": [
+   "Org chart",
+   "Balance sheet",
+   "Marketing budget",
+   "Credit report"
+  ],
+  "a": 2,
+  "e": "A marketing budget distributes funds among planned activities."
+ },
+ {
+  "id": "g-market-planning-6",
+  "ia": "Market Planning",
+  "q": "A company with strong brand recognition plans to enter a growing market where competitors are weak. This is best viewed as a:",
+  "c": [
+   "Market threat",
+   "Operating loss",
+   "Sunk cost",
+   "Market opportunity"
+  ],
+  "a": 3,
+  "e": "A favorable external condition that fits a firm's strengths is an opportunity."
+ },
+ {
+  "id": "g-marketing-information-management-1",
+  "ia": "Marketing-Information Management",
+  "q": "A company interviews a small group of customers in depth to understand their opinions about a new product. This is a:",
+  "c": [
+   "Focus group",
+   "Census",
+   "Random audit",
+   "Trade show"
+  ],
+  "a": 0,
+  "e": "Focus groups gather qualitative views through group discussion."
+ },
+ {
+  "id": "g-marketing-information-management-2",
+  "ia": "Marketing-Information Management",
+  "q": "A marketer collects responses from 500 randomly selected customers using a questionnaire. This is a:",
+  "c": [
+   "Observation",
+   "Survey",
+   "Experiment",
+   "Case study"
+  ],
+  "a": 1,
+  "e": "Surveys collect data from a sample of respondents."
+ },
+ {
+  "id": "g-marketing-information-management-3",
+  "ia": "Marketing-Information Management",
+  "q": "Data collected earlier by someone else for a different purpose, such as a government report, is called:",
+  "c": [
+   "Primary data",
+   "Raw data",
+   "Secondary data",
+   "Observational data"
+  ],
+  "a": 2,
+  "e": "Secondary data already exists and was gathered for another reason."
+ },
+ {
+  "id": "g-marketing-information-management-4",
+  "ia": "Marketing-Information Management",
+  "q": "Before designing a survey about declining sales, a researcher first writes a clear statement of what needs to be learned. Which research step is this?",
+  "c": [
+   "Collect data",
+   "Analyze results",
+   "Make recommendations",
+   "Define the problem"
+  ],
+  "a": 3,
+  "e": "Clearly identifying the problem guides the rest of the research."
+ },
+ {
+  "id": "g-marketing-information-management-5",
+  "ia": "Marketing-Information Management",
+  "q": "A researcher watches how shoppers move through a store without speaking to them. This method is:",
+  "c": [
+   "Observation",
+   "Survey",
+   "Interview",
+   "Focus group"
+  ],
+  "a": 0,
+  "e": "Observation records behavior as it naturally happens."
+ },
+ {
+  "id": "g-marketing-information-management-6",
+  "ia": "Marketing-Information Management",
+  "q": "A sample is:",
+  "c": [
+   "The whole population",
+   "A smaller group chosen to represent a larger population",
+   "A survey question",
+   "A final report"
+  ],
+  "a": 1,
+  "e": "Sampling lets researchers learn about a population without studying everyone."
+ },
+ {
+  "id": "g-marketing-information-management-7",
+  "ia": "Marketing-Information Management",
+  "q": "A store tests two ads in different cities to see which produces more sales. This is a(n):",
+  "c": [
+   "Census",
+   "Focus group",
+   "Experiment",
+   "Observation"
+  ],
+  "a": 2,
+  "e": "Experiments change a variable and compare results."
+ },
+ {
+  "id": "g-marketing-information-management-8",
+  "ia": "Marketing-Information Management",
+  "q": "Which question would be a poor survey question because it is biased?",
+  "c": [
+   "How would you rate our service from 1 to 5?",
+   "What do you like most about our store?",
+   "How often do you visit?",
+   "Don't you agree our excellent service is the best in town?"
+  ],
+  "a": 3,
+  "e": "Leading questions push respondents toward a particular answer."
+ },
+ {
+  "id": "g-marketing-information-management-9",
+  "ia": "Marketing-Information Management",
+  "q": "A restaurant reviews that 60% of 200 surveyed diners prefer outdoor seating. How many diners prefer it?",
+  "c": [
+   "120",
+   "60",
+   "140",
+   "200"
+  ],
+  "a": 0,
+  "e": "200 x 0.60 = 120 diners."
+ },
+ {
+  "id": "g-marketing-information-management-10",
+  "ia": "Marketing-Information Management",
+  "q": "Using sales records, loyalty-card data and social media comments to understand buying habits is part of:",
+  "c": [
+   "Wage setting",
+   "Marketing data analysis",
+   "Product recall",
+   "Employee orientation"
+  ],
+  "a": 1,
+  "e": "Analyzing customer data reveals patterns that guide marketing decisions."
+ },
+ {
+  "id": "g-marketing-information-management-11",
+  "ia": "Marketing-Information Management",
+  "q": "A tracking study that surveys the same group repeatedly over time to see changes in attitudes is called:",
+  "c": [
+   "One-time research",
+   "Observation",
+   "Longitudinal research",
+   "Census"
+  ],
+  "a": 2,
+  "e": "Longitudinal studies follow the same subjects over time."
+ },
+ {
+  "id": "g-marketing-information-management-12",
+  "ia": "Marketing-Information Management",
+  "q": "A marketer wants to forecast next year's sales using past sales and trends. This is:",
+  "c": [
+   "Product placement",
+   "Warranty design",
+   "Pricing for loss",
+   "Sales forecasting"
+  ],
+  "a": 3,
+  "e": "Forecasting estimates future sales from data and judgment."
+ },
+ {
+  "id": "g-marketing-information-management-13",
+  "ia": "Marketing-Information Management",
+  "q": "A marketing database that stores customer names, purchases and contact preferences helps a company to:",
+  "c": [
+   "Target messages to specific customers",
+   "Print money",
+   "Avoid competition",
+   "Lower taxes"
+  ],
+  "a": 0,
+  "e": "Customer databases enable personalized, targeted marketing."
+ },
+ {
+  "id": "g-marketing-information-management-14",
+  "ia": "Marketing-Information Management",
+  "q": "Which sampling method gives each member of the population an equal chance of being selected?",
+  "c": [
+   "Convenience sampling",
+   "Random sampling",
+   "Quota sampling",
+   "Judgment sampling"
+  ],
+  "a": 1,
+  "e": "Random sampling reduces bias because every member has an equal chance."
+ },
+ {
+  "id": "g-marketing-information-management-15",
+  "ia": "Marketing-Information Management",
+  "q": "A company learns that competitors are lowering prices. Gathering this type of information is called:",
+  "c": [
+   "Employee relations",
+   "Cost accounting",
+   "Competitive intelligence",
+   "Recruitment"
+  ],
+  "a": 2,
+  "e": "Competitive intelligence monitors rivals' actions to inform strategy."
+ },
+ {
+  "id": "g-marketing-information-management-16",
+  "ia": "Marketing-Information Management",
+  "q": "A marketer reports that an ad campaign generated 1,200 new customers on a spend of $6,000. What was the cost per new customer?",
+  "c": [
+   "$7.20",
+   "$0.20",
+   "$50",
+   "$5"
+  ],
+  "a": 3,
+  "e": "$6,000 / 1,200 = $5 per new customer."
+ },
+ {
+  "id": "g-promotion-1",
+  "ia": "Promotion",
+  "q": "A retailer gives shoppers a coupon for $2 off a purchase. This is an example of:",
+  "c": [
+   "Sales promotion",
+   "Personal selling",
+   "Public relations",
+   "Publicity"
+  ],
+  "a": 0,
+  "e": "Coupons are short-term incentives that encourage purchases."
+ },
+ {
+  "id": "g-promotion-2",
+  "ia": "Promotion",
+  "q": "A company sponsors a charity race and gets mentioned in the local news. The news coverage is:",
+  "c": [
+   "Advertising",
+   "Publicity",
+   "Direct selling",
+   "Telemarketing"
+  ],
+  "a": 1,
+  "e": "Publicity is unpaid media coverage."
+ },
+ {
+  "id": "g-promotion-3",
+  "ia": "Promotion",
+  "q": "An ad that tells viewers a brand is available and reminds them to buy again is meant to:",
+  "c": [
+   "Inform",
+   "Persuade",
+   "Remind",
+   "Educate"
+  ],
+  "a": 2,
+  "e": "Reminder advertising keeps a brand top of mind."
+ },
+ {
+  "id": "g-promotion-4",
+  "ia": "Promotion",
+  "q": "A company combines TV ads, a salesperson visit, a coupon and a press release. Together these make up its:",
+  "c": [
+   "Distribution channel",
+   "Promotional mix",
+   "Product line",
+   "Pricing policy"
+  ],
+  "a": 1,
+  "e": "The promotional mix is the combination of advertising, personal selling, sales promotion and public relations used together."
+ },
+ {
+  "id": "g-promotion-5",
+  "ia": "Promotion",
+  "q": "A company runs a TV commercial the day before a big sale. The main objective is to:",
+  "c": [
+   "Inform customers about the event",
+   "Lower costs",
+   "Recruit employees",
+   "Find suppliers"
+  ],
+  "a": 0,
+  "e": "Informative advertising makes customers aware of products or events."
+ },
+ {
+  "id": "g-promotion-6",
+  "ia": "Promotion",
+  "q": "A business asks influencers to share honest reviews of its product on social media. This is a form of:",
+  "c": [
+   "Telemarketing",
+   "Influencer marketing",
+   "Direct mail",
+   "Trade promotion"
+  ],
+  "a": 1,
+  "e": "Influencer marketing uses people with followings to reach target audiences."
+ },
+ {
+  "id": "g-promotion-7",
+  "ia": "Promotion",
+  "q": "A brand wants to measure whether its email campaign worked. Which metric best shows engagement?",
+  "c": [
+   "Employee turnover",
+   "Inventory turns",
+   "Click-through rate",
+   "Depreciation"
+  ],
+  "a": 2,
+  "e": "Click-through rate shows how many recipients clicked on a link."
+ },
+ {
+  "id": "g-promotion-8",
+  "ia": "Promotion",
+  "q": "If 4,000 emails are sent and 320 people click the link, the click-through rate is:",
+  "c": [
+   "12.5%",
+   "3.2%",
+   "32%",
+   "8%"
+  ],
+  "a": 3,
+  "e": "320 / 4,000 = 0.08 or 8%."
+ },
+ {
+  "id": "g-promotion-9",
+  "ia": "Promotion",
+  "q": "A cereal maker pays a grocery store to display its product at the end of an aisle. This is an example of:",
+  "c": [
+   "Trade promotion",
+   "Consumer advertising",
+   "Publicity",
+   "Word of mouth"
+  ],
+  "a": 0,
+  "e": "Trade promotions are incentives directed at retailers and other channel members."
+ },
+ {
+  "id": "g-promotion-10",
+  "ia": "Promotion",
+  "q": "A banner ad on a website that links to a company's page is an example of:",
+  "c": [
+   "Personal selling",
+   "Digital advertising",
+   "Public relations",
+   "Packaging"
+  ],
+  "a": 1,
+  "e": "Online display ads are a form of digital advertising."
+ },
+ {
+  "id": "g-promotion-11",
+  "ia": "Promotion",
+  "q": "Which promotional objective is most appropriate for a brand-new product that few people know about?",
+  "c": [
+   "Increase repeat purchases",
+   "Defend market share",
+   "Create awareness",
+   "Reduce inventory"
+  ],
+  "a": 2,
+  "e": "New products must first make consumers aware of their existence."
+ },
+ {
+  "id": "g-promotion-12",
+  "ia": "Promotion",
+  "q": "A company uses a consistent logo, slogan and message across TV, social media and print. This approach is called:",
+  "c": [
+   "Market segmentation",
+   "Price bundling",
+   "Vertical marketing",
+   "Integrated marketing communications"
+  ],
+  "a": 3,
+  "e": "IMC coordinates all promotion so customers receive a unified message."
+ },
+ {
+  "id": "g-promotion-13",
+  "ia": "Promotion",
+  "q": "A newspaper ad costs $1,500 and reaches 30,000 readers. What is the cost per thousand readers (CPM)?",
+  "c": [
+   "$50",
+   "$5",
+   "$500",
+   "$0.05"
+  ],
+  "a": 0,
+  "e": "$1,500 / 30 = $50 per thousand."
+ },
+ {
+  "id": "g-selling-1",
+  "ia": "Selling",
+  "q": "A salesperson asks a customer questions about needs and budget before presenting products. This step is called:",
+  "c": [
+   "Closing",
+   "Determining needs",
+   "Following up",
+   "Handling objections"
+  ],
+  "a": 1,
+  "e": "Needs determination ensures the product presented fits the customer."
+ },
+ {
+  "id": "g-selling-2",
+  "ia": "Selling",
+  "q": "A customer says, 'That's more than I wanted to spend.' This is a(n):",
+  "c": [
+   "Close",
+   "Greeting",
+   "Objection",
+   "Referral"
+  ],
+  "a": 2,
+  "e": "An objection is a concern raised that the salesperson can address."
+ },
+ {
+  "id": "g-selling-3",
+  "ia": "Selling",
+  "q": "Telling customers that a laptop has a 12-hour battery, then explaining it lets them work all day without charging, is an example of linking a:",
+  "c": [
+   "Price to a cost",
+   "Need to a want",
+   "Objection to a close",
+   "Feature to a benefit"
+  ],
+  "a": 3,
+  "e": "A feature is a characteristic; a benefit is what it does for the customer."
+ },
+ {
+  "id": "g-selling-4",
+  "ia": "Selling",
+  "q": "After a sale, a salesperson calls the customer to make sure everything is working well. This is:",
+  "c": [
+   "Follow-up",
+   "Prospecting",
+   "Approaching",
+   "Qualifying"
+  ],
+  "a": 0,
+  "e": "Follow-up builds satisfaction and long-term relationships."
+ },
+ {
+  "id": "g-selling-5",
+  "ia": "Selling",
+  "q": "Finding potential customers who might need a product is called:",
+  "c": [
+   "Closing",
+   "Prospecting",
+   "Suggestion selling",
+   "Demonstrating"
+  ],
+  "a": 1,
+  "e": "Prospecting identifies and seeks out possible buyers."
+ },
+ {
+  "id": "g-selling-6",
+  "ia": "Selling",
+  "q": "A clerk who sells a customer a case and screen protector with a new phone is practicing:",
+  "c": [
+   "Cold calling",
+   "Price cutting",
+   "Suggestion selling",
+   "Product recall"
+  ],
+  "a": 2,
+  "e": "Suggestion selling offers related items to add to the original purchase."
+ },
+ {
+  "id": "g-selling-7",
+  "ia": "Selling",
+  "q": "A salesperson asks, 'Would you like to pay by card or cash?' to move toward finalizing the sale. This is a:",
+  "c": [
+   "Greeting",
+   "Prospecting step",
+   "Demonstration",
+   "Closing technique"
+  ],
+  "a": 3,
+  "e": "Closing techniques help the customer make a purchase decision."
+ },
+ {
+  "id": "g-selling-8",
+  "ia": "Selling",
+  "q": "Which behavior best builds customer trust during a sales presentation?",
+  "c": [
+   "Answering questions honestly, including limits of the product",
+   "Exaggerating benefits",
+   "Rushing the customer",
+   "Ignoring concerns"
+  ],
+  "a": 0,
+  "e": "Honesty builds credibility and long-term relationships."
+ },
+ {
+  "id": "g-selling-9",
+  "ia": "Selling",
+  "q": "A salesperson earns a 6% commission on sales of $14,500. Commission earned is:",
+  "c": [
+   "$87",
+   "$870",
+   "$8,700",
+   "$2,417"
+  ],
+  "a": 1,
+  "e": "$14,500 x 0.06 = $870."
+ },
+ {
+  "id": "g-product-service-management-1",
+  "ia": "Product/Service Management",
+  "q": "The stage of the product life cycle when sales grow rapidly and profits begin to rise is:",
+  "c": [
+   "Introduction",
+   "Maturity",
+   "Growth",
+   "Decline"
+  ],
+  "a": 2,
+  "e": "Growth is marked by increasing sales and rising profits as acceptance spreads."
+ },
+ {
+  "id": "g-product-service-management-2",
+  "ia": "Product/Service Management",
+  "q": "A company adds new flavors and sizes to an existing soda line. This is a product-line:",
+  "c": [
+   "Elimination",
+   "Recall",
+   "Licensing",
+   "Extension"
+  ],
+  "a": 3,
+  "e": "Extending a line adds variations to existing products."
+ },
+ {
+  "id": "g-product-service-management-3",
+  "ia": "Product/Service Management",
+  "q": "The name, symbol or design that identifies a seller's products and distinguishes them from others is a:",
+  "c": [
+   "Brand",
+   "Warranty",
+   "Tariff",
+   "Invoice"
+  ],
+  "a": 0,
+  "e": "A brand identifies the source of goods and differentiates them."
+ },
+ {
+  "id": "g-product-service-management-4",
+  "ia": "Product/Service Management",
+  "q": "A company's package protects the product, provides information and also:",
+  "c": [
+   "Sets tax rates",
+   "Promotes the product",
+   "Prevents competition",
+   "Controls interest rates"
+  ],
+  "a": 1,
+  "e": "Packaging serves protection, information and promotion functions."
+ },
+ {
+  "id": "g-product-service-management-5",
+  "ia": "Product/Service Management",
+  "q": "A pharmaceutical firm tests a new product with a small group of consumers before a full launch. This is:",
+  "c": [
+   "Liquidation",
+   "Franchising",
+   "Test marketing",
+   "Dumping"
+  ],
+  "a": 2,
+  "e": "Test marketing gauges consumer reaction before a wide release."
+ },
+ {
+  "id": "g-product-service-management-6",
+  "ia": "Product/Service Management",
+  "q": "Quality, features, design and brand name are all part of a product's:",
+  "c": [
+   "Pricing structure",
+   "Distribution system",
+   "Financial statements",
+   "Product mix attributes"
+  ],
+  "a": 3,
+  "e": "These are core characteristics that define a product offering."
+ },
+ {
+  "id": "g-product-service-management-7",
+  "ia": "Product/Service Management",
+  "q": "A product at the stage of the product life cycle where sales are flat and competition is intense is in:",
+  "c": [
+   "Maturity",
+   "Introduction",
+   "Growth",
+   "Development"
+  ],
+  "a": 0,
+  "e": "In maturity, sales level off and rivals compete heavily."
+ },
+ {
+  "id": "g-product-service-management-8",
+  "ia": "Product/Service Management",
+  "q": "A company recalls a toy after finding it poses a choking hazard. The recall is meant to:",
+  "c": [
+   "Increase profits",
+   "Protect consumers from harm",
+   "Raise prices",
+   "Attract new competitors"
+  ],
+  "a": 1,
+  "e": "Product recalls remove unsafe items from the market."
+ },
+ {
+  "id": "g-product-service-management-9",
+  "ia": "Product/Service Management",
+  "q": "A company that offers a three-year guarantee on its washing machines is providing a:",
+  "c": [
+   "Subsidy",
+   "Franchise",
+   "Warranty",
+   "Trademark"
+  ],
+  "a": 2,
+  "e": "A warranty is a promise about product quality and repair or replacement."
+ },
+ {
+  "id": "g-product-service-management-10",
+  "ia": "Product/Service Management",
+  "q": "A bank offers checking accounts, loans and savings accounts. Because these are intangible, they are:",
+  "c": [
+   "Raw materials",
+   "Capital goods",
+   "Inventory",
+   "Services"
+  ],
+  "a": 3,
+  "e": "Services are intangible activities rather than physical products."
+ },
+ {
+  "id": "g-product-service-management-11",
+  "ia": "Product/Service Management",
+  "q": "A company stops making a product that no longer sells enough to cover costs. This decision is product:",
+  "c": [
+   "Elimination",
+   "Development",
+   "Branding",
+   "Extension"
+  ],
+  "a": 0,
+  "e": "Dropping unprofitable products is part of managing the product mix."
+ },
+ {
+  "id": "g-product-service-management-12",
+  "ia": "Product/Service Management",
+  "q": "A phone maker develops a prototype, tests it, then launches it. The step between idea screening and launch that builds a working model is:",
+  "c": [
+   "Retail pricing",
+   "Product development",
+   "Market exit",
+   "Liquidation"
+  ],
+  "a": 1,
+  "e": "Development turns an approved concept into a working product."
+ },
+ {
+  "id": "g-product-service-management-13",
+  "ia": "Product/Service Management",
+  "q": "The number of different product lines a company sells is the product mix's:",
+  "c": [
+   "Depth",
+   "Length",
+   "Width",
+   "Weight"
+  ],
+  "a": 2,
+  "e": "Width is the number of product lines; depth is the number of items in each line."
+ },
+ {
+  "id": "g-product-service-management-14",
+  "ia": "Product/Service Management",
+  "q": "A restaurant adds a vegan menu after surveys show customer demand. This is an example of:",
+  "c": [
+   "Cost cutting",
+   "Price fixing",
+   "Overproduction",
+   "Responding to customer needs in product planning"
+  ],
+  "a": 3,
+  "e": "Product planning is guided by consumer needs and research."
+ },
+ {
+  "id": "g-product-service-management-15",
+  "ia": "Product/Service Management",
+  "q": "A supplement company sells the same product under a store's private label. The store is selling a:",
+  "c": [
+   "Private brand",
+   "National brand",
+   "Generic brand only",
+   "Counterfeit"
+  ],
+  "a": 0,
+  "e": "Private brands are owned by the retailer rather than the manufacturer."
+ },
+ {
+  "id": "g-knowledge-management-1",
+  "ia": "Knowledge Management",
+  "q": "A company creates a searchable intranet where employees post lessons learned from projects. This supports:",
+  "c": [
+   "Price discrimination",
+   "Knowledge sharing",
+   "Product recall",
+   "Tax planning"
+  ],
+  "a": 1,
+  "e": "Capturing and sharing lessons helps the organization learn and avoid repeated mistakes."
+ },
+ {
+  "id": "g-knowledge-management-2",
+  "ia": "Knowledge Management",
+  "q": "Knowledge that is hard to write down, such as an expert's judgment gained from years of experience, is called:",
+  "c": [
+   "Explicit knowledge",
+   "Public data",
+   "Tacit knowledge",
+   "Raw data"
+  ],
+  "a": 2,
+  "e": "Tacit knowledge lives in people's experience and is difficult to document."
+ },
+ {
+  "id": "g-knowledge-management-3",
+  "ia": "Knowledge Management",
+  "q": "A procedures manual, a how-to video and a written policy are examples of:",
+  "c": [
+   "Tacit knowledge",
+   "Intuition",
+   "Rumor",
+   "Explicit knowledge"
+  ],
+  "a": 3,
+  "e": "Explicit knowledge is documented and easy to share."
+ },
+ {
+  "id": "g-knowledge-management-4",
+  "ia": "Knowledge Management",
+  "q": "A retiring employee spends weeks training a successor and documenting key processes. The purpose is to:",
+  "c": [
+   "Retain organizational knowledge",
+   "Lower wages",
+   "Reduce competition",
+   "Increase taxes"
+  ],
+  "a": 0,
+  "e": "Knowledge transfer prevents loss of expertise when people leave."
+ },
+ {
+  "id": "g-knowledge-management-5",
+  "ia": "Knowledge Management",
+  "q": "Employees in different departments with the same interest meet regularly to share ideas. This group is a:",
+  "c": [
+   "Board of directors",
+   "Community of practice",
+   "Union",
+   "Franchise"
+  ],
+  "a": 1,
+  "e": "Communities of practice are groups that learn together by sharing experience."
+ },
+ {
+  "id": "g-knowledge-management-6",
+  "ia": "Knowledge Management",
+  "q": "After finishing a project, a team meets to discuss what went well and what to improve. This review is called:",
+  "c": [
+   "Hostile takeover",
+   "Performance bond",
+   "After-action review",
+   "Tax audit"
+  ],
+  "a": 2,
+  "e": "After-action or lessons-learned reviews capture insights for future projects."
+ },
+ {
+  "id": "g-knowledge-management-7",
+  "ia": "Knowledge Management",
+  "q": "Which of the following is the biggest barrier to knowledge sharing?",
+  "c": [
+   "A shared database",
+   "Clear naming rules",
+   "Regular team meetings",
+   "Employees fear losing status or are not rewarded for sharing"
+  ],
+  "a": 3,
+  "e": "Lack of trust or incentives discourages people from sharing what they know."
+ },
+ {
+  "id": "g-knowledge-management-8",
+  "ia": "Knowledge Management",
+  "q": "A company tags documents with keywords so employees can find them quickly. This practice improves:",
+  "c": [
+   "Information retrieval",
+   "Depreciation",
+   "Product design",
+   "Payroll accuracy"
+  ],
+  "a": 0,
+  "e": "Good metadata and tagging make knowledge easier to locate."
+ },
+ {
+  "id": "g-project-management-1",
+  "ia": "Project Management",
+  "q": "The first phase of a project, in which goals, scope and deliverables are defined, is:",
+  "c": [
+   "Closing",
+   "Initiation",
+   "Monitoring",
+   "Execution"
+  ],
+  "a": 1,
+  "e": "Initiation sets the purpose and boundaries of the project."
+ },
+ {
+  "id": "g-project-management-2",
+  "ia": "Project Management",
+  "q": "A chart showing tasks as bars across a timeline is a:",
+  "c": [
+   "Pie chart",
+   "Balance sheet",
+   "Gantt chart",
+   "Org chart"
+  ],
+  "a": 2,
+  "e": "Gantt charts display task schedules and dependencies over time."
+ },
+ {
+  "id": "g-project-management-3",
+  "ia": "Project Management",
+  "q": "A project's scope creep refers to:",
+  "c": [
+   "A reduction in budget",
+   "Early completion",
+   "A decrease in team size",
+   "Uncontrolled additions to project requirements"
+  ],
+  "a": 3,
+  "e": "Scope creep is the gradual expansion of work beyond the original plan."
+ },
+ {
+  "id": "g-project-management-4",
+  "ia": "Project Management",
+  "q": "The sequence of tasks that determines the shortest possible project duration is the:",
+  "c": [
+   "Critical path",
+   "Budget line",
+   "Risk register",
+   "Scope statement"
+  ],
+  "a": 0,
+  "e": "Delays to tasks on the critical path delay the whole project."
+ },
+ {
+  "id": "g-project-management-5",
+  "ia": "Project Management",
+  "q": "A project manager identifies that the team needs a graphic designer and a programmer for six weeks. This is part of:",
+  "c": [
+   "Closing",
+   "Resource planning",
+   "Marketing",
+   "Auditing"
+  ],
+  "a": 1,
+  "e": "Resource planning determines the people, equipment and materials required."
+ },
+ {
+  "id": "g-project-management-6",
+  "ia": "Project Management",
+  "q": "A project is budgeted for $40,000 and has spent $25,000 with the work 50% complete. Compared with progress, spending is:",
+  "c": [
+   "Under budget pace",
+   "Exactly on pace",
+   "Ahead of budget pace (overspent)",
+   "Not comparable"
+  ],
+  "a": 2,
+  "e": "Half the work done should cost about $20,000; $25,000 spent indicates an overrun."
+ },
+ {
+  "id": "g-project-management-7",
+  "ia": "Project Management",
+  "q": "Meeting with stakeholders to report progress and gather feedback occurs during:",
+  "c": [
+   "Initiation only",
+   "Liquidation",
+   "Pricing",
+   "Monitoring and communication"
+  ],
+  "a": 3,
+  "e": "Ongoing communication keeps stakeholders informed and engaged."
+ },
+ {
+  "id": "g-project-management-8",
+  "ia": "Project Management",
+  "q": "A task that cannot start until another task is finished has a:",
+  "c": [
+   "Dependency",
+   "Milestone",
+   "Constraint fee",
+   "Variance"
+  ],
+  "a": 0,
+  "e": "Dependencies define the order in which tasks must occur."
+ },
+ {
+  "id": "g-quality-management-1",
+  "ia": "Quality Management",
+  "q": "A manufacturer tracks the percentage of defective units each week to catch problems early. This is an example of:",
+  "c": [
+   "Price skimming",
+   "Quality monitoring",
+   "Market segmentation",
+   "Brand extension"
+  ],
+  "a": 1,
+  "e": "Tracking defect rates helps detect and fix quality issues."
+ },
+ {
+  "id": "g-quality-management-2",
+  "ia": "Quality Management",
+  "q": "A restaurant surveys customers, reviews complaints and adjusts recipes continuously. This ongoing effort is called:",
+  "c": [
+   "Downsizing",
+   "Price cutting",
+   "Continuous improvement",
+   "Liquidation"
+  ],
+  "a": 2,
+  "e": "Continuous improvement is the ongoing effort to enhance products and processes."
+ },
+ {
+  "id": "g-quality-management-3",
+  "ia": "Quality Management",
+  "q": "A product meets all written specifications but customers still dislike it. Which view of quality was ignored?",
+  "c": [
+   "Cost accounting",
+   "Legal compliance",
+   "Distribution",
+   "Fitness for the customer's needs"
+  ],
+  "a": 3,
+  "e": "Quality includes meeting customer expectations, not just specifications."
+ },
+ {
+  "id": "g-quality-management-4",
+  "ia": "Quality Management",
+  "q": "Of 800 units inspected, 24 are defective. The defect rate is:",
+  "c": [
+   "3%",
+   "24%",
+   "0.3%",
+   "30%"
+  ],
+  "a": 0,
+  "e": "24 / 800 = 0.03 or 3%."
+ },
+ {
+  "id": "g-risk-management-1",
+  "ia": "Risk Management",
+  "q": "A company buys fire insurance for its warehouse. This is an example of which risk response?",
+  "c": [
+   "Risk avoidance",
+   "Risk transfer",
+   "Risk acceptance",
+   "Risk creation"
+  ],
+  "a": 1,
+  "e": "Insurance transfers the financial burden of a loss to the insurer."
+ },
+ {
+  "id": "g-risk-management-2",
+  "ia": "Risk Management",
+  "q": "A business decides not to enter a market because the risks are too high. This is risk:",
+  "c": [
+   "Transfer",
+   "Reduction",
+   "Avoidance",
+   "Acceptance"
+  ],
+  "a": 2,
+  "e": "Avoiding an activity eliminates the associated risk."
+ },
+ {
+  "id": "g-risk-management-3",
+  "ia": "Risk Management",
+  "q": "Installing sprinklers and training staff on fire safety is an example of risk:",
+  "c": [
+   "Avoidance",
+   "Transfer",
+   "Ignorance",
+   "Reduction"
+  ],
+  "a": 3,
+  "e": "Reducing risk lowers the likelihood or impact of a loss."
+ },
+ {
+  "id": "g-risk-management-4",
+  "ia": "Risk Management",
+  "q": "A small firm sets aside a reserve fund to cover minor equipment repairs instead of buying insurance. This is risk:",
+  "c": [
+   "Retention",
+   "Transfer",
+   "Avoidance",
+   "Duplication"
+  ],
+  "a": 0,
+  "e": "Retention means accepting and planning to pay for losses."
+ },
+ {
+  "id": "g-risk-management-5",
+  "ia": "Risk Management",
+  "q": "The first step in the risk management process is to:",
+  "c": [
+   "Buy insurance",
+   "Identify risks",
+   "Eliminate all employees",
+   "Raise prices"
+  ],
+  "a": 1,
+  "e": "Risks must be identified before they can be assessed and treated."
+ },
+ {
+  "id": "g-risk-management-6",
+  "ia": "Risk Management",
+  "q": "A risk that is unlikely to occur but would cause severe damage is best described as:",
+  "c": [
+   "High likelihood, low impact",
+   "Low likelihood, low impact",
+   "Low likelihood, high impact",
+   "High likelihood, high impact"
+  ],
+  "a": 2,
+  "e": "Risk is assessed by considering both probability and consequence."
+ },
+ {
+  "id": "g-risk-management-7",
+  "ia": "Risk Management",
+  "q": "A company stores copies of its data in two different cities. This helps manage the risk of:",
+  "c": [
+   "Employee turnover",
+   "Rising wages",
+   "Competition",
+   "Data loss from a disaster"
+  ],
+  "a": 3,
+  "e": "Redundancy limits the damage from a single point of failure."
+ },
+ {
+  "id": "g-risk-management-8",
+  "ia": "Risk Management",
+  "q": "Which type of risk is created when a firm borrows heavily and interest rates rise?",
+  "c": [
+   "Financial risk",
+   "Product risk",
+   "Legal risk only",
+   "Seasonal risk"
+  ],
+  "a": 0,
+  "e": "Heavy borrowing exposes a firm to financial risk if costs of debt increase."
+ },
+ {
+  "id": "g-risk-management-9",
+  "ia": "Risk Management",
+  "q": "A company's insurance policy has a $1,000 deductible. After a $6,500 covered loss, how much will the insurer pay?",
+  "c": [
+   "$6,500",
+   "$5,500",
+   "$1,000",
+   "$7,500"
+  ],
+  "a": 1,
+  "e": "Insurer pays loss minus deductible: $6,500 - $1,000 = $5,500."
+ },
+ {
+  "id": "g-financial-information-management-1",
+  "ia": "Financial-Information Management",
+  "q": "A company uses software to record each sale, expense and payment as it happens. This supports:",
+  "c": [
+   "Product design",
+   "Pricing strategy",
+   "Accurate bookkeeping",
+   "Recruitment"
+  ],
+  "a": 2,
+  "e": "Recording transactions promptly creates reliable financial records."
+ },
+ {
+  "id": "g-financial-information-management-2",
+  "ia": "Financial-Information Management",
+  "q": "Under the accounting equation, if assets are $90,000 and equity is $55,000, liabilities equal:",
+  "c": [
+   "$145,000",
+   "$55,000",
+   "$90,000",
+   "$35,000"
+  ],
+  "a": 3,
+  "e": "Liabilities = assets - equity = $90,000 - $55,000 = $35,000."
+ },
+ {
+  "id": "g-financial-information-management-3",
+  "ia": "Financial-Information Management",
+  "q": "A business receives $500 cash from a customer for a sale. In a double-entry system, this transaction increases cash and also:",
+  "c": [
+   "Increases revenue",
+   "Decreases liabilities",
+   "Increases expenses",
+   "Decreases equity"
+  ],
+  "a": 0,
+  "e": "Each transaction affects at least two accounts; a sale increases cash and revenue."
+ },
+ {
+  "id": "g-financial-information-management-4",
+  "ia": "Financial-Information Management",
+  "q": "An accountant totals every account balance to confirm that debits equal credits before preparing statements. This listing is the:",
+  "c": [
+   "Business plan",
+   "Trial balance",
+   "Credit report",
+   "Purchase order"
+  ],
+  "a": 1,
+  "e": "A trial balance verifies that total debits equal total credits."
+ },
+ {
+  "id": "g-financial-information-management-5",
+  "ia": "Financial-Information Management",
+  "q": "Financial records must be kept organized and available primarily to support:",
+  "c": [
+   "Advertising",
+   "Product design",
+   "Audits and tax filings",
+   "Employee recruiting"
+  ],
+  "a": 2,
+  "e": "Records provide evidence for audits, taxes and decisions."
+ },
+ {
+  "id": "g-financial-information-management-6",
+  "ia": "Financial-Information Management",
+  "q": "A business pays its electric bill of $350. In the accounting records, this is recorded as a(n):",
+  "c": [
+   "Asset",
+   "Liability",
+   "Revenue",
+   "Expense"
+  ],
+  "a": 3,
+  "e": "Operating costs such as utilities are expenses."
+ },
+ {
+  "id": "g-financial-information-management-7",
+  "ia": "Financial-Information Management",
+  "q": "The process of independently examining a company's financial records to check accuracy is a(n):",
+  "c": [
+   "Audit",
+   "Forecast",
+   "Promotion",
+   "Orientation"
+  ],
+  "a": 0,
+  "e": "An audit reviews records for accuracy and compliance."
+ },
+ {
+  "id": "g-financial-information-management-8",
+  "ia": "Financial-Information Management",
+  "q": "A company that records revenue when earned and expenses when incurred, regardless of cash timing, uses the:",
+  "c": [
+   "Cash method",
+   "Accrual method",
+   "Barter method",
+   "Estimate method"
+  ],
+  "a": 1,
+  "e": "Accrual accounting matches revenues and expenses to the period in which they occur."
+ },
+ {
+  "id": "g-financial-information-management-9",
+  "ia": "Financial-Information Management",
+  "q": "A company's accounts payable ledger lists:",
+  "c": [
+   "Amounts owed by customers",
+   "Owner investments",
+   "Amounts owed to suppliers",
+   "Fixed assets"
+  ],
+  "a": 2,
+  "e": "Accounts payable tracks bills the business has yet to pay."
+ },
+ {
+  "id": "g-financial-information-management-10",
+  "ia": "Financial-Information Management",
+  "q": "A business has beginning cash of $4,000, receives $9,500 and pays out $7,200. Ending cash is:",
+  "c": [
+   "$2,300",
+   "$12,300",
+   "$20,700",
+   "$6,300"
+  ],
+  "a": 3,
+  "e": "$4,000 + $9,500 - $7,200 = $6,300."
+ },
+ {
+  "id": "g-financial-information-management-11",
+  "ia": "Financial-Information Management",
+  "q": "An invoice is best described as:",
+  "c": [
+   "A bill sent to a customer listing goods or services and amounts due",
+   "A receipt from a bank",
+   "A loan agreement",
+   "A tax form"
+  ],
+  "a": 0,
+  "e": "Invoices request payment and document the sale."
+ },
+ {
+  "id": "g-financial-information-management-12",
+  "ia": "Financial-Information Management",
+  "q": "Why do businesses separate personal and business finances?",
+  "c": [
+   "To increase interest",
+   "To keep records accurate and protect legal and tax status",
+   "To reduce sales",
+   "To avoid budgeting"
+  ],
+  "a": 1,
+  "e": "Separate accounts make bookkeeping, tax reporting and liability protection clearer."
+ },
+ {
+  "id": "g-earning-income-1",
+  "ia": "Earning Income",
+  "q": "An employee's gross pay is $2,000 for a pay period. Deductions are $300 for taxes, $120 for insurance and $80 for retirement. What is net pay?",
+  "c": [
+   "$500",
+   "$1,700",
+   "$1,500",
+   "$2,500"
+  ],
+  "a": 2,
+  "e": "Net pay = gross pay - deductions = $2,000 - $500 = $1,500."
+ },
+ {
+  "id": "g-earning-income-2",
+  "ia": "Earning Income",
+  "q": "A worker earns $18 per hour and works 35 hours in a week. Gross weekly pay is:",
+  "c": [
+   "$53",
+   "$180",
+   "$350",
+   "$630"
+  ],
+  "a": 3,
+  "e": "$18 x 35 = $630."
+ },
+ {
+  "id": "g-earning-income-3",
+  "ia": "Earning Income",
+  "q": "An employee earns $20 per hour and works 44 hours in a week. If overtime (hours over 40) is paid at 1.5 times the regular rate, gross pay is:",
+  "c": [
+   "$920",
+   "$880",
+   "$840",
+   "$1,320"
+  ],
+  "a": 0,
+  "e": "40 x $20 = $800; overtime 4 x $30 = $120; total $920."
+ },
+ {
+  "id": "g-earning-income-4",
+  "ia": "Earning Income",
+  "q": "A salesperson earns a $1,500 monthly salary plus 5% commission on $20,000 of sales. Total earnings are:",
+  "c": [
+   "$1,600",
+   "$2,500",
+   "$21,500",
+   "$3,000"
+  ],
+  "a": 1,
+  "e": "Commission = $20,000 x 0.05 = $1,000; total = $1,500 + $1,000 = $2,500."
+ },
+ {
+  "id": "g-earning-income-5",
+  "ia": "Earning Income",
+  "q": "Money withheld from a paycheck and paid to the government to fund retirement and health benefits for older adults is:",
+  "c": [
+   "Sales tax",
+   "Property tax",
+   "Payroll taxes (Social Security and Medicare)",
+   "Excise tax"
+  ],
+  "a": 2,
+  "e": "FICA payroll taxes fund Social Security and Medicare."
+ },
+ {
+  "id": "g-earning-income-6",
+  "ia": "Earning Income",
+  "q": "A form an employee completes so the employer knows how much income tax to withhold from each paycheck is the:",
+  "c": [
+   "W-2",
+   "1099",
+   "1040",
+   "W-4"
+  ],
+  "a": 3,
+  "e": "The W-4 tells the employer how much federal income tax to withhold."
+ },
+ {
+  "id": "g-earning-income-7",
+  "ia": "Earning Income",
+  "q": "At the end of the year, an employer gives employees a form summarizing wages and taxes withheld. This form is the:",
+  "c": [
+   "W-2",
+   "W-4",
+   "I-9",
+   "1099-NEC"
+  ],
+  "a": 0,
+  "e": "The W-2 reports annual wages and withholding to employees and the IRS."
+ },
+ {
+  "id": "g-earning-income-8",
+  "ia": "Earning Income",
+  "q": "A person who is paid per project and is responsible for their own taxes is typically a(n):",
+  "c": [
+   "Salaried employee",
+   "Independent contractor",
+   "Hourly employee",
+   "Apprentice"
+  ],
+  "a": 1,
+  "e": "Independent contractors are self-employed and pay their own self-employment taxes."
+ },
+ {
+  "id": "g-earning-income-9",
+  "ia": "Earning Income",
+  "q": "Which of the following is a non-wage employment benefit?",
+  "c": [
+   "Hourly pay",
+   "Overtime",
+   "Employer-paid health insurance",
+   "Commission"
+  ],
+  "a": 2,
+  "e": "Benefits are compensation beyond wages."
+ },
+ {
+  "id": "g-earning-income-10",
+  "ia": "Earning Income",
+  "q": "Skills and knowledge a person acquires through education and training that increase earning potential are known as:",
+  "c": [
+   "Financial capital",
+   "Physical capital",
+   "Natural capital",
+   "Human capital"
+  ],
+  "a": 3,
+  "e": "Human capital is the value of a person's skills, knowledge and experience."
+ },
+ {
+  "id": "g-earning-income-11",
+  "ia": "Earning Income",
+  "q": "Compared with a high school diploma alone, earning a college degree is generally associated with:",
+  "c": [
+   "Higher average lifetime earnings",
+   "Lower unemployment risk only for managers",
+   "Guaranteed employment",
+   "Lower costs only"
+  ],
+  "a": 0,
+  "e": "On average, more education leads to higher earnings, though outcomes vary."
+ },
+ {
+  "id": "g-earning-income-12",
+  "ia": "Earning Income",
+  "q": "A student wants a career in healthcare. Which activity would best help them explore it?",
+  "c": [
+   "Reading a car magazine",
+   "Job shadowing a nurse",
+   "Taking a vacation",
+   "Opening a savings account"
+  ],
+  "a": 1,
+  "e": "Job shadowing provides real-world exposure to a career."
+ },
+ {
+  "id": "g-earning-income-13",
+  "ia": "Earning Income",
+  "q": "What is the primary purpose of a cover letter?",
+  "c": [
+   "To list all references",
+   "To show your tax returns",
+   "To introduce yourself and explain why you fit the job",
+   "To negotiate benefits"
+  ],
+  "a": 2,
+  "e": "A cover letter accompanies a resume and highlights fit for the position."
+ },
+ {
+  "id": "g-earning-income-14",
+  "ia": "Earning Income",
+  "q": "An employee receives a $0.75 per hour raise on a $14.00 hourly wage. The new wage is:",
+  "c": [
+   "$14.07",
+   "$15.50",
+   "$13.25",
+   "$14.75"
+  ],
+  "a": 3,
+  "e": "$14.00 + $0.75 = $14.75."
+ },
+ {
+  "id": "g-earning-income-15",
+  "ia": "Earning Income",
+  "q": "A worker's gross annual salary is $48,000 paid monthly. Gross pay per month is:",
+  "c": [
+   "$4,000",
+   "$480",
+   "$3,200",
+   "$5,000"
+  ],
+  "a": 0,
+  "e": "$48,000 / 12 = $4,000."
+ },
+ {
+  "id": "g-earning-income-16",
+  "ia": "Earning Income",
+  "q": "A person works two part-time jobs: one pays $240 per week and another $180 per week. Over a 4-week month, gross income is:",
+  "c": [
+   "$420",
+   "$1,680",
+   "$1,260",
+   "$2,100"
+  ],
+  "a": 1,
+  "e": "($240 + $180) x 4 = $1,680."
+ },
+ {
+  "id": "g-earning-income-17",
+  "ia": "Earning Income",
+  "q": "Which type of income comes from interest on a savings account?",
+  "c": [
+   "Earned wages",
+   "Commission",
+   "Passive (investment) income",
+   "Tips"
+  ],
+  "a": 2,
+  "e": "Interest earned on money is investment income, not payment for work."
+ },
+ {
+  "id": "g-earning-income-18",
+  "ia": "Earning Income",
+  "q": "An hourly worker receives tips in addition to wages. Tips are generally:",
+  "c": [
+   "Tax-free income",
+   "A benefit",
+   "A deduction",
+   "Taxable income"
+  ],
+  "a": 3,
+  "e": "Tips count as income and are subject to taxes."
+ },
+ {
+  "id": "g-earning-income-19",
+  "ia": "Earning Income",
+  "q": "Taxes taken out of a paycheck before you receive it are called:",
+  "c": [
+   "Withholding",
+   "Rebates",
+   "Exemptions only",
+   "Credits"
+  ],
+  "a": 0,
+  "e": "Withholding is money the employer deducts and sends to tax authorities."
+ },
+ {
+  "id": "g-earning-income-20",
+  "ia": "Earning Income",
+  "q": "A job offer includes a lower salary but excellent health insurance, retirement matching and paid time off. Compare offers by considering:",
+  "c": [
+   "Salary only",
+   "Total compensation",
+   "Office color",
+   "Commute music"
+  ],
+  "a": 1,
+  "e": "Total compensation includes pay and the value of benefits."
+ },
+ {
+  "id": "g-earning-income-21",
+  "ia": "Earning Income",
+  "q": "The wage a worker earns is usually affected most by supply and demand for:",
+  "c": [
+   "The worker's age alone",
+   "The worker's address",
+   "The skills the worker offers",
+   "Office decor"
+  ],
+  "a": 2,
+  "e": "Wages tend to be higher for skills that are in demand and in short supply."
+ },
+ {
+  "id": "g-earning-income-22",
+  "ia": "Earning Income",
+  "q": "A teenage worker asks about the minimum wage. This wage is:",
+  "c": [
+   "The maximum a business can pay",
+   "A suggested pay level",
+   "The average wage",
+   "The lowest hourly pay an employer may legally pay for covered jobs"
+  ],
+  "a": 3,
+  "e": "Minimum wage laws set a legal floor for hourly pay."
+ },
+ {
+  "id": "g-earning-income-23",
+  "ia": "Earning Income",
+  "q": "An employer matches 50% of an employee's retirement contribution up to 6% of pay. The employee earns $50,000 and contributes 6%. How much does the employer add per year?",
+  "c": [
+   "$1,500",
+   "$3,000",
+   "$300",
+   "$6,000"
+  ],
+  "a": 0,
+  "e": "6% of $50,000 = $3,000; employer matches 50%, so $1,500."
+ },
+ {
+  "id": "g-earning-income-24",
+  "ia": "Earning Income",
+  "q": "Entering the workforce as an apprentice provides:",
+  "c": [
+   "Free tuition only",
+   "Paid on-the-job training in a skilled trade",
+   "Guaranteed promotion",
+   "Ownership of the company"
+  ],
+  "a": 1,
+  "e": "Apprenticeships combine paid work with structured training."
+ },
+ {
+  "id": "g-earning-income-25",
+  "ia": "Earning Income",
+  "q": "Which is the best description of 'take-home pay'?",
+  "c": [
+   "Gross pay",
+   "Overtime pay",
+   "Net pay after deductions",
+   "Employer taxes"
+  ],
+  "a": 2,
+  "e": "Take-home pay is what the employee actually receives after deductions."
+ },
+ {
+  "id": "g-spending-1",
+  "ia": "Spending",
+  "q": "A shopper compares two cereals: a 12-ounce box for $3.00 and a 20-ounce box for $4.40. Which statement is correct?",
+  "c": [
+   "The 12-ounce box costs less per ounce",
+   "They cost the same per ounce",
+   "Cannot be determined",
+   "The 20-ounce box costs less per ounce"
+  ],
+  "a": 3,
+  "e": "$3.00/12 = $0.25 per ounce; $4.40/20 = $0.22 per ounce."
+ },
+ {
+  "id": "g-spending-2",
+  "ia": "Spending",
+  "q": "A consumer wants to make a major purchase. Which step should come first in a smart buying decision?",
+  "c": [
+   "Identify the need and research options",
+   "Pay with credit",
+   "Sign the contract",
+   "Ignore reviews"
+  ],
+  "a": 0,
+  "e": "Good decisions start with defining the need and gathering information."
+ },
+ {
+  "id": "g-spending-3",
+  "ia": "Spending",
+  "q": "A person buys a $400 item that has a 25% discount. The sale price is:",
+  "c": [
+   "$100",
+   "$300",
+   "$375",
+   "$425"
+  ],
+  "a": 1,
+  "e": "25% of $400 is $100, so $400 - $100 = $300."
+ },
+ {
+  "id": "g-spending-4",
+  "ia": "Spending",
+  "q": "A purchase priced at $80 is subject to 7% sales tax. The total cost is:",
+  "c": [
+   "$87.00",
+   "$80.07",
+   "$85.60",
+   "$75.60"
+  ],
+  "a": 2,
+  "e": "Tax = $80 x 0.07 = $5.60; total = $85.60."
+ },
+ {
+  "id": "g-spending-5",
+  "ia": "Spending",
+  "q": "Spending money on something you want but do not need is a:",
+  "c": [
+   "Need",
+   "Fixed expense",
+   "Investment",
+   "Want"
+  ],
+  "a": 3,
+  "e": "Wants are items that are desirable but not essential."
+ },
+ {
+  "id": "g-spending-6",
+  "ia": "Spending",
+  "q": "A family tracks their monthly income and expenses to plan how to spend. This is called:",
+  "c": [
+   "Budgeting",
+   "Investing",
+   "Borrowing",
+   "Hedging"
+  ],
+  "a": 0,
+  "e": "A budget plans how income will be spent and saved."
+ },
+ {
+  "id": "g-spending-7",
+  "ia": "Spending",
+  "q": "A monthly gym membership fee that stays the same each month is a:",
+  "c": [
+   "Variable expense",
+   "Fixed expense",
+   "Irregular income",
+   "Asset"
+  ],
+  "a": 1,
+  "e": "Fixed expenses do not change from month to month."
+ },
+ {
+  "id": "g-spending-8",
+  "ia": "Spending",
+  "q": "A consumer has $100 to spend and chooses a jacket over a pair of shoes. The shoes are the:",
+  "c": [
+   "Sunk cost",
+   "Impulse buy",
+   "Opportunity cost",
+   "Warranty"
+  ],
+  "a": 2,
+  "e": "Opportunity cost is what you give up when making a choice."
+ },
+ {
+  "id": "g-spending-9",
+  "ia": "Spending",
+  "q": "An impulse buy is best described as:",
+  "c": [
+   "A planned major purchase",
+   "A bulk purchase",
+   "A contract purchase",
+   "An unplanned purchase made on the spur of the moment"
+  ],
+  "a": 3,
+  "e": "Impulse purchases are made without planning, often triggered by displays or emotion."
+ },
+ {
+  "id": "g-spending-10",
+  "ia": "Spending",
+  "q": "Which is the best way to avoid overspending on groceries?",
+  "c": [
+   "Make a list and stick to it",
+   "Shop while hungry",
+   "Buy only name brands",
+   "Skip comparing prices"
+  ],
+  "a": 0,
+  "e": "A list helps prevent unplanned purchases."
+ },
+ {
+  "id": "g-spending-11",
+  "ia": "Spending",
+  "q": "A buyer reviews the return policy before purchasing an item online. This is an example of:",
+  "c": [
+   "Impulse spending",
+   "Being an informed consumer",
+   "Overspending",
+   "Ignoring risk"
+  ],
+  "a": 1,
+  "e": "Informed consumers consider policies and terms before buying."
+ },
+ {
+  "id": "g-spending-12",
+  "ia": "Spending",
+  "q": "A consumer uses a coupon worth $5 on a $42 purchase. The amount owed before tax is:",
+  "c": [
+   "$47",
+   "$32",
+   "$37",
+   "$42"
+  ],
+  "a": 2,
+  "e": "$42 - $5 = $37."
+ },
+ {
+  "id": "g-spending-13",
+  "ia": "Spending",
+  "q": "Comparison shopping means:",
+  "c": [
+   "Buying the first item you see",
+   "Always buying the cheapest",
+   "Buying only online",
+   "Checking prices and quality across sellers before buying"
+  ],
+  "a": 3,
+  "e": "Comparison shopping helps find the best value."
+ },
+ {
+  "id": "g-spending-14",
+  "ia": "Spending",
+  "q": "Advertising that says 'only 2 left, sale ends tonight' is designed to create:",
+  "c": [
+   "A sense of urgency",
+   "Lower prices",
+   "Better quality",
+   "Warranty coverage"
+  ],
+  "a": 0,
+  "e": "Scarcity and deadlines push consumers toward quick decisions."
+ },
+ {
+  "id": "g-saving-1",
+  "ia": "Saving",
+  "q": "A person deposits $1,000 into an account paying 4% simple annual interest. How much interest is earned in 3 years?",
+  "c": [
+   "$40",
+   "$120",
+   "$1,120",
+   "$400"
+  ],
+  "a": 1,
+  "e": "$1,000 x 0.04 x 3 = $120."
+ },
+ {
+  "id": "g-saving-2",
+  "ia": "Saving",
+  "q": "Interest earned on both the original deposit and previously earned interest is called:",
+  "c": [
+   "Simple interest",
+   "Principal",
+   "Compound interest",
+   "Dividend"
+  ],
+  "a": 2,
+  "e": "Compound interest accumulates on principal and accumulated interest."
+ },
+ {
+  "id": "g-saving-3",
+  "ia": "Saving",
+  "q": "An emergency fund is generally recommended to cover:",
+  "c": [
+   "One week of expenses",
+   "Vacation costs",
+   "A new car",
+   "About three to six months of living expenses"
+  ],
+  "a": 3,
+  "e": "Experts commonly suggest 3-6 months of essential expenses."
+ },
+ {
+  "id": "g-saving-4",
+  "ia": "Saving",
+  "q": "Which account is typically insured by the FDIC up to a limit if held at a member bank?",
+  "c": [
+   "Savings account",
+   "Stock",
+   "Cryptocurrency",
+   "Mutual fund"
+  ],
+  "a": 0,
+  "e": "FDIC insurance protects deposits at member banks."
+ },
+ {
+  "id": "g-saving-5",
+  "ia": "Saving",
+  "q": "A person puts $200 per month into savings. After 12 months, total deposits (ignoring interest) equal:",
+  "c": [
+   "$200",
+   "$2,400",
+   "$1,200",
+   "$3,600"
+  ],
+  "a": 1,
+  "e": "$200 x 12 = $2,400."
+ },
+ {
+  "id": "g-saving-6",
+  "ia": "Saving",
+  "q": "A saver wants easy access to money while earning some interest. Which account is most suitable?",
+  "c": [
+   "Retirement account with penalties",
+   "Long-term bond",
+   "Savings account",
+   "Real estate"
+  ],
+  "a": 2,
+  "e": "Savings accounts offer liquidity along with modest interest."
+ },
+ {
+  "id": "g-saving-7",
+  "ia": "Saving",
+  "q": "A certificate of deposit generally pays a higher rate than a regular savings account because:",
+  "c": [
+   "It is uninsured",
+   "The bank has no risk",
+   "Interest is variable daily",
+   "The money is locked in for a set term"
+  ],
+  "a": 3,
+  "e": "CDs require funds to stay deposited until maturity, usually earning more."
+ },
+ {
+  "id": "g-saving-8",
+  "ia": "Saving",
+  "q": "Maria moves 10% of each paycheck into savings on payday, before paying for anything else. This habit is known as:",
+  "c": [
+   "Impulse saving",
+   "Paying yourself first",
+   "Dollar-cost averaging",
+   "Opportunity cost"
+  ],
+  "a": 1,
+  "e": "Paying yourself first means saving a set portion of income before spending on anything else."
+ },
+ {
+  "id": "g-saving-9",
+  "ia": "Saving",
+  "q": "A person wants to save $1,800 for a trip in 9 months. How much must be saved per month?",
+  "c": [
+   "$180",
+   "$200",
+   "$162",
+   "$900"
+  ],
+  "a": 1,
+  "e": "$1,800 / 9 = $200."
+ },
+ {
+  "id": "g-saving-10",
+  "ia": "Saving",
+  "q": "Which of these is a short-term savings goal?",
+  "c": [
+   "Retirement in 40 years",
+   "College in 10 years",
+   "Saving for a new phone next month",
+   "Buying a house in 15 years"
+  ],
+  "a": 2,
+  "e": "Short-term goals are achievable within about a year."
+ },
+ {
+  "id": "g-saving-11",
+  "ia": "Saving",
+  "q": "An annual percentage yield (APY) tells a saver:",
+  "c": [
+   "The cost of a loan",
+   "The tax owed",
+   "The fee for overdraft",
+   "The actual annual return including compounding"
+  ],
+  "a": 3,
+  "e": "APY reflects total interest earned in a year with compounding."
+ },
+ {
+  "id": "g-saving-12",
+  "ia": "Saving",
+  "q": "A savings account balance of $500 grows to $525 after one year with no deposits. The interest rate is:",
+  "c": [
+   "5%",
+   "25%",
+   "0.5%",
+   "10%"
+  ],
+  "a": 0,
+  "e": "$25 / $500 = 0.05 or 5%."
+ },
+ {
+  "id": "g-saving-13",
+  "ia": "Saving",
+  "q": "Inflation can reduce the value of savings kept in cash because:",
+  "c": [
+   "Banks close",
+   "Prices rise, so money buys less",
+   "Interest is illegal",
+   "Taxes are zero"
+  ],
+  "a": 1,
+  "e": "Rising prices reduce purchasing power over time."
+ },
+ {
+  "id": "g-saving-14",
+  "ia": "Saving",
+  "q": "A direct deposit that automatically moves a part of each paycheck into savings helps to:",
+  "c": [
+   "Increase spending",
+   "Raise credit utilization",
+   "Build the savings habit consistently",
+   "Reduce income"
+  ],
+  "a": 2,
+  "e": "Automation removes the temptation to skip saving."
+ },
+ {
+  "id": "g-saving-15",
+  "ia": "Saving",
+  "q": "Which statement about a high-yield savings account is true?",
+  "c": [
+   "It cannot earn interest",
+   "It is risky like stocks",
+   "It requires a long lock-in",
+   "It typically pays a higher interest rate than a standard savings account"
+  ],
+  "a": 3,
+  "e": "High-yield accounts offer better rates while keeping funds accessible."
+ },
+ {
+  "id": "g-investing-1",
+  "ia": "Investing",
+  "q": "An investor buys 50 shares of a stock at $24 per share. The total cost, ignoring fees, is:",
+  "c": [
+   "$1,200",
+   "$74",
+   "$480",
+   "$2,400"
+  ],
+  "a": 0,
+  "e": "50 x $24 = $1,200."
+ },
+ {
+  "id": "g-investing-2",
+  "ia": "Investing",
+  "q": "A person who owns shares of a corporation is a:",
+  "c": [
+   "Bondholder",
+   "Stockholder",
+   "Creditor",
+   "Lender"
+  ],
+  "a": 1,
+  "e": "Shares represent ownership in the corporation."
+ },
+ {
+  "id": "g-investing-3",
+  "ia": "Investing",
+  "q": "When you buy a corporate bond, you are:",
+  "c": [
+   "Becoming an owner",
+   "Buying insurance",
+   "Lending money to the company",
+   "Opening a checking account"
+  ],
+  "a": 2,
+  "e": "Bonds are debt; the issuer pays interest and returns principal at maturity."
+ },
+ {
+  "id": "g-investing-4",
+  "ia": "Investing",
+  "q": "Spreading money across different types of investments to reduce risk is called:",
+  "c": [
+   "Speculation",
+   "Liquidation",
+   "Leveraging",
+   "Diversification"
+  ],
+  "a": 3,
+  "e": "Diversification reduces the impact of any single investment performing poorly."
+ },
+ {
+  "id": "g-investing-5",
+  "ia": "Investing",
+  "q": "A beginner with $200 a month wants diversification without choosing individual stocks. Which product pools many investors' money into a professionally managed portfolio?",
+  "c": [
+   "Mutual fund",
+   "Savings bond",
+   "Certificate of deposit",
+   "Single stock"
+  ],
+  "a": 0,
+  "e": "A mutual fund pools investor money to buy a diversified portfolio managed by professionals."
+ },
+ {
+  "id": "g-investing-6",
+  "ia": "Investing",
+  "q": "Generally, as the potential return of an investment increases, the risk:",
+  "c": [
+   "Decreases",
+   "Increases",
+   "Disappears",
+   "Stays the same"
+  ],
+  "a": 1,
+  "e": "Higher expected returns usually come with greater risk."
+ },
+ {
+  "id": "g-investing-7",
+  "ia": "Investing",
+  "q": "A stock that pays $1.20 per share annually is priced at $40. The dividend yield is:",
+  "c": [
+   "30%",
+   "1.2%",
+   "3%",
+   "48%"
+  ],
+  "a": 2,
+  "e": "$1.20 / $40 = 0.03 or 3%."
+ },
+ {
+  "id": "g-investing-8",
+  "ia": "Investing",
+  "q": "An investor buys a stock for $50 and sells it for $65. The capital gain per share is:",
+  "c": [
+   "$30",
+   "$115",
+   "$65",
+   "$15"
+  ],
+  "a": 3,
+  "e": "$65 - $50 = $15."
+ },
+ {
+  "id": "g-investing-9",
+  "ia": "Investing",
+  "q": "Using the same trade, the percentage return on the purchase is:",
+  "c": [
+   "30%",
+   "15%",
+   "23%",
+   "77%"
+  ],
+  "a": 0,
+  "e": "$15 / $50 = 0.30 or 30%."
+ },
+ {
+  "id": "g-investing-10",
+  "ia": "Investing",
+  "q": "Investing small, equal amounts at regular intervals regardless of price is called:",
+  "c": [
+   "Day trading",
+   "Dollar-cost averaging",
+   "Short selling",
+   "Margin buying"
+  ],
+  "a": 1,
+  "e": "Dollar-cost averaging spreads purchases over time to reduce timing risk."
+ },
+ {
+  "id": "g-investing-11",
+  "ia": "Investing",
+  "q": "An index fund is designed to:",
+  "c": [
+   "Beat the market through active picking",
+   "Avoid stocks",
+   "Track the performance of a market index",
+   "Guarantee income"
+  ],
+  "a": 2,
+  "e": "Index funds mirror an index such as the S&P 500 and typically have low costs."
+ },
+ {
+  "id": "g-investing-12",
+  "ia": "Investing",
+  "q": "A person starts investing at age 25 instead of 35, with the same monthly amount. Which concept explains the larger result?",
+  "c": [
+   "Inflation",
+   "Liquidity",
+   "Tax withholding",
+   "Time value of money (compounding)"
+  ],
+  "a": 3,
+  "e": "More years of compounding allow earnings to grow on earnings."
+ },
+ {
+  "id": "g-investing-13",
+  "ia": "Investing",
+  "q": "Which investment is generally considered most liquid?",
+  "c": [
+   "Shares of a widely traded stock",
+   "Land",
+   "A house",
+   "Antique furniture"
+  ],
+  "a": 0,
+  "e": "Liquidity is how quickly an asset can be converted to cash without losing value."
+ },
+ {
+  "id": "g-investing-14",
+  "ia": "Investing",
+  "q": "A $2,000 investment doubles in value in about how many years at 8% per year, using the Rule of 72?",
+  "c": [
+   "8 years",
+   "9 years",
+   "72 years",
+   "12 years"
+  ],
+  "a": 1,
+  "e": "72 / 8 = 9 years."
+ },
+ {
+  "id": "g-investing-15",
+  "ia": "Investing",
+  "q": "Money placed in a retirement account like a 401(k) with an employer match is attractive because:",
+  "c": [
+   "It guarantees stock gains",
+   "It is tax-free forever",
+   "The match is additional money from the employer",
+   "It requires no risk"
+  ],
+  "a": 2,
+  "e": "Employer matching contributions are essentially extra compensation."
+ },
+ {
+  "id": "g-investing-16",
+  "ia": "Investing",
+  "q": "The risk that an investment's value will decline due to overall market movements is:",
+  "c": [
+   "Credit risk",
+   "Inflation risk only",
+   "Liquidity risk",
+   "Market risk"
+  ],
+  "a": 3,
+  "e": "Market risk affects most investments in a market."
+ },
+ {
+  "id": "g-investing-17",
+  "ia": "Investing",
+  "q": "Which of the following best describes a stock split?",
+  "c": [
+   "A company increases its number of shares and lowers the price per share proportionally",
+   "A company pays a dividend",
+   "The company goes bankrupt",
+   "The stock is delisted"
+  ],
+  "a": 0,
+  "e": "A split changes share count and price but not the total value of holdings."
+ },
+ {
+  "id": "g-investing-18",
+  "ia": "Investing",
+  "q": "An investor wants income and stability and has a short time horizon. Which asset mix fits best?",
+  "c": [
+   "All stocks",
+   "More bonds and cash, fewer stocks",
+   "All speculative assets",
+   "Only real estate"
+  ],
+  "a": 1,
+  "e": "Shorter horizons and a desire for income favor lower-volatility assets."
+ },
+ {
+  "id": "g-investing-19",
+  "ia": "Investing",
+  "q": "A broker's commission of 1% is charged on a $5,000 stock purchase. The fee is:",
+  "c": [
+   "$5",
+   "$500",
+   "$50",
+   "$0.50"
+  ],
+  "a": 2,
+  "e": "$5,000 x 0.01 = $50."
+ },
+ {
+  "id": "g-investing-20",
+  "ia": "Investing",
+  "q": "The expense ratio of a mutual fund represents:",
+  "c": [
+   "The dividend rate",
+   "The tax rate",
+   "The stock price",
+   "The annual fee as a percentage of assets"
+  ],
+  "a": 3,
+  "e": "Expense ratios are the yearly costs of running the fund."
+ },
+ {
+  "id": "g-investing-21",
+  "ia": "Investing",
+  "q": "A bond with a face value of $1,000 and a 4% coupon rate pays annual interest of:",
+  "c": [
+   "$40",
+   "$4",
+   "$400",
+   "$1,040"
+  ],
+  "a": 0,
+  "e": "$1,000 x 0.04 = $40."
+ },
+ {
+  "id": "g-managing-credit-1",
+  "ia": "Managing Credit",
+  "q": "A credit card has a balance of $1,000 and an APR of 18%. Approximately how much interest accrues in one year if no payments are made and ignoring compounding?",
+  "c": [
+   "$18",
+   "$180",
+   "$1,800",
+   "$118"
+  ],
+  "a": 1,
+  "e": "$1,000 x 0.18 = $180."
+ },
+ {
+  "id": "g-managing-credit-2",
+  "ia": "Managing Credit",
+  "q": "Paying only the minimum on a credit card balance generally leads to:",
+  "c": [
+   "Lower total cost",
+   "Immediate payoff",
+   "Paying more interest over a longer time",
+   "Higher credit limit"
+  ],
+  "a": 2,
+  "e": "Interest continues to accumulate on the remaining balance."
+ },
+ {
+  "id": "g-managing-credit-3",
+  "ia": "Managing Credit",
+  "q": "Which factor has the largest influence on a FICO credit score?",
+  "c": [
+   "Number of credit inquiries",
+   "Types of credit used",
+   "Age of the borrower",
+   "Payment history"
+  ],
+  "a": 3,
+  "e": "Payment history is the most heavily weighted category."
+ },
+ {
+  "id": "g-managing-credit-4",
+  "ia": "Managing Credit",
+  "q": "A credit card has a $2,000 limit and a $600 balance. The credit utilization ratio is:",
+  "c": [
+   "30%",
+   "70%",
+   "3%",
+   "300%"
+  ],
+  "a": 0,
+  "e": "$600 / $2,000 = 0.30 or 30%."
+ },
+ {
+  "id": "g-managing-credit-5",
+  "ia": "Managing Credit",
+  "q": "A lender uses a credit report mainly to:",
+  "c": [
+   "Set the minimum wage",
+   "Evaluate a borrower's creditworthiness",
+   "Verify identity only",
+   "Calculate taxes"
+  ],
+  "a": 1,
+  "e": "Credit reports show borrowing and payment history to assess risk."
+ },
+ {
+  "id": "g-managing-credit-6",
+  "ia": "Managing Credit",
+  "q": "A fixed interest rate on a loan means the rate:",
+  "c": [
+   "Changes with the market",
+   "Is zero",
+   "Stays the same for the loan term",
+   "Doubles each year"
+  ],
+  "a": 2,
+  "e": "Fixed-rate loans have predictable payments."
+ },
+ {
+  "id": "g-managing-credit-7",
+  "ia": "Managing Credit",
+  "q": "A secured loan is backed by:",
+  "c": [
+   "A co-worker",
+   "A promise only",
+   "A tax return",
+   "Collateral"
+  ],
+  "a": 3,
+  "e": "Collateral, such as a car, secures the lender in case of default."
+ },
+ {
+  "id": "g-managing-credit-8",
+  "ia": "Managing Credit",
+  "q": "Someone repeatedly pays bills late. The most likely effect on their credit is:",
+  "c": [
+   "A lower credit score",
+   "A higher score",
+   "No change",
+   "Free credit"
+  ],
+  "a": 0,
+  "e": "Late payments are reported and reduce credit scores."
+ },
+ {
+  "id": "g-managing-credit-9",
+  "ia": "Managing Credit",
+  "q": "A student takes a $5,000 loan at 6% simple annual interest for 2 years. Total interest paid is:",
+  "c": [
+   "$300",
+   "$600",
+   "$5,600",
+   "$60"
+  ],
+  "a": 1,
+  "e": "$5,000 x 0.06 x 2 = $600."
+ },
+ {
+  "id": "g-managing-credit-10",
+  "ia": "Managing Credit",
+  "q": "Which of the following is a cost of using a payday loan?",
+  "c": [
+   "Low rates",
+   "No fees",
+   "Very high fees and effective interest rates",
+   "Credit score increase"
+  ],
+  "a": 2,
+  "e": "Payday loans carry extremely high annual percentage rates."
+ },
+ {
+  "id": "g-managing-credit-11",
+  "ia": "Managing Credit",
+  "q": "The law that gives consumers the right to a free copy of their credit report from each credit bureau annually is part of:",
+  "c": [
+   "Sherman Antitrust Act",
+   "Truth in Lending only",
+   "Securities Act",
+   "Fair Credit Reporting Act"
+  ],
+  "a": 3,
+  "e": "FCRA governs credit reporting and allows access to reports."
+ },
+ {
+  "id": "g-managing-credit-12",
+  "ia": "Managing Credit",
+  "q": "A consumer notices an unfamiliar account on their credit report. The first step should be to:",
+  "c": [
+   "Dispute it with the credit bureau",
+   "Ignore it",
+   "Pay it",
+   "Close all accounts"
+  ],
+  "a": 0,
+  "e": "Disputing errors or possible fraud starts the correction process."
+ },
+ {
+  "id": "g-managing-credit-13",
+  "ia": "Managing Credit",
+  "q": "An installment loan requires the borrower to:",
+  "c": [
+   "Pay everything at the end of life",
+   "Repay in equal scheduled payments",
+   "Never pay interest",
+   "Pay only when convenient"
+  ],
+  "a": 1,
+  "e": "Installment loans are repaid with regular fixed payments."
+ },
+ {
+  "id": "g-managing-credit-14",
+  "ia": "Managing Credit",
+  "q": "Credit cards that offer cash back or points usually charge:",
+  "c": [
+   "No interest ever",
+   "No limit",
+   "Higher interest rates if balances are carried",
+   "Mandatory insurance"
+  ],
+  "a": 2,
+  "e": "Rewards cards often carry high APRs, so balances should be paid in full."
+ },
+ {
+  "id": "g-managing-credit-15",
+  "ia": "Managing Credit",
+  "q": "The total yearly cost of credit expressed as a percentage, including interest and certain fees, is the:",
+  "c": [
+   "Dividend yield",
+   "Principal",
+   "Cost of goods",
+   "Annual percentage rate"
+  ],
+  "a": 3,
+  "e": "APR allows consumers to compare the cost of loans."
+ },
+ {
+  "id": "g-managing-credit-16",
+  "ia": "Managing Credit",
+  "q": "A person has a $240 monthly car payment, a $300 student loan payment and $1,500 in other fixed obligations. The monthly gross income is $4,080. What is the debt-to-income ratio?",
+  "c": [
+   "50%",
+   "13%",
+   "37%",
+   "20%"
+  ],
+  "a": 0,
+  "e": "($240 + $300 + $1,500) / $4,080 = $2,040 / $4,080 = 0.50 or 50%."
+ },
+ {
+  "id": "g-managing-credit-17",
+  "ia": "Managing Credit",
+  "q": "Co-signing a loan for a friend means you:",
+  "c": [
+   "Receive part of the money",
+   "Are legally responsible if the friend does not pay",
+   "Have no risk",
+   "Own the item"
+  ],
+  "a": 1,
+  "e": "A co-signer promises to repay if the borrower defaults."
+ },
+ {
+  "id": "g-managing-credit-18",
+  "ia": "Managing Credit",
+  "q": "A buyer with a down payment of $3,000 on a $15,000 car must finance:",
+  "c": [
+   "$18,000",
+   "$3,000",
+   "$12,000",
+   "$15,000"
+  ],
+  "a": 2,
+  "e": "$15,000 - $3,000 = $12,000."
+ },
+ {
+  "id": "g-managing-credit-19",
+  "ia": "Managing Credit",
+  "q": "Identity theft victims can place a fraud alert or credit freeze to:",
+  "c": [
+   "Increase their credit limit",
+   "Erase legitimate debt",
+   "Lower interest rates",
+   "Prevent new accounts from being opened in their name"
+  ],
+  "a": 3,
+  "e": "Freezes and alerts restrict access to a credit file."
+ },
+ {
+  "id": "g-managing-credit-20",
+  "ia": "Managing Credit",
+  "q": "A balance transfer credit card offer with 0% introductory APR is most beneficial if the borrower:",
+  "c": [
+   "Pays off the balance before the promo period ends",
+   "Makes new purchases",
+   "Misses payments",
+   "Ignores the fee"
+  ],
+  "a": 0,
+  "e": "The benefit is avoiding interest on existing debt when it is repaid during the promotion."
+ },
+ {
+  "id": "g-managing-credit-21",
+  "ia": "Managing Credit",
+  "q": "Which action will most likely improve a credit score over time?",
+  "c": [
+   "Maxing out credit cards",
+   "Paying all bills on time and keeping balances low",
+   "Applying for many cards",
+   "Closing all accounts"
+  ],
+  "a": 1,
+  "e": "On-time payments and low utilization are key positive factors."
+ },
+ {
+  "id": "g-managing-risk-1",
+  "ia": "Managing Risk",
+  "q": "Monthly payments to keep an insurance policy active are called:",
+  "c": [
+   "Deductibles",
+   "Benefits",
+   "Premiums",
+   "Claims"
+  ],
+  "a": 2,
+  "e": "Premiums are the periodic payments for coverage."
+ },
+ {
+  "id": "g-managing-risk-2",
+  "ia": "Managing Risk",
+  "q": "The amount a policyholder pays out of pocket before insurance begins to pay is the:",
+  "c": [
+   "Premium",
+   "Beneficiary",
+   "Limit",
+   "Deductible"
+  ],
+  "a": 3,
+  "e": "A deductible is the portion of a loss the insured must cover first."
+ },
+ {
+  "id": "g-managing-risk-3",
+  "ia": "Managing Risk",
+  "q": "A person chooses a higher deductible on an auto policy. The most likely result is:",
+  "c": [
+   "A lower premium",
+   "A higher premium",
+   "No coverage",
+   "A higher payout"
+  ],
+  "a": 0,
+  "e": "Higher deductibles shift more risk to the insured, lowering premiums."
+ },
+ {
+  "id": "g-managing-risk-4",
+  "ia": "Managing Risk",
+  "q": "Which type of insurance helps replace income for a family if the wage earner dies?",
+  "c": [
+   "Auto insurance",
+   "Life insurance",
+   "Renters insurance",
+   "Dental insurance"
+  ],
+  "a": 1,
+  "e": "Life insurance pays benefits to beneficiaries after death."
+ },
+ {
+  "id": "g-managing-risk-5",
+  "ia": "Managing Risk",
+  "q": "Renters insurance primarily protects:",
+  "c": [
+   "The landlord's building",
+   "Rent payments",
+   "A tenant's personal belongings and liability",
+   "Utilities"
+  ],
+  "a": 2,
+  "e": "Renters policies cover personal property and liability, not the structure."
+ },
+ {
+  "id": "g-managing-risk-6",
+  "ia": "Managing Risk",
+  "q": "A driver has a $500 deductible and a $3,200 collision loss covered by insurance. How much does the insurer pay?",
+  "c": [
+   "$3,200",
+   "$500",
+   "$3,700",
+   "$2,700"
+  ],
+  "a": 3,
+  "e": "$3,200 - $500 = $2,700."
+ },
+ {
+  "id": "g-managing-risk-7",
+  "ia": "Managing Risk",
+  "q": "Health insurance co-payment is:",
+  "c": [
+   "A fixed amount you pay for a covered service",
+   "The monthly premium",
+   "The annual limit",
+   "The company's profit"
+  ],
+  "a": 0,
+  "e": "A copay is a set fee paid at the time of service."
+ },
+ {
+  "id": "g-managing-risk-8",
+  "ia": "Managing Risk",
+  "q": "A teenager decides not to ride a motorcycle because of safety concerns. This is risk:",
+  "c": [
+   "Transfer",
+   "Avoidance",
+   "Sharing",
+   "Speculation"
+  ],
+  "a": 1,
+  "e": "Choosing not to engage avoids the risk."
+ },
+ {
+  "id": "g-managing-risk-9",
+  "ia": "Managing Risk",
+  "q": "Wearing a seat belt is an example of risk:",
+  "c": [
+   "Avoidance",
+   "Transfer",
+   "Reduction",
+   "Ignorance"
+  ],
+  "a": 2,
+  "e": "Seat belts reduce injury severity."
+ },
+ {
+  "id": "g-managing-risk-10",
+  "ia": "Managing Risk",
+  "q": "A homeowner wants protection if a guest is injured and sues. Which coverage helps?",
+  "c": [
+   "Collision coverage",
+   "Disability coverage",
+   "Dental coverage",
+   "Liability coverage"
+  ],
+  "a": 3,
+  "e": "Liability coverage pays legal costs and damages for injuries or damage the insured is responsible for."
+ },
+ {
+  "id": "g-managing-risk-11",
+  "ia": "Managing Risk",
+  "q": "Disability insurance replaces:",
+  "c": [
+   "A portion of income if you cannot work due to illness or injury",
+   "Your car",
+   "Your house",
+   "Medical bills only"
+  ],
+  "a": 0,
+  "e": "Disability coverage protects earnings."
+ },
+ {
+  "id": "g-managing-risk-12",
+  "ia": "Managing Risk",
+  "q": "The person named to receive the payout from a life insurance policy is the:",
+  "c": [
+   "Underwriter",
+   "Beneficiary",
+   "Agent",
+   "Premium holder"
+  ],
+  "a": 1,
+  "e": "The beneficiary receives the death benefit."
+ },
+ {
+  "id": "g-managing-risk-13",
+  "ia": "Managing Risk",
+  "q": "A consumer reads the exclusions in a policy. Exclusions are:",
+  "c": [
+   "Discounts",
+   "Premium payments",
+   "Events or items not covered",
+   "Claims paid"
+  ],
+  "a": 2,
+  "e": "Exclusions list what the policy will not cover."
+ },
+ {
+  "id": "g-managing-risk-14",
+  "ia": "Managing Risk",
+  "q": "An insurance company charges higher premiums to drivers with many accidents because they represent:",
+  "c": [
+   "Lower risk",
+   "No change",
+   "Higher income",
+   "Greater risk"
+  ],
+  "a": 3,
+  "e": "Premiums reflect the likelihood of claims."
+ },
+ {
+  "id": "g-managing-risk-15",
+  "ia": "Managing Risk",
+  "q": "Which is the best reason to keep a home inventory of belongings?",
+  "c": [
+   "It helps document items for insurance claims",
+   "It lowers taxes",
+   "It raises property values",
+   "It cancels deductibles"
+  ],
+  "a": 0,
+  "e": "A record of possessions supports claims after a loss."
+ }
+]

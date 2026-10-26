@@ -47,3 +47,6 @@ next-env.d.ts
 # local agent tooling state
 .claude-flow/
 .swarm/
+/dist/
+.vinext/
+.cloudflare/

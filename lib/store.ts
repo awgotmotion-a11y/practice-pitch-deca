@@ -1,6 +1,8 @@
 "use client";
 import { useSyncExternalStore } from "react";
 import type { Level } from "./deca";
+import type { Difficulty, Judge, Mode, Prospect, Scenario } from "./judge";
+import type { Line, Metrics } from "./room";
 
 // ponytail: progress lives in this browser only; move to a DB (Supabase) when accounts/advisor dashboards land.
 
@@ -8,34 +10,16 @@ export type Profile = { event: string; level: Level };
 export type Attempt = { id: string; ia: string; ok: boolean; t: number };
 export type VocabState = Record<string, { box: number; due: number }>;
 
-export type Scenario = {
-  title: string;
-  company: string;
-  studentRole: string;
-  judgeName: string;
-  judgeRole: string;
-  situation: string;
-  task: string;
-  pis: { text: string; ia: string }[];
+export type ReportRow = { name: string; group: string; max: number; score: number; level: string; why: string; quote: string };
+export type ReportData = {
+  form: string; rows: ReportRow[]; total: number; max: number; outcome: string; verdict: string; drill: string;
+  strengths: string[]; fixes: { said: string; try: string; why: string }[];
 };
-export type Line = { who: "student" | "judge"; text: string };
-export type ScoreResult = {
-  pis: { pi: string; score: number; level: string; quote: string; feedback: string; fix: string }[];
-  skills: { skill: string; score: number; max: number; feedback: string }[];
-  summary: string;
-  topFixes: string[];
-  piMax: number;
-};
-export type Delivery = { wpm: number; fillersPerMin: number; longPauses: number };
-export type Session = {
-  date: number;
-  event: string;
-  level: Level;
-  scenario: Scenario;
-  transcript: Line[];
-  delivery: Delivery;
-  score: ScoreResult;
-  total: number;
+/** One scored practice session, saved in this browser (last 50). Audio is never saved. */
+export type Trial = {
+  id: string; date: number; mode: Mode; event?: string; level?: Level; title: string; difficulty: Difficulty;
+  total?: number; max?: number; outcome?: string; report?: ReportData; transcript: Line[]; metrics: Metrics;
+  scenario?: Scenario; judge?: Judge; prospect?: Prospect; durationSec: number;
 };
 
 const listeners = new Set<() => void>();
@@ -91,7 +75,7 @@ export function useStored<T>(key: string, fallback: T) {
   return [value, set] as const;
 }
 
-export const DEFAULT_PROFILE: Profile = { event: "MMS", level: "district" };
+export const DEFAULT_PROFILE: Profile = { event: "PMK", level: "district" };
 
 /** Accuracy per instructional area, weakest first; areas with fewer than `min` answers are skipped. */
 export function accuracyByArea(attempts: Attempt[], min = 3) {
